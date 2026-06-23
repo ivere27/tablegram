@@ -1,0 +1,31 @@
+<xml xmlns:s='uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882'
+	xmlns:dt='uuid:C2F41010-65B3-11d1-A29F-00AA00C14882'
+	xmlns:rs='urn:schemas-microsoft-com:rowset'
+	xmlns:z='#RowsetSchema'>
+<s:Schema id='RowsetSchema'>
+	<s:ElementType name='row' content='eltOnly' rs:updatable='true'>
+		<s:AttributeType name='ID' rs:number='1' rs:write='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='VALUE_FIELD' rs:number='2' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='bin.hex' dt:maxLength='128' rs:precision='0' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:extends type='rs:rowbase'/>
+	</s:ElementType>
+</s:Schema>
+<rs:data>
+	<rs:update>
+		<rs:original>
+			<z:row ID='1' VALUE_FIELD='001326394c5f728598abbed1'/>
+		</rs:original>
+		<z:row VALUE_FIELD='6f8295a8bbcee1f4071a2d40'/>
+	</rs:update>
+	<z:row ID='3' VALUE_FIELD='4a5d708396a9bccfe2f5081b'/>
+	<rs:insert>
+		<z:row ID='4' VALUE_FIELD='94a7bacde0f306192c3f5265'/>
+	</rs:insert>
+	<rs:delete>
+		<z:row ID='2' VALUE_FIELD='25384b5e718497aabdd0e3f6'/>
+	</rs:delete>
+</rs:data>
+</xml>

@@ -1,0 +1,306 @@
+<xml xmlns:s='uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882'
+	xmlns:dt='uuid:C2F41010-65B3-11d1-A29F-00AA00C14882'
+	xmlns:rs='urn:schemas-microsoft-com:rowset'
+	xmlns:z='#RowsetSchema'>
+<s:Schema id='RowsetSchema'>
+	<s:ElementType name='row' content='eltOnly' rs:updatable='true'>
+		<s:AttributeType name='ID' rs:number='1' rs:write='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_01_DBDate' rs:number='2' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_02_TinyInt' rs:number='3' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_03_DBDate' rs:number='4' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_04_TinyInt' rs:number='5' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_05_DBDate' rs:number='6' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_06_TinyInt' rs:number='7' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_07_DBDate' rs:number='8' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_08_TinyInt' rs:number='9' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_09_DBDate' rs:number='10' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_10_TinyInt' rs:number='11' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_11_DBDate' rs:number='12' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_12_TinyInt' rs:number='13' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_13_DBDate' rs:number='14' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_14_TinyInt' rs:number='15' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_15_DBDate' rs:number='16' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_16_TinyInt' rs:number='17' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_17_DBDate' rs:number='18' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_18_TinyInt' rs:number='19' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_19_DBDate' rs:number='20' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_20_TinyInt' rs:number='21' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_21_DBDate' rs:number='22' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_22_TinyInt' rs:number='23' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_23_DBDate' rs:number='24' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_24_TinyInt' rs:number='25' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_25_DBDate' rs:number='26' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_26_TinyInt' rs:number='27' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_27_DBDate' rs:number='28' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_28_TinyInt' rs:number='29' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_29_DBDate' rs:number='30' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_30_TinyInt' rs:number='31' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_31_DBDate' rs:number='32' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_32_TinyInt' rs:number='33' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_33_DBDate' rs:number='34' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_34_TinyInt' rs:number='35' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_35_DBDate' rs:number='36' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_36_TinyInt' rs:number='37' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_37_DBDate' rs:number='38' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_38_TinyInt' rs:number='39' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_39_DBDate' rs:number='40' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_40_TinyInt' rs:number='41' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_41_DBDate' rs:number='42' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_42_TinyInt' rs:number='43' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_43_DBDate' rs:number='44' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_44_TinyInt' rs:number='45' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_45_DBDate' rs:number='46' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_46_TinyInt' rs:number='47' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_47_DBDate' rs:number='48' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_48_TinyInt' rs:number='49' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_49_DBDate' rs:number='50' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_50_TinyInt' rs:number='51' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_51_DBDate' rs:number='52' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_52_TinyInt' rs:number='53' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_53_DBDate' rs:number='54' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_54_TinyInt' rs:number='55' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_55_DBDate' rs:number='56' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_56_TinyInt' rs:number='57' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_57_DBDate' rs:number='58' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_58_TinyInt' rs:number='59' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_59_DBDate' rs:number='60' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_60_TinyInt' rs:number='61' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_61_DBDate' rs:number='62' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_62_TinyInt' rs:number='63' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_63_DBDate' rs:number='64' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='W65_64_TinyInt' rs:number='65' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:extends type='rs:rowbase'/>
+	</s:ElementType>
+</s:Schema>
+<rs:data>
+	<rs:update>
+		<rs:original>
+			<z:row ID='1' W65_01_DBDate='2001-02-02' W65_02_TinyInt='1' W65_03_DBDate='2001-02-02' W65_04_TinyInt='1'
+				 W65_05_DBDate='2001-02-02' W65_06_TinyInt='1' W65_07_DBDate='2001-02-02' W65_08_TinyInt='1' W65_09_DBDate='2001-02-02'
+				 W65_11_DBDate='2001-02-02' W65_12_TinyInt='1' W65_13_DBDate='2001-02-02' W65_14_TinyInt='1' W65_15_DBDate='2001-02-02'
+				 W65_16_TinyInt='1' W65_17_DBDate='2001-02-02' W65_18_TinyInt='1' W65_19_DBDate='2001-02-02' W65_20_TinyInt='1'
+				 W65_22_TinyInt='1' W65_23_DBDate='2001-02-02' W65_24_TinyInt='1' W65_25_DBDate='2001-02-02' W65_26_TinyInt='1'
+				 W65_27_DBDate='2001-02-02' W65_28_TinyInt='1' W65_29_DBDate='2001-02-02' W65_30_TinyInt='1' W65_31_DBDate='2001-02-02'
+				 W65_33_DBDate='2001-02-02' W65_34_TinyInt='1' W65_35_DBDate='2001-02-02' W65_36_TinyInt='1' W65_37_DBDate='2001-02-02'
+				 W65_38_TinyInt='1' W65_39_DBDate='2001-02-02' W65_40_TinyInt='1' W65_41_DBDate='2001-02-02' W65_42_TinyInt='1'
+				 W65_44_TinyInt='1' W65_45_DBDate='2001-02-02' W65_46_TinyInt='1' W65_47_DBDate='2001-02-02' W65_48_TinyInt='1'
+				 W65_49_DBDate='2001-02-02' W65_50_TinyInt='1' W65_51_DBDate='2001-02-02' W65_52_TinyInt='1' W65_53_DBDate='2001-02-02'
+				 W65_55_DBDate='2001-02-02' W65_56_TinyInt='1' W65_57_DBDate='2001-02-02' W65_58_TinyInt='1' W65_59_DBDate='2001-02-02'
+				 W65_60_TinyInt='1' W65_61_DBDate='2001-02-02' W65_62_TinyInt='1' W65_63_DBDate='2001-02-02' W65_64_TinyInt='1'/>
+		</rs:original>
+		<z:row ID='1' W65_01_DBDate='2001-03-03' W65_03_DBDate='2001-03-03' W65_05_DBDate='2001-03-03' W65_07_DBDate='2001-03-03'
+			 W65_11_DBDate='2001-03-03' W65_13_DBDate='2001-03-03' W65_15_DBDate='2001-03-03' W65_17_DBDate='2001-03-03' W65_19_DBDate='2001-03-03'
+			 W65_21_DBDate='2001-03-03' W65_23_DBDate='2001-03-03' W65_25_DBDate='2001-03-03' W65_27_DBDate='2001-03-03' W65_29_DBDate='2001-03-03'
+			 W65_33_DBDate='2001-03-03' W65_35_DBDate='2001-03-03' W65_37_DBDate='2001-03-03' W65_39_DBDate='2001-03-03' W65_41_DBDate='2001-03-03'
+			 W65_43_DBDate='2001-03-03' W65_45_DBDate='2001-03-03' W65_47_DBDate='2001-03-03' W65_49_DBDate='2001-03-03' W65_51_DBDate='2001-03-03'
+			 W65_55_DBDate='2001-03-03' W65_57_DBDate='2001-03-03' W65_59_DBDate='2001-03-03' W65_61_DBDate='2001-03-03' W65_63_DBDate='2001-03-03'
+			 rs:forcenull='W65_09_DBDate W65_31_DBDate W65_53_DBDate'/>
+	</rs:update>
+	<z:row ID='3' W65_01_DBDate='2003-04-04' W65_02_TinyInt='3' W65_03_DBDate='2003-04-04' W65_04_TinyInt='3' W65_05_DBDate='2003-04-04'
+		 W65_06_TinyInt='3' W65_07_DBDate='2003-04-04' W65_09_DBDate='2003-04-04' W65_10_TinyInt='3' W65_11_DBDate='2003-04-04'
+		 W65_12_TinyInt='3' W65_13_DBDate='2003-04-04' W65_14_TinyInt='3' W65_15_DBDate='2003-04-04' W65_16_TinyInt='3'
+		 W65_17_DBDate='2003-04-04' W65_18_TinyInt='3' W65_20_TinyInt='3' W65_21_DBDate='2003-04-04' W65_22_TinyInt='3'
+		 W65_23_DBDate='2003-04-04' W65_24_TinyInt='3' W65_25_DBDate='2003-04-04' W65_26_TinyInt='3' W65_27_DBDate='2003-04-04'
+		 W65_28_TinyInt='3' W65_29_DBDate='2003-04-04' W65_31_DBDate='2003-04-04' W65_32_TinyInt='3' W65_33_DBDate='2003-04-04'
+		 W65_34_TinyInt='3' W65_35_DBDate='2003-04-04' W65_36_TinyInt='3' W65_37_DBDate='2003-04-04' W65_38_TinyInt='3'
+		 W65_39_DBDate='2003-04-04' W65_40_TinyInt='3' W65_42_TinyInt='3' W65_43_DBDate='2003-04-04' W65_44_TinyInt='3'
+		 W65_45_DBDate='2003-04-04' W65_46_TinyInt='3' W65_47_DBDate='2003-04-04' W65_48_TinyInt='3' W65_49_DBDate='2003-04-04'
+		 W65_50_TinyInt='3' W65_51_DBDate='2003-04-04' W65_53_DBDate='2003-04-04' W65_54_TinyInt='3' W65_55_DBDate='2003-04-04'
+		 W65_56_TinyInt='3' W65_57_DBDate='2003-04-04' W65_58_TinyInt='3' W65_59_DBDate='2003-04-04' W65_60_TinyInt='3'
+		 W65_61_DBDate='2003-04-04' W65_62_TinyInt='3' W65_64_TinyInt='3'/>
+	<z:row ID='4' W65_01_DBDate='2004-05-05' W65_02_TinyInt='4' W65_03_DBDate='2004-05-05' W65_04_TinyInt='4' W65_05_DBDate='2004-05-05'
+		 W65_06_TinyInt='4' W65_08_TinyInt='4' W65_09_DBDate='2004-05-05' W65_10_TinyInt='4' W65_11_DBDate='2004-05-05'
+		 W65_12_TinyInt='4' W65_13_DBDate='2004-05-05' W65_14_TinyInt='4' W65_15_DBDate='2004-05-05' W65_16_TinyInt='4'
+		 W65_17_DBDate='2004-05-05' W65_19_DBDate='2004-05-05' W65_20_TinyInt='4' W65_21_DBDate='2004-05-05' W65_22_TinyInt='4'
+		 W65_23_DBDate='2004-05-05' W65_24_TinyInt='4' W65_25_DBDate='2004-05-05' W65_26_TinyInt='4' W65_27_DBDate='2004-05-05'
+		 W65_28_TinyInt='4' W65_30_TinyInt='4' W65_31_DBDate='2004-05-05' W65_32_TinyInt='4' W65_33_DBDate='2004-05-05'
+		 W65_34_TinyInt='4' W65_35_DBDate='2004-05-05' W65_36_TinyInt='4' W65_37_DBDate='2004-05-05' W65_38_TinyInt='4'
+		 W65_39_DBDate='2004-05-05' W65_41_DBDate='2004-05-05' W65_42_TinyInt='4' W65_43_DBDate='2004-05-05' W65_44_TinyInt='4'
+		 W65_45_DBDate='2004-05-05' W65_46_TinyInt='4' W65_47_DBDate='2004-05-05' W65_48_TinyInt='4' W65_49_DBDate='2004-05-05'
+		 W65_50_TinyInt='4' W65_52_TinyInt='4' W65_53_DBDate='2004-05-05' W65_54_TinyInt='4' W65_55_DBDate='2004-05-05'
+		 W65_56_TinyInt='4' W65_57_DBDate='2004-05-05' W65_58_TinyInt='4' W65_59_DBDate='2004-05-05' W65_60_TinyInt='4'
+		 W65_61_DBDate='2004-05-05' W65_63_DBDate='2004-05-05' W65_64_TinyInt='4'/>
+	<z:row ID='5' W65_01_DBDate='2005-06-06' W65_02_TinyInt='5' W65_03_DBDate='2005-06-06' W65_04_TinyInt='5' W65_05_DBDate='2005-06-06'
+		 W65_07_DBDate='2005-06-06' W65_08_TinyInt='5' W65_09_DBDate='2005-06-06' W65_10_TinyInt='5' W65_11_DBDate='2005-06-06'
+		 W65_12_TinyInt='5' W65_13_DBDate='2005-06-06' W65_14_TinyInt='5' W65_15_DBDate='2005-06-06' W65_16_TinyInt='5'
+		 W65_18_TinyInt='5' W65_19_DBDate='2005-06-06' W65_20_TinyInt='5' W65_21_DBDate='2005-06-06' W65_22_TinyInt='5'
+		 W65_23_DBDate='2005-06-06' W65_24_TinyInt='5' W65_25_DBDate='2005-06-06' W65_26_TinyInt='5' W65_27_DBDate='2005-06-06'
+		 W65_29_DBDate='2005-06-06' W65_30_TinyInt='5' W65_31_DBDate='2005-06-06' W65_32_TinyInt='5' W65_33_DBDate='2005-06-06'
+		 W65_34_TinyInt='5' W65_35_DBDate='2005-06-06' W65_36_TinyInt='5' W65_37_DBDate='2005-06-06' W65_38_TinyInt='5'
+		 W65_40_TinyInt='5' W65_41_DBDate='2005-06-06' W65_42_TinyInt='5' W65_43_DBDate='2005-06-06' W65_44_TinyInt='5'
+		 W65_45_DBDate='2005-06-06' W65_46_TinyInt='5' W65_47_DBDate='2005-06-06' W65_48_TinyInt='5' W65_49_DBDate='2005-06-06'
+		 W65_51_DBDate='2005-06-06' W65_52_TinyInt='5' W65_53_DBDate='2005-06-06' W65_54_TinyInt='5' W65_55_DBDate='2005-06-06'
+		 W65_56_TinyInt='5' W65_57_DBDate='2005-06-06' W65_58_TinyInt='5' W65_59_DBDate='2005-06-06' W65_60_TinyInt='5'
+		 W65_62_TinyInt='5' W65_63_DBDate='2005-06-06' W65_64_TinyInt='5'/>
+	<z:row ID='6' W65_01_DBDate='2006-07-07' W65_02_TinyInt='6' W65_03_DBDate='2006-07-07' W65_04_TinyInt='6' W65_06_TinyInt='6'
+		 W65_07_DBDate='2006-07-07' W65_08_TinyInt='6' W65_09_DBDate='2006-07-07' W65_10_TinyInt='6' W65_11_DBDate='2006-07-07'
+		 W65_12_TinyInt='6' W65_13_DBDate='2006-07-07' W65_14_TinyInt='6' W65_15_DBDate='2006-07-07' W65_17_DBDate='2006-07-07'
+		 W65_18_TinyInt='6' W65_19_DBDate='2006-07-07' W65_20_TinyInt='6' W65_21_DBDate='2006-07-07' W65_22_TinyInt='6'
+		 W65_23_DBDate='2006-07-07' W65_24_TinyInt='6' W65_25_DBDate='2006-07-07' W65_26_TinyInt='6' W65_28_TinyInt='6'
+		 W65_29_DBDate='2006-07-07' W65_30_TinyInt='6' W65_31_DBDate='2006-07-07' W65_32_TinyInt='6' W65_33_DBDate='2006-07-07'
+		 W65_34_TinyInt='6' W65_35_DBDate='2006-07-07' W65_36_TinyInt='6' W65_37_DBDate='2006-07-07' W65_39_DBDate='2006-07-07'
+		 W65_40_TinyInt='6' W65_41_DBDate='2006-07-07' W65_42_TinyInt='6' W65_43_DBDate='2006-07-07' W65_44_TinyInt='6'
+		 W65_45_DBDate='2006-07-07' W65_46_TinyInt='6' W65_47_DBDate='2006-07-07' W65_48_TinyInt='6' W65_50_TinyInt='6'
+		 W65_51_DBDate='2006-07-07' W65_52_TinyInt='6' W65_53_DBDate='2006-07-07' W65_54_TinyInt='6' W65_55_DBDate='2006-07-07'
+		 W65_56_TinyInt='6' W65_57_DBDate='2006-07-07' W65_58_TinyInt='6' W65_59_DBDate='2006-07-07' W65_61_DBDate='2006-07-07'
+		 W65_62_TinyInt='6' W65_63_DBDate='2006-07-07' W65_64_TinyInt='6'/>
+	<rs:insert>
+		<z:row ID='7' W65_01_DBDate='2007-10-10' W65_03_DBDate='2007-10-10' W65_04_TinyInt='9' W65_05_DBDate='2007-10-10'
+			 W65_06_TinyInt='9' W65_07_DBDate='2007-10-10' W65_08_TinyInt='9' W65_09_DBDate='2007-10-10' W65_10_TinyInt='9'
+			 W65_11_DBDate='2007-10-10' W65_12_TinyInt='9' W65_14_TinyInt='9' W65_15_DBDate='2007-10-10' W65_16_TinyInt='9'
+			 W65_17_DBDate='2007-10-10' W65_18_TinyInt='9' W65_19_DBDate='2007-10-10' W65_20_TinyInt='9' W65_21_DBDate='2007-10-10'
+			 W65_22_TinyInt='9' W65_23_DBDate='2007-10-10' W65_25_DBDate='2007-10-10' W65_26_TinyInt='9' W65_27_DBDate='2007-10-10'
+			 W65_28_TinyInt='9' W65_29_DBDate='2007-10-10' W65_30_TinyInt='9' W65_31_DBDate='2007-10-10' W65_32_TinyInt='9'
+			 W65_33_DBDate='2007-10-10' W65_34_TinyInt='9' W65_36_TinyInt='9' W65_37_DBDate='2007-10-10' W65_38_TinyInt='9'
+			 W65_39_DBDate='2007-10-10' W65_40_TinyInt='9' W65_41_DBDate='2007-10-10' W65_42_TinyInt='9' W65_43_DBDate='2007-10-10'
+			 W65_44_TinyInt='9' W65_45_DBDate='2007-10-10' W65_47_DBDate='2007-10-10' W65_48_TinyInt='9' W65_49_DBDate='2007-10-10'
+			 W65_50_TinyInt='9' W65_51_DBDate='2007-10-10' W65_52_TinyInt='9' W65_53_DBDate='2007-10-10' W65_54_TinyInt='9'
+			 W65_55_DBDate='2007-10-10' W65_56_TinyInt='9' W65_58_TinyInt='9' W65_59_DBDate='2007-10-10' W65_60_TinyInt='9'
+			 W65_61_DBDate='2007-10-10' W65_62_TinyInt='9' W65_63_DBDate='2007-10-10' W65_64_TinyInt='9' rs:forcenull='W65_02_TinyInt W65_13_DBDate W65_24_TinyInt W65_35_DBDate W65_46_TinyInt W65_57_DBDate'/>
+	</rs:insert>
+	<rs:delete>
+		<z:row ID='2' W65_01_DBDate='2002-03-03' W65_02_TinyInt='2' W65_03_DBDate='2002-03-03' W65_04_TinyInt='2' W65_05_DBDate='2002-03-03'
+			 W65_06_TinyInt='2' W65_07_DBDate='2002-03-03' W65_08_TinyInt='2' W65_10_TinyInt='2' W65_11_DBDate='2002-03-03'
+			 W65_12_TinyInt='2' W65_13_DBDate='2002-03-03' W65_14_TinyInt='2' W65_15_DBDate='2002-03-03' W65_16_TinyInt='2'
+			 W65_17_DBDate='2002-03-03' W65_18_TinyInt='2' W65_19_DBDate='2002-03-03' W65_21_DBDate='2002-03-03' W65_22_TinyInt='2'
+			 W65_23_DBDate='2002-03-03' W65_24_TinyInt='2' W65_25_DBDate='2002-03-03' W65_26_TinyInt='2' W65_27_DBDate='2002-03-03'
+			 W65_28_TinyInt='2' W65_29_DBDate='2002-03-03' W65_30_TinyInt='2' W65_32_TinyInt='2' W65_33_DBDate='2002-03-03'
+			 W65_34_TinyInt='2' W65_35_DBDate='2002-03-03' W65_36_TinyInt='2' W65_37_DBDate='2002-03-03' W65_38_TinyInt='2'
+			 W65_39_DBDate='2002-03-03' W65_40_TinyInt='2' W65_41_DBDate='2002-03-03' W65_43_DBDate='2002-03-03' W65_44_TinyInt='2'
+			 W65_45_DBDate='2002-03-03' W65_46_TinyInt='2' W65_47_DBDate='2002-03-03' W65_48_TinyInt='2' W65_49_DBDate='2002-03-03'
+			 W65_50_TinyInt='2' W65_51_DBDate='2002-03-03' W65_52_TinyInt='2' W65_54_TinyInt='2' W65_55_DBDate='2002-03-03'
+			 W65_56_TinyInt='2' W65_57_DBDate='2002-03-03' W65_58_TinyInt='2' W65_59_DBDate='2002-03-03' W65_60_TinyInt='2'
+			 W65_61_DBDate='2002-03-03' W65_62_TinyInt='2' W65_63_DBDate='2002-03-03'/>
+	</rs:delete>
+</rs:data>
+</xml>

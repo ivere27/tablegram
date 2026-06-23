@@ -1,0 +1,21 @@
+<xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"
+     xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+     xmlns:rs="urn:schemas-microsoft-com:rowset"
+     xmlns:z="#RowsetSchema">
+  <s:Schema id="RowsetSchema">
+    <s:ElementType name="row" content="eltOnly">
+      <s:AttributeType name="ID" dt:type="int"/>
+      <s:AttributeType name="BASE64_LONG" dt:type="bin.base64" rs:maybenull="true"/>
+      <s:AttributeType name="BASE64_VAR" dt:type="bin.base64" dt:maxLength="12" rs:maybenull="true"/>
+      <s:AttributeType name="BASE64_FIXED" dt:type="bin.base64" dt:maxLength="12" rs:fixedlength="true" rs:maybenull="true"/>
+      <s:AttributeType name="BASE64_CHILD" rs:maybenull="true">
+        <s:datatype dt:type="bin.base64"/>
+      </s:AttributeType>
+      <s:Extends type="rs:rowbase"/>
+    </s:ElementType>
+  </s:Schema>
+  <rs:data>
+    <z:row ID="1" BASE64_LONG="AAECAwQF+v8=" BASE64_VAR="YWJj" BASE64_FIXED="MTIzNA==" BASE64_CHILD="ZmllbGQ="/>
+    <z:row ID="2"/>
+  </rs:data>
+</xml>

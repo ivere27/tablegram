@@ -1,0 +1,9 @@
+case,filter_name,filter_value,result,stage,error_number,error_description,default_view,pending_view,affected_view,conflicting_view
+"filter_save_none","none","0","ok","","","","1:2|3:8|4:1","1:2|4:1|:4","",""
+"filter_save_pending","pending","1","ok","","","","1:2|3:8|4:1","1:2|4:1|:4","",""
+"filter_save_affected","affected","2","ok","","","","1:2|3:8|4:1","1:2|4:1|:4","",""
+"filter_save_fetched","fetched","3","ok","","","","1:2|3:8|4:1","1:2|4:1|:4","",""
+"filter_save_conflicting","conflicting","5","ok","","","","1:2|3:8|4:1","1:2|4:1|:4","",""
+"filter_save_criteria_id_1","criteria_id_1","ID = 1","fail","set_filter","-2147467262","No such interface supported","","","",""
+"filter_save_criteria_num_ge_30","criteria_num_ge_30","NUM >= 30","fail","set_filter","-2147467262","No such interface supported","","","",""
+"filter_save_criteria_txt_inserted","criteria_txt_inserted","TXT = 'inserted'","fail","set_filter","-2147467262","No such interface supported","","","",""

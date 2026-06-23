@@ -1,0 +1,11 @@
+type_name,type_code,result,error_number,error_description
+"Empty","0","fail","3001","Arguments are of the wrong type, are out of acceptable range, or are in conflict with one another."
+"VarNumeric","139","fail","3001","Arguments are of the wrong type, are out of acceptable range, or are in conflict with one another."
+"Error","10","fail","-2147217887","Multiple-step operation generated errors. Check each status value."
+"Variant","12","probe_ok_not_exhaustive","",""
+"IDispatch","9","fail","-2147217887","Multiple-step operation generated errors. Check each status value."
+"IUnknown","13","fail","-2147217887","Multiple-step operation generated errors. Check each status value."
+"Chapter","136","fail","3001","Arguments are of the wrong type, are out of acceptable range, or are in conflict with one another."
+"PropVariant","138","fail","3001","Arguments are of the wrong type, are out of acceptable range, or are in conflict with one another."
+"UserDefined","132","fail","3001","Arguments are of the wrong type, are out of acceptable range, or are in conflict with one another."
+"ArrayInteger","8195","fail","3001","Arguments are of the wrong type, are out of acceptable range, or are in conflict with one another."

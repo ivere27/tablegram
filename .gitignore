@@ -1,0 +1,39 @@
+# Rust build artifacts
+/target/
+/dist/
+/fuzz/target/
+/fuzz/artifacts/
+/wasm_bindings/target/
+
+# Generated browser demo artifacts
+/web/pkg/
+/web/public/samples/
+
+# Optional locally generated provider-backed corpora
+/corpus/sqlserver_sales/
+
+# Local configuration, credentials, certificates, and oracle-run outputs
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.crt
+*.pfx
+*.p12
+*.log
+*.tmp
+*.bak
+*.resp.pb
+
+# Editor and OS files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Native probe build outputs
+*.exe
+*.pdb

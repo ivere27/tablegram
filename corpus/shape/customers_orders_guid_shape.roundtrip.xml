@@ -1,0 +1,73 @@
+<xml xmlns:s='uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882'
+	xmlns:dt='uuid:C2F41010-65B3-11d1-A29F-00AA00C14882'
+	xmlns:rs='urn:schemas-microsoft-com:rowset'
+	xmlns:z='#RowsetSchema'>
+<s:Schema id='RowsetSchema'>
+	<s:ElementType name='row' content='eltOnly' rs:CommandTimeout='120' rs:updatable='true' rs:ReshapeName='Customers'>
+		<s:AttributeType name='CustomerId' rs:number='1' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+			 rs:baseschema='dbo' rs:basetable='SalesCustomers' rs:basecolumn='CustomerId' rs:keycolumn='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='CustomerGuid' rs:number='2' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+			 rs:baseschema='dbo' rs:basetable='SalesCustomers' rs:basecolumn='CustomerGuid'>
+			<s:datatype dt:type='uuid' dt:maxLength='16' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='CustomerName' rs:number='3' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+			 rs:baseschema='dbo' rs:basetable='SalesCustomers' rs:basecolumn='CustomerName'>
+			<s:datatype dt:type='string' dt:maxLength='80' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:ElementType name='Orders' content='eltOnly' rs:CommandTimeout='120' rs:updatable='true' rs:ReshapeName='Orders'
+		 rs:relation='020000000100000000000000'>
+			<s:AttributeType name='CustomerGuid' rs:number='1' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesCustomers' rs:basecolumn='CustomerGuid'>
+				<s:datatype dt:type='uuid' dt:maxLength='16' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='OrderId' rs:number='2' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesOrders' rs:basecolumn='OrderId' rs:keycolumn='true'>
+				<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='Freight' rs:number='3' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesOrders' rs:basecolumn='Freight'>
+				<s:datatype dt:type='number' rs:dbtype='currency' dt:maxLength='8' rs:precision='19' rs:fixedlength='true'
+				 rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='CustomerId' rs:number='4' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesCustomers' rs:basecolumn='CustomerId' rs:keycolumn='true' rs:hidden='true'>
+				<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:extends type='rs:rowbase'/>
+		</s:ElementType>
+		<s:extends type='rs:rowbase'/>
+	</s:ElementType>
+</s:Schema>
+<rs:data>
+	<z:row CustomerId='1' CustomerGuid='{00000001-1111-2222-3333-000000000001}' CustomerName='고객 1 / Customer 1'>
+		<Orders CustomerGuid='{00000001-1111-2222-3333-000000000001}' OrderId='100001' Freight='7.35' CustomerId='1'/>
+		<Orders CustomerGuid='{00000001-1111-2222-3333-000000000001}' OrderId='100049' Freight='40.25' CustomerId='1'/>
+		<Orders CustomerGuid='{00000001-1111-2222-3333-000000000001}' OrderId='100097' Freight='33.2' CustomerId='1'/>
+		<Orders CustomerGuid='{00000001-1111-2222-3333-000000000001}' OrderId='100145' Freight='26.15' CustomerId='1'/>
+		<Orders CustomerGuid='{00000001-1111-2222-3333-000000000001}' OrderId='100193' Freight='19.1' CustomerId='1'/>
+	</z:row>
+	<z:row CustomerId='2' CustomerGuid='{00000002-1111-2222-3333-000000000002}' CustomerName='고객 2 / Customer 2'>
+		<Orders CustomerGuid='{00000002-1111-2222-3333-000000000002}' OrderId='100002' Freight='9.7' CustomerId='2'/>
+		<Orders CustomerGuid='{00000002-1111-2222-3333-000000000002}' OrderId='100050' Freight='42.6' CustomerId='2'/>
+		<Orders CustomerGuid='{00000002-1111-2222-3333-000000000002}' OrderId='100098' Freight='35.55' CustomerId='2'/>
+		<Orders CustomerGuid='{00000002-1111-2222-3333-000000000002}' OrderId='100146' Freight='28.5' CustomerId='2'/>
+		<Orders CustomerGuid='{00000002-1111-2222-3333-000000000002}' OrderId='100194' Freight='21.45' CustomerId='2'/>
+	</z:row>
+	<z:row CustomerId='3' CustomerGuid='{00000003-1111-2222-3333-000000000003}' CustomerName='고객 3 / Customer 3'>
+		<Orders CustomerGuid='{00000003-1111-2222-3333-000000000003}' OrderId='100003' Freight='12.05' CustomerId='3'/>
+		<Orders CustomerGuid='{00000003-1111-2222-3333-000000000003}' OrderId='100051' Freight='5' CustomerId='3'/>
+		<Orders CustomerGuid='{00000003-1111-2222-3333-000000000003}' OrderId='100099' Freight='37.9' CustomerId='3'/>
+		<Orders CustomerGuid='{00000003-1111-2222-3333-000000000003}' OrderId='100147' Freight='30.85' CustomerId='3'/>
+		<Orders CustomerGuid='{00000003-1111-2222-3333-000000000003}' OrderId='100195' Freight='23.8' CustomerId='3'/>
+	</z:row>
+	<z:row CustomerId='4' CustomerGuid='{00000004-1111-2222-3333-000000000004}' CustomerName='고객 4 / Customer 4'>
+		<Orders CustomerGuid='{00000004-1111-2222-3333-000000000004}' OrderId='100004' Freight='14.4' CustomerId='4'/>
+		<Orders CustomerGuid='{00000004-1111-2222-3333-000000000004}' OrderId='100052' Freight='7.35' CustomerId='4'/>
+		<Orders CustomerGuid='{00000004-1111-2222-3333-000000000004}' OrderId='100100' Freight='40.25' CustomerId='4'/>
+		<Orders CustomerGuid='{00000004-1111-2222-3333-000000000004}' OrderId='100148' Freight='33.2' CustomerId='4'/>
+		<Orders CustomerGuid='{00000004-1111-2222-3333-000000000004}' OrderId='100196' Freight='26.15' CustomerId='4'/>
+	</z:row>
+</rs:data>
+</xml>

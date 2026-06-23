@@ -1,0 +1,82 @@
+<xml xmlns:s='uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882'
+	xmlns:dt='uuid:C2F41010-65B3-11d1-A29F-00AA00C14882'
+	xmlns:rs='urn:schemas-microsoft-com:rowset'
+	xmlns:z='#RowsetSchema'>
+<s:Schema id='RowsetSchema'>
+	<s:ElementType name='row' content='eltOnly' rs:CommandTimeout='120' rs:updatable='true' rs:ReshapeName='DSRowset1'>
+		<s:ElementType name='Lines' content='eltOnly' rs:CommandTimeout='120' rs:updatable='true' rs:ReshapeName='Lines'
+		 rs:relation='040000000100000001000000'>
+			<s:AttributeType name='CustomerId' rs:number='1' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesOrders' rs:basecolumn='CustomerId'>
+				<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='OrderId' rs:number='2' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesOrders' rs:basecolumn='OrderId' rs:keycolumn='true'>
+				<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='LineId' rs:number='3' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesOrderLines' rs:basecolumn='LineId' rs:keycolumn='true'>
+				<s:datatype dt:type='i8' dt:maxLength='8' rs:precision='19' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='Quantity' rs:number='4' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesOrderLines' rs:basecolumn='Quantity'>
+				<s:datatype dt:type='i2' dt:maxLength='2' rs:precision='5' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='UnitPrice' rs:number='5' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesOrderLines' rs:basecolumn='UnitPrice'>
+				<s:datatype dt:type='number' rs:dbtype='currency' dt:maxLength='8' rs:precision='19' rs:fixedlength='true'
+				 rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='LineTotal' rs:number='6' rs:nullable='true'>
+				<s:datatype dt:type='number' rs:dbtype='currency' dt:maxLength='8' rs:precision='19' rs:fixedlength='true'/>
+			</s:AttributeType>
+			<s:extends type='rs:rowbase'/>
+		</s:ElementType>
+		<s:AttributeType name='LineTotalSum' rs:number='2'>
+			<s:datatype dt:type='number' rs:dbtype='currency' dt:maxLength='8' rs:precision='19' rs:fixedlength='true'/>
+		</s:AttributeType>
+		<s:AttributeType name='LineCount' rs:number='3'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:fixedlength='true'/>
+		</s:AttributeType>
+		<s:AttributeType name='CustomerId' rs:number='4'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:extends type='rs:rowbase'/>
+	</s:ElementType>
+</s:Schema>
+<rs:data>
+	<z:row LineTotalSum='2366.37' LineCount='9' CustomerId='1'>
+		<Lines CustomerId='1' OrderId='100001' LineId='1000011' Quantity='4' UnitPrice='99.88' LineTotal='399.52'/>
+		<Lines CustomerId='1' OrderId='100001' LineId='1000012' Quantity='5' UnitPrice='103.09' LineTotal='515.45'/>
+		<Lines CustomerId='1' OrderId='100001' LineId='1000013' Quantity='6' UnitPrice='106.3' LineTotal='637.8'/>
+		<Lines CustomerId='1' OrderId='100049' LineId='1000491' Quantity='7' UnitPrice='16.42' LineTotal='114.94'/>
+		<Lines CustomerId='1' OrderId='100049' LineId='1000492' Quantity='8' UnitPrice='19.63' LineTotal='157.04'/>
+		<Lines CustomerId='1' OrderId='100049' LineId='1000493' Quantity='9' UnitPrice='22.84' LineTotal='205.56'/>
+		<Lines CustomerId='1' OrderId='100097' LineId='1000971' Quantity='1' UnitPrice='51.73' LineTotal='51.73'/>
+		<Lines CustomerId='1' OrderId='100097' LineId='1000972' Quantity='2' UnitPrice='54.94' LineTotal='109.88'/>
+		<Lines CustomerId='1' OrderId='100097' LineId='1000973' Quantity='3' UnitPrice='58.15' LineTotal='174.45'/>
+	</z:row>
+	<z:row LineTotalSum='2838.24' LineCount='9' CustomerId='2'>
+		<Lines CustomerId='2' OrderId='100002' LineId='1000021' Quantity='5' UnitPrice='103.09' LineTotal='515.45'/>
+		<Lines CustomerId='2' OrderId='100002' LineId='1000022' Quantity='6' UnitPrice='106.3' LineTotal='637.8'/>
+		<Lines CustomerId='2' OrderId='100002' LineId='1000023' Quantity='7' UnitPrice='109.51' LineTotal='766.57'/>
+		<Lines CustomerId='2' OrderId='100050' LineId='1000501' Quantity='8' UnitPrice='19.63' LineTotal='157.04'/>
+		<Lines CustomerId='2' OrderId='100050' LineId='1000502' Quantity='9' UnitPrice='22.84' LineTotal='205.56'/>
+		<Lines CustomerId='2' OrderId='100050' LineId='1000503' Quantity='1' UnitPrice='26.05' LineTotal='26.05'/>
+		<Lines CustomerId='2' OrderId='100098' LineId='1000981' Quantity='2' UnitPrice='54.94' LineTotal='109.88'/>
+		<Lines CustomerId='2' OrderId='100098' LineId='1000982' Quantity='3' UnitPrice='58.15' LineTotal='174.45'/>
+		<Lines CustomerId='2' OrderId='100098' LineId='1000983' Quantity='4' UnitPrice='61.36' LineTotal='245.44'/>
+	</z:row>
+	<z:row LineTotalSum='3339' LineCount='9' CustomerId='3'>
+		<Lines CustomerId='3' OrderId='100003' LineId='1000031' Quantity='6' UnitPrice='106.3' LineTotal='637.8'/>
+		<Lines CustomerId='3' OrderId='100003' LineId='1000032' Quantity='7' UnitPrice='109.51' LineTotal='766.57'/>
+		<Lines CustomerId='3' OrderId='100003' LineId='1000033' Quantity='8' UnitPrice='112.72' LineTotal='901.76'/>
+		<Lines CustomerId='3' OrderId='100051' LineId='1000511' Quantity='9' UnitPrice='22.84' LineTotal='205.56'/>
+		<Lines CustomerId='3' OrderId='100051' LineId='1000512' Quantity='1' UnitPrice='26.05' LineTotal='26.05'/>
+		<Lines CustomerId='3' OrderId='100051' LineId='1000513' Quantity='2' UnitPrice='29.26' LineTotal='58.52'/>
+		<Lines CustomerId='3' OrderId='100099' LineId='1000991' Quantity='3' UnitPrice='58.15' LineTotal='174.45'/>
+		<Lines CustomerId='3' OrderId='100099' LineId='1000992' Quantity='4' UnitPrice='61.36' LineTotal='245.44'/>
+		<Lines CustomerId='3' OrderId='100099' LineId='1000993' Quantity='5' UnitPrice='64.57' LineTotal='322.85'/>
+	</z:row>
+</rs:data>
+</xml>

@@ -1,0 +1,64 @@
+<xml xmlns:s='uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882'
+	xmlns:dt='uuid:C2F41010-65B3-11d1-A29F-00AA00C14882'
+	xmlns:rs='urn:schemas-microsoft-com:rowset'
+	xmlns:z='#RowsetSchema'>
+<s:Schema id='RowsetSchema'>
+	<s:ElementType name='row' content='eltOnly' rs:CommandTimeout='120' rs:updatable='true' rs:ReshapeName='Buckets'>
+		<s:AttributeType name='IsDomestic' rs:number='1' rs:nullable='true'>
+			<s:datatype dt:type='boolean' dt:maxLength='2' rs:fixedlength='true'/>
+		</s:AttributeType>
+		<s:AttributeType name='Bucket' rs:number='2' rs:nullable='true'>
+			<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='20'/>
+		</s:AttributeType>
+		<s:ElementType name='Customers' content='eltOnly' rs:CommandTimeout='120' rs:updatable='true' rs:ReshapeName='Customers'
+		 rs:relation='010000000100000000000000'>
+			<s:AttributeType name='IsDomestic' rs:number='1' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesRegions' rs:basecolumn='IsDomestic'>
+				<s:datatype dt:type='boolean' dt:maxLength='2' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='CustomerId' rs:number='2' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesCustomers' rs:basecolumn='CustomerId' rs:keycolumn='true'>
+				<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='CustomerCode' rs:number='3' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesCustomers' rs:basecolumn='CustomerCode'>
+				<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='12' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='RegionCode' rs:number='4' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesRegions' rs:basecolumn='RegionCode'>
+				<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='3' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='RegionId' rs:number='5' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesRegions' rs:basecolumn='RegionId' rs:keycolumn='true' rs:hidden='true'>
+				<s:datatype dt:type='ui1' dt:maxLength='1' rs:precision='3' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:extends type='rs:rowbase'/>
+		</s:ElementType>
+		<s:extends type='rs:rowbase'/>
+	</s:ElementType>
+</s:Schema>
+<rs:data>
+	<z:row IsDomestic='True' Bucket='Domestic'>
+		<Customers IsDomestic='True' CustomerId='1' CustomerCode='CUST0001' RegionCode='SEL' RegionId='1'/>
+		<Customers IsDomestic='True' CustomerId='2' CustomerCode='CUST0002' RegionCode='BUS' RegionId='2'/>
+		<Customers IsDomestic='True' CustomerId='3' CustomerCode='CUST0003' RegionCode='ICN' RegionId='3'/>
+		<Customers IsDomestic='True' CustomerId='7' CustomerCode='CUST0007' RegionCode='SEL' RegionId='1'/>
+		<Customers IsDomestic='True' CustomerId='8' CustomerCode='CUST0008' RegionCode='BUS' RegionId='2'/>
+		<Customers IsDomestic='True' CustomerId='9' CustomerCode='CUST0009' RegionCode='ICN' RegionId='3'/>
+		<Customers IsDomestic='True' CustomerId='13' CustomerCode='CUST0013' RegionCode='SEL' RegionId='1'/>
+		<Customers IsDomestic='True' CustomerId='14' CustomerCode='CUST0014' RegionCode='BUS' RegionId='2'/>
+		<Customers IsDomestic='True' CustomerId='15' CustomerCode='CUST0015' RegionCode='ICN' RegionId='3'/>
+	</z:row>
+	<z:row IsDomestic='False' Bucket='International'>
+		<Customers IsDomestic='False' CustomerId='4' CustomerCode='CUST0004' RegionCode='TYO' RegionId='4'/>
+		<Customers IsDomestic='False' CustomerId='5' CustomerCode='CUST0005' RegionCode='SFO' RegionId='5'/>
+		<Customers IsDomestic='False' CustomerId='6' CustomerCode='CUST0006' RegionCode='BER' RegionId='6'/>
+		<Customers IsDomestic='False' CustomerId='10' CustomerCode='CUST0010' RegionCode='TYO' RegionId='4'/>
+		<Customers IsDomestic='False' CustomerId='11' CustomerCode='CUST0011' RegionCode='SFO' RegionId='5'/>
+		<Customers IsDomestic='False' CustomerId='12' CustomerCode='CUST0012' RegionCode='BER' RegionId='6'/>
+		<Customers IsDomestic='False' CustomerId='16' CustomerCode='CUST0016' RegionCode='TYO' RegionId='4'/>
+		<Customers IsDomestic='False' CustomerId='17' CustomerCode='CUST0017' RegionCode='SFO' RegionId='5'/>
+		<Customers IsDomestic='False' CustomerId='18' CustomerCode='CUST0018' RegionCode='BER' RegionId='6'/>
+	</z:row>
+</rs:data>
+</xml>

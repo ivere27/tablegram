@@ -1,0 +1,33 @@
+<xml xmlns:s='uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882'
+	xmlns:dt='uuid:C2F41010-65B3-11d1-A29F-00AA00C14882'
+	xmlns:rs='urn:schemas-microsoft-com:rowset'
+	xmlns:z='#RowsetSchema'>
+<s:Schema id='RowsetSchema'>
+	<s:ElementType name='row' content='eltOnly' rs:updatable='true'>
+		<s:AttributeType name='ID' rs:number='1' rs:write='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='FLAG' rs:number='2' rs:write='true'>
+			<s:datatype dt:type='boolean' dt:maxLength='2' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='AMOUNT' rs:number='3' rs:write='true'>
+			<s:datatype dt:type='number' rs:dbtype='currency' dt:maxLength='8' rs:precision='0' rs:fixedlength='true'
+			 rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='RATIO' rs:number='4' rs:write='true'>
+			<s:datatype dt:type='float' dt:maxLength='8' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='WHEN_AT' rs:number='5' rs:write='true'>
+			<s:datatype dt:type='dateTime' rs:dbtype='variantdate' dt:maxLength='16' rs:precision='0' rs:fixedlength='true'
+			 rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:extends type='rs:rowbase'/>
+	</s:ElementType>
+</s:Schema>
+<rs:data>
+	<rs:insert>
+		<z:row ID='1' FLAG='True' AMOUNT='1234.56' RATIO='3.1415899999999999' WHEN_AT='2001-02-03T04:05:06'/>
+		<z:row ID='-2' FLAG='False' AMOUNT='-7.89' RATIO='-0.25' WHEN_AT='1999-12-31T23:59:58'/>
+	</rs:insert>
+</rs:data>
+</xml>

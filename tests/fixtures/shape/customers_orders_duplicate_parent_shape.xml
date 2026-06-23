@@ -1,0 +1,129 @@
+<xml xmlns:s='uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882'
+	xmlns:dt='uuid:C2F41010-65B3-11d1-A29F-00AA00C14882'
+	xmlns:rs='urn:schemas-microsoft-com:rowset'
+	xmlns:z='#RowsetSchema'>
+<s:Schema id='RowsetSchema'>
+	<s:ElementType name='row' content='eltOnly' rs:CommandTimeout='120' rs:updatable='true' rs:ReshapeName='Customers'>
+		<s:AttributeType name='RegionCode' rs:number='1' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+			 rs:baseschema='dbo' rs:basetable='SalesRegions' rs:basecolumn='RegionCode'>
+			<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='3' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='CustomerId' rs:number='2' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+			 rs:baseschema='dbo' rs:basetable='SalesCustomers' rs:basecolumn='CustomerId' rs:keycolumn='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='CustomerCode' rs:number='3' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+			 rs:baseschema='dbo' rs:basetable='SalesCustomers' rs:basecolumn='CustomerCode'>
+			<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='12' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:ElementType name='Orders' content='eltOnly' rs:CommandTimeout='120' rs:updatable='true' rs:ReshapeName='Orders'
+		 rs:relation='010000000100000000000000'>
+			<s:AttributeType name='RegionCode' rs:number='1' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesRegions' rs:basecolumn='RegionCode'>
+				<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='3' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='OrderId' rs:number='2' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesOrders' rs:basecolumn='OrderId' rs:keycolumn='true'>
+				<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='CustomerId' rs:number='3' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesOrders' rs:basecolumn='CustomerId'>
+				<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='Freight' rs:number='4' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesOrders' rs:basecolumn='Freight'>
+				<s:datatype dt:type='number' rs:dbtype='currency' dt:maxLength='8' rs:precision='19' rs:fixedlength='true'
+				 rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='c4' rs:name='CustomerId' rs:number='5' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesCustomers' rs:basecolumn='CustomerId' rs:keycolumn='true' rs:hidden='true'>
+				<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='RegionId' rs:number='6' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesRegions' rs:basecolumn='RegionId' rs:keycolumn='true' rs:hidden='true'>
+				<s:datatype dt:type='ui1' dt:maxLength='1' rs:precision='3' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:extends type='rs:rowbase'/>
+		</s:ElementType>
+		<s:AttributeType name='RegionId' rs:number='5' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+			 rs:basetable='SalesRegions' rs:basecolumn='RegionId' rs:keycolumn='true' rs:hidden='true'>
+			<s:datatype dt:type='ui1' dt:maxLength='1' rs:precision='3' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:extends type='rs:rowbase'/>
+	</s:ElementType>
+</s:Schema>
+<rs:data>
+	<z:row RegionCode='SEL' CustomerId='1' CustomerCode='CUST0001' RegionId='1'>
+		<Orders RegionCode='SEL' OrderId='100001' CustomerId='1' Freight='7.35' c4='1' RegionId='1'/>
+		<Orders RegionCode='SEL' OrderId='100007' CustomerId='7' Freight='21.45' c4='7' RegionId='1'/>
+		<Orders RegionCode='SEL' OrderId='100049' CustomerId='1' Freight='40.25' c4='1' RegionId='1'/>
+		<Orders RegionCode='SEL' OrderId='100055' CustomerId='7' Freight='14.4' c4='7' RegionId='1'/>
+		<Orders RegionCode='SEL' OrderId='100097' CustomerId='1' Freight='33.2' c4='1' RegionId='1'/>
+		<Orders RegionCode='SEL' OrderId='100103' CustomerId='7' Freight='7.35' c4='7' RegionId='1'/>
+		<Orders RegionCode='SEL' OrderId='100145' CustomerId='1' Freight='26.15' c4='1' RegionId='1'/>
+		<Orders RegionCode='SEL' OrderId='100151' CustomerId='7' Freight='40.25' c4='7' RegionId='1'/>
+		<Orders RegionCode='SEL' OrderId='100193' CustomerId='1' Freight='19.1' c4='1' RegionId='1'/>
+		<Orders RegionCode='SEL' OrderId='100199' CustomerId='7' Freight='33.2' c4='7' RegionId='1'/>
+	</z:row>
+	<z:row RegionCode='SEL' CustomerId='7' CustomerCode='CUST0007' RegionId='1'>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100001' CustomerId='1' Freight='7.35' c4='1' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100007' CustomerId='7' Freight='21.45' c4='7' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100049' CustomerId='1' Freight='40.25' c4='1' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100055' CustomerId='7' Freight='14.4' c4='7' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100097' CustomerId='1' Freight='33.2' c4='1' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100103' CustomerId='7' Freight='7.35' c4='7' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100145' CustomerId='1' Freight='26.15' c4='1' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100151' CustomerId='7' Freight='40.25' c4='7' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100193' CustomerId='1' Freight='19.1' c4='1' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100199' CustomerId='7' Freight='33.2' c4='7' RegionId='1'/>
+	</z:row>
+	<z:row RegionCode='SEL' CustomerId='13' CustomerCode='CUST0013' RegionId='1'>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100001' CustomerId='1' Freight='7.35' c4='1' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100007' CustomerId='7' Freight='21.45' c4='7' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100049' CustomerId='1' Freight='40.25' c4='1' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100055' CustomerId='7' Freight='14.4' c4='7' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100097' CustomerId='1' Freight='33.2' c4='1' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100103' CustomerId='7' Freight='7.35' c4='7' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100145' CustomerId='1' Freight='26.15' c4='1' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100151' CustomerId='7' Freight='40.25' c4='7' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100193' CustomerId='1' Freight='19.1' c4='1' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100199' CustomerId='7' Freight='33.2' c4='7' RegionId='1'/>
+	</z:row>
+	<z:row RegionCode='SEL' CustomerId='19' CustomerCode='CUST0019' RegionId='1'>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100001' CustomerId='1' Freight='7.35' c4='1' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100007' CustomerId='7' Freight='21.45' c4='7' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100049' CustomerId='1' Freight='40.25' c4='1' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100055' CustomerId='7' Freight='14.4' c4='7' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100097' CustomerId='1' Freight='33.2' c4='1' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100103' CustomerId='7' Freight='7.35' c4='7' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100145' CustomerId='1' Freight='26.15' c4='1' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100151' CustomerId='7' Freight='40.25' c4='7' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100193' CustomerId='1' Freight='19.1' c4='1' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100199' CustomerId='7' Freight='33.2' c4='7' RegionId='1'/>
+	</z:row>
+	<z:row RegionCode='SEL' CustomerId='25' CustomerCode='CUST0025' RegionId='1'>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100001' CustomerId='1' Freight='7.35' c4='1' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100007' CustomerId='7' Freight='21.45' c4='7' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100049' CustomerId='1' Freight='40.25' c4='1' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100055' CustomerId='7' Freight='14.4' c4='7' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100097' CustomerId='1' Freight='33.2' c4='1' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100103' CustomerId='7' Freight='7.35' c4='7' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100145' CustomerId='1' Freight='26.15' c4='1' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100151' CustomerId='7' Freight='40.25' c4='7' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100193' CustomerId='1' Freight='19.1' c4='1' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100199' CustomerId='7' Freight='33.2' c4='7' RegionId='1'/>
+	</z:row>
+	<z:row RegionCode='SEL' CustomerId='31' CustomerCode='CUST0031' RegionId='1'>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100001' CustomerId='1' Freight='7.35' c4='1' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100007' CustomerId='7' Freight='21.45' c4='7' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100049' CustomerId='1' Freight='40.25' c4='1' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100055' CustomerId='7' Freight='14.4' c4='7' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100097' CustomerId='1' Freight='33.2' c4='1' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100103' CustomerId='7' Freight='7.35' c4='7' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100145' CustomerId='1' Freight='26.15' c4='1' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100151' CustomerId='7' Freight='40.25' c4='7' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100193' CustomerId='1' Freight='19.1' c4='1' RegionId='1'/>
+		<Orders rs:duplicate='true' RegionCode='SEL' OrderId='100199' CustomerId='7' Freight='33.2' c4='7' RegionId='1'/>
+	</z:row>
+</rs:data>
+</xml>

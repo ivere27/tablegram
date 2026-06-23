@@ -1,0 +1,5 @@
+attribute_name,field_type,attribute_flags,result,error_number,error_description
+"IsRowURL","adVarWChar","65568","fail","3001","Arguments are of the wrong type, are out of acceptable range, or are in conflict with one another."
+"IsDefaultStream","adLongVarWChar","131232","fail","3001","Arguments are of the wrong type, are out of acceptable range, or are in conflict with one another."
+"IsCollection","adVarWChar","262176","fail","3001","Arguments are of the wrong type, are out of acceptable range, or are in conflict with one another."
+"IsChapter","adInteger","8192","fail","3001","Arguments are of the wrong type, are out of acceptable range, or are in conflict with one another."

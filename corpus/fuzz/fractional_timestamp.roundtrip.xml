@@ -1,0 +1,32 @@
+<xml xmlns:s='uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882'
+	xmlns:dt='uuid:C2F41010-65B3-11d1-A29F-00AA00C14882'
+	xmlns:rs='urn:schemas-microsoft-com:rowset'
+	xmlns:z='#RowsetSchema'>
+<s:Schema id='RowsetSchema'>
+	<s:ElementType name='row' content='eltOnly' rs:updatable='true'>
+		<s:AttributeType name='ID' rs:number='1' rs:write='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='TS' rs:number='2' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='dateTime' rs:dbtype='timestamp' dt:maxLength='16' rs:scale='0' rs:precision='0' rs:fixedlength='true'
+			 rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:extends type='rs:rowbase'/>
+	</s:ElementType>
+</s:Schema>
+<rs:data>
+	<rs:update>
+		<rs:original>
+			<z:row ID='1' TS='2026-01-02T03:04:05.123000000'/>
+		</rs:original>
+		<z:row TS='2026-01-02T03:04:05.987000000'/>
+	</rs:update>
+	<z:row ID='3'/>
+	<rs:insert>
+		<z:row ID='4' TS='2026-04-05T06:07:08.250000000'/>
+	</rs:insert>
+	<rs:delete>
+		<z:row ID='2' TS='2026-02-03T04:05:06.500000000'/>
+	</rs:delete>
+</rs:data>
+</xml>

@@ -1,0 +1,48 @@
+<xml xmlns:s='uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882'
+	xmlns:dt='uuid:C2F41010-65B3-11d1-A29F-00AA00C14882'
+	xmlns:rs='urn:schemas-microsoft-com:rowset'
+	xmlns:z='#RowsetSchema'>
+<s:Schema id='RowsetSchema'>
+	<s:ElementType name='row' content='eltOnly' rs:updatable='true'>
+		<s:AttributeType name='ID' rs:number='1' rs:write='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='c1' rs:name='Amp &#x26; Field' rs:number='2' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='string' dt:maxLength='80' rs:precision='0' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='c2' rs:name='Quote &#x22; Field' rs:number='3' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='string' dt:maxLength='80' rs:precision='0' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='c3' rs:name='Apostrophe &#x27; Field' rs:number='4' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='string' dt:maxLength='80' rs:precision='0' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='c4' rs:name='Less &#x3c; Field' rs:number='5' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='string' dt:maxLength='80' rs:precision='0' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='c5' rs:name='Greater &#x3e; Field' rs:number='6' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='string' dt:maxLength='80' rs:precision='0' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:extends type='rs:rowbase'/>
+	</s:ElementType>
+</s:Schema>
+<rs:data>
+	<rs:update>
+		<rs:original>
+			<z:row ID='1' c1='amp|row=1|phase=0|한글' c2='quote|row=1|phase=0|한글' c3='apostrophe|row=1|phase=0|한글'
+				 c4='less|row=1|phase=0|한글' c5='greater|row=1|phase=0|한글'/>
+		</rs:original>
+		<z:row ID='1' c1='amp|row=1|phase=1|한글' c2='quote|row=1|phase=1|한글' c3='apostrophe|row=1|phase=1|한글'
+			 c4='less|row=1|phase=1|한글' c5='greater|row=1|phase=1|한글'/>
+	</rs:update>
+	<z:row ID='3' c1='amp|row=3|phase=0|한글' c2='quote|row=3|phase=0|한글' c3='apostrophe|row=3|phase=0|한글'
+		 c4='less|row=3|phase=0|한글' c5='greater|row=3|phase=0|한글'/>
+	<rs:insert>
+		<z:row ID='4' c1='amp|row=4|phase=2|한글' c2='quote|row=4|phase=2|한글' c3='apostrophe|row=4|phase=2|한글'
+			 c4='less|row=4|phase=2|한글' c5='greater|row=4|phase=2|한글'/>
+	</rs:insert>
+	<rs:delete>
+		<z:row ID='2' c1='amp|row=2|phase=0|한글' c2='quote|row=2|phase=0|한글' c3='apostrophe|row=2|phase=0|한글'
+			 c4='less|row=2|phase=0|한글' c5='greater|row=2|phase=0|한글'/>
+	</rs:delete>
+</rs:data>
+</xml>

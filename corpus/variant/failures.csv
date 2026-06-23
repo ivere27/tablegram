@@ -1,0 +1,5 @@
+case,scenario,error_number,error_description
+"variant_string","string","-2147217891","Requested conversion is not supported."
+"variant_binary","binary","-2147217891","Requested conversion is not supported."
+"variant_mixed","mixed","-2147217891","Requested conversion is not supported."
+"variant_error","error","-2147352562","ADODB Field.Value rejects VT_ERROR with DISP_E_BADPARAMCOUNT; reproduce with tools\probe_variant_error.cpp"

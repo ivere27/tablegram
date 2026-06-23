@@ -1,0 +1,7 @@
+type_name,type_code,value_name,result,stage,error_number,error_description
+"Single","4","nan","fail","save_xml","-2147217887","Multiple-step operation generated errors. Check each status value."
+"Single","4","positive_infinity","fail","save_xml","-2147217887","Multiple-step operation generated errors. Check each status value."
+"Single","4","negative_infinity","fail","save_xml","-2147217887","Multiple-step operation generated errors. Check each status value."
+"Double","5","nan","fail","save_xml","-2147467262","Multiple-step operation generated errors. Check each status value."
+"Double","5","positive_infinity","fail","save_xml","-2147467262","Multiple-step operation generated errors. Check each status value."
+"Double","5","negative_infinity","fail","save_xml","-2147467262","Multiple-step operation generated errors. Check each status value."

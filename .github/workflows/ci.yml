@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - master
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  rust:
+    name: Rust ${{ matrix.toolchain }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        toolchain:
+          - stable
+          - 1.87.0
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: ${{ matrix.toolchain }}
+          components: clippy,rustfmt
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo fmt --check
+      - run: cargo check --lib --no-default-features
+      - run: cargo clippy --all-targets -- -D warnings
+      - run: cargo clippy --features oracle --all-targets -- -D warnings
+      - run: RUSTDOCFLAGS="-D warnings" cargo doc --no-deps --all-features --quiet
+      - run: cargo test --quiet
+      - run: cargo test --features oracle --quiet
+      - run: cargo package --no-verify
+        if: matrix.toolchain == 'stable'
+      - run: cargo install cargo-audit --locked
+        if: matrix.toolchain == 'stable'
+      - run: cargo audit
+        if: matrix.toolchain == 'stable'
+
+  fuzz-smoke:
+    name: Fuzz smoke
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@nightly
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo install cargo-fuzz --locked
+      - run: tools/verify_fuzz_parse_any.sh 5

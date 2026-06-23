@@ -1,0 +1,21 @@
+<xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"
+     xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+     xmlns:rs="urn:schemas-microsoft-com:rowset"
+     xmlns:z="#RowsetSchema">
+  <s:Schema id="RowsetSchema">
+    <s:ElementType name="row" content="eltOnly">
+      <s:AttributeType name="ID" dt:type="int"/>
+      <s:AttributeType name="DT_TZ_LONG" dt:type="dateTime.tz" rs:maybenull="true"/>
+      <s:AttributeType name="DT_TZ_VAR" dt:type="dateTime.tz" dt:maxLength="32" rs:maybenull="true"/>
+      <s:AttributeType name="DT_TZ_FIXED" dt:type="dateTime.tz" dt:maxLength="32" rs:fixedlength="true" rs:maybenull="true"/>
+      <s:AttributeType name="DT_TZ_CHILD" rs:maybenull="true">
+        <s:datatype dt:type="dateTime.tz"/>
+      </s:AttributeType>
+      <s:Extends type="rs:rowbase"/>
+    </s:ElementType>
+  </s:Schema>
+  <rs:data>
+    <z:row ID="1" DT_TZ_LONG="2026-06-12T01:02:03Z" DT_TZ_VAR="2026-06-12T01:02:03+09:30" DT_TZ_FIXED="2026-06-12T01:02:03-04:00" DT_TZ_CHILD="2026-06-12T01:02:03Z"/>
+    <z:row ID="2"/>
+  </rs:data>
+</xml>

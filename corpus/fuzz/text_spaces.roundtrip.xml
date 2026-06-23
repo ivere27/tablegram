@@ -1,0 +1,47 @@
+<xml xmlns:s='uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882'
+	xmlns:dt='uuid:C2F41010-65B3-11d1-A29F-00AA00C14882'
+	xmlns:rs='urn:schemas-microsoft-com:rowset'
+	xmlns:z='#RowsetSchema'>
+<s:Schema id='RowsetSchema'>
+	<s:ElementType name='row' content='eltOnly' rs:updatable='true'>
+		<s:AttributeType name='ID' rs:number='1' rs:write='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='FIXED_ASCII' rs:number='2' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='16' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='FIXED_WIDE' rs:number='3' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='string' dt:maxLength='16' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='VAR_ASCII' rs:number='4' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='80' rs:precision='0' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='VAR_WIDE' rs:number='5' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='string' dt:maxLength='80' rs:precision='0' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='LONG_WIDE' rs:number='6' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='string' dt:maxLength='4000' rs:precision='0' rs:long='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:extends type='rs:rowbase'/>
+	</s:ElementType>
+</s:Schema>
+<rs:data>
+	<rs:update>
+		<rs:original>
+			<z:row ID='1' FIXED_ASCII=' A1  P0   Z     ' FIXED_WIDE=' 한1  값0   €     ' VAR_ASCII='  row 1   phase 0  end  '
+				 VAR_WIDE='  한글 1   값 0  €  ' LONG_WIDE='  한글 1   값 0  €   block  1     한글 1   값 0  €   block  2     한글 1   값 0  €   block  3     한글 1   값 0  €   block  4     한글 1   값 0  €   block  5     한글 1   값 0  €   block  6     한글 1   값 0  €   block  7     한글 1   값 0  €   block  8     한글 1   값 0  €   block  9     한글 1   값 0  €   block  10     한글 1   값 0  €   block  11     한글 1   값 0  €   block  12     한글 1   값 0  €   block  13     한글 1   값 0  €   block  14     한글 1   값 0  €   block  15     한글 1   값 0  €   block  16     한글 1   값 0  €   block  17     한글 1   값 0  €   block  18     한글 1   값 0  €   block  19     한글 1   값 0  €   block  20   '/>
+		</rs:original>
+		<z:row ID='1' FIXED_ASCII=' A1  P1   Z     ' FIXED_WIDE=' 한1  값1   €     ' VAR_ASCII='  row 1   phase 1  end  '
+			 VAR_WIDE='  한글 1   값 1  €  ' LONG_WIDE='  한글 1   값 1  €   block  1     한글 1   값 1  €   block  2     한글 1   값 1  €   block  3     한글 1   값 1  €   block  4     한글 1   값 1  €   block  5     한글 1   값 1  €   block  6     한글 1   값 1  €   block  7     한글 1   값 1  €   block  8     한글 1   값 1  €   block  9     한글 1   값 1  €   block  10     한글 1   값 1  €   block  11     한글 1   값 1  €   block  12     한글 1   값 1  €   block  13     한글 1   값 1  €   block  14     한글 1   값 1  €   block  15     한글 1   값 1  €   block  16     한글 1   값 1  €   block  17     한글 1   값 1  €   block  18     한글 1   값 1  €   block  19     한글 1   값 1  €   block  20   '/>
+	</rs:update>
+	<z:row ID='3'/>
+	<rs:insert>
+		<z:row ID='4' FIXED_ASCII=' A4  P2   Z     ' FIXED_WIDE=' 한4  값2   €     ' VAR_ASCII='  row 4   phase 2  end  '
+			 VAR_WIDE='  한글 4   값 2  €  ' LONG_WIDE='  한글 4   값 2  €   block  1     한글 4   값 2  €   block  2     한글 4   값 2  €   block  3     한글 4   값 2  €   block  4     한글 4   값 2  €   block  5     한글 4   값 2  €   block  6     한글 4   값 2  €   block  7     한글 4   값 2  €   block  8     한글 4   값 2  €   block  9     한글 4   값 2  €   block  10     한글 4   값 2  €   block  11     한글 4   값 2  €   block  12     한글 4   값 2  €   block  13     한글 4   값 2  €   block  14     한글 4   값 2  €   block  15     한글 4   값 2  €   block  16     한글 4   값 2  €   block  17     한글 4   값 2  €   block  18     한글 4   값 2  €   block  19     한글 4   값 2  €   block  20   '/>
+	</rs:insert>
+	<rs:delete>
+		<z:row ID='2' FIXED_ASCII=' A2  P0   Z     ' FIXED_WIDE=' 한2  값0   €     ' VAR_ASCII='  row 2   phase 0  end  '
+			 VAR_WIDE='  한글 2   값 0  €  ' LONG_WIDE='  한글 2   값 0  €   block  1     한글 2   값 0  €   block  2     한글 2   값 0  €   block  3     한글 2   값 0  €   block  4     한글 2   값 0  €   block  5     한글 2   값 0  €   block  6     한글 2   값 0  €   block  7     한글 2   값 0  €   block  8     한글 2   값 0  €   block  9     한글 2   값 0  €   block  10     한글 2   값 0  €   block  11     한글 2   값 0  €   block  12     한글 2   값 0  €   block  13     한글 2   값 0  €   block  14     한글 2   값 0  €   block  15     한글 2   값 0  €   block  16     한글 2   값 0  €   block  17     한글 2   값 0  €   block  18     한글 2   값 0  €   block  19     한글 2   값 0  €   block  20   '/>
+	</rs:delete>
+</rs:data>
+</xml>

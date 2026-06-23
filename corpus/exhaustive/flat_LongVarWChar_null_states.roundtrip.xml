@@ -1,0 +1,31 @@
+<xml xmlns:s='uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882'
+	xmlns:dt='uuid:C2F41010-65B3-11d1-A29F-00AA00C14882'
+	xmlns:rs='urn:schemas-microsoft-com:rowset'
+	xmlns:z='#RowsetSchema'>
+<s:Schema id='RowsetSchema'>
+	<s:ElementType name='row' content='eltOnly' rs:updatable='true'>
+		<s:AttributeType name='ID' rs:number='1' rs:write='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='VALUE_FIELD' rs:number='2' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='string' dt:maxLength='4000' rs:precision='0' rs:long='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:extends type='rs:rowbase'/>
+	</s:ElementType>
+</s:Schema>
+<rs:data>
+	<rs:update>
+		<rs:original>
+			<z:row ID='1' VALUE_FIELD='long-0-1 한글 long-0-2 한글 long-0-3 한글 long-0-4 한글 long-0-5 한글 long-0-6 한글 long-0-7 한글 long-0-8 한글 long-0-9 한글 long-0-10 한글 long-0-11 한글 long-0-12 한글 long-0-13 한글 long-0-14 한글 long-0-15 한글 long-0-16 한글 long-0-17 한글 long-0-18 한글 long-0-19 한글 long-0-20 한글 long-0-21 한글 long-0-22 한글 long-0-23 한글 long-0-24 한글 long-0-25 한글 long-0-26 한글 long-0-27 한글 long-0-28 한글 long-0-29 한글 long-0-30 한글 long-0-31 한글 long-0-32 한글 long-0-33 한글 long-0-34 한글 long-0-35 한글 long-0-36 한글 long-0-37 한글 long-0-38 한글 long-0-39 한글 long-0-40 한글 long-0-41 한글 long-0-42 한글 long-0-43 한글 long-0-44 한글 long-0-45 한글 long-0-46 한글 long-0-47 한글 long-0-48 한글 long-0-49 한글 long-0-50 한글 long-0-51 한글 long-0-52 한글 long-0-53 한글 long-0-54 한글 long-0-55 한글 long-0-56 한글 long-0-57 한글 long-0-58 한글 long-0-59 한글 long-0-60 한글 long-0-61 한글 long-0-62 한글 long-0-63 한글 long-0-64 한글 long-0-65 한글 long-0-66 한글 long-0-67 한글 long-0-68 한글 long-0-69 한글 long-0-70 한글 long-0-71 한글 long-0-72 한글 long-0-73 한글 long-0-74 한글 long-0-75 한글 long-0-76 한글 long-0-77 한글 long-0-78 한글 long-0-79 한글 long-0-80 한글 '/>
+		</rs:original>
+		<z:row rs:forcenull='VALUE_FIELD'/>
+	</rs:update>
+	<z:row ID='3'/>
+	<rs:insert>
+		<z:row ID='4' rs:forcenull='VALUE_FIELD'/>
+	</rs:insert>
+	<rs:delete>
+		<z:row ID='2'/>
+	</rs:delete>
+</rs:data>
+</xml>

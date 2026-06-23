@@ -1,0 +1,6 @@
+case,charset,result,stage,error_number,error_description
+"unicode_text_stream","unicode","ok","reopen","",""
+"unicodefffe_text_stream","unicodeFFFE","ok","reopen","",""
+"utf16_text_stream","utf-16","ok","reopen","",""
+"utf16be_text_stream","utf-16BE","ok","reopen","",""
+"utf8_text_stream","utf-8","fail","reopen","-2147467259","Recordset cannot be created from the specified source. The source file or stream must contain Recordset data in XML or ADTG format."

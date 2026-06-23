@@ -1,0 +1,54 @@
+<xml xmlns:s='uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882'
+	xmlns:dt='uuid:C2F41010-65B3-11d1-A29F-00AA00C14882'
+	xmlns:rs='urn:schemas-microsoft-com:rowset'
+	xmlns:z='#RowsetSchema'>
+<s:Schema id='RowsetSchema'>
+	<s:ElementType name='row' content='eltOnly' rs:updatable='true'>
+		<s:AttributeType name='ID' rs:number='1' rs:write='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='F1_GUID' rs:number='2' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='uuid' dt:maxLength='16' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='F2_VarChar' rs:number='3' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='80' rs:precision='0' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='F3_WChar' rs:number='4' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='string' dt:maxLength='12' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='c4' rs:name='Field Space 4 GUID' rs:number='5' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='uuid' dt:maxLength='16' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='F5_Date' rs:number='6' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='dateTime' rs:dbtype='variantdate' dt:maxLength='16' rs:precision='0' rs:fixedlength='true'
+			 rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:extends type='rs:rowbase'/>
+	</s:ElementType>
+</s:Schema>
+<rs:data>
+	<rs:update>
+		<rs:original>
+			<z:row ID='1' F1_GUID='{00000000-0000-0000-0000-000000001000}' F2_VarChar='r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;'
+				 F3_WChar='r1p0        ' c4='{00000000-0000-0000-0000-000000001000}' F5_Date='2001-02-02T01:03:00'/>
+		</rs:original>
+		<z:row ID='1' F1_GUID='{00000000-0000-0000-0000-000000001001}' F3_WChar='r1p1        ' F5_Date='2001-03-03T02:03:07'/>
+	</rs:update>
+	<z:row ID='3' F1_GUID='{00000000-0000-0000-0000-000000003000}' F2_VarChar='r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;'
+		 F3_WChar='r3p0        ' c4='{00000000-0000-0000-0000-000000003000}' F5_Date='2003-04-04T03:09:00'/>
+	<z:row ID='4' F1_GUID='{00000000-0000-0000-0000-000000004000}' F2_VarChar='r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;'
+		 F3_WChar='r4p0        ' c4='{00000000-0000-0000-0000-000000004000}' F5_Date='2004-05-05T04:12:00'/>
+	<z:row ID='5' F1_GUID='{00000000-0000-0000-0000-000000005000}' F2_VarChar='r5_p0_한글_&#x3c;&#x26;&#x27;&#x3e;'
+		 F3_WChar='r5p0        ' c4='{00000000-0000-0000-0000-000000005000}' F5_Date='2005-06-06T05:15:00'/>
+	<z:row ID='6' F1_GUID='{00000000-0000-0000-0000-000000006000}' F2_VarChar='r6_p0_한글_&#x3c;&#x26;&#x27;&#x3e;'
+		 F3_WChar='r6p0        ' c4='{00000000-0000-0000-0000-000000006000}'/>
+	<rs:insert>
+		<z:row ID='7' F1_GUID='{00000000-0000-0000-0000-000000007002}' F3_WChar='r7p2        ' c4='{00000000-0000-0000-0000-000000007002}'
+			 F5_Date='2007-10-10T09:21:14' rs:forcenull='F2_VarChar'/>
+	</rs:insert>
+	<rs:delete>
+		<z:row ID='2' F1_GUID='{00000000-0000-0000-0000-000000002000}' F2_VarChar='r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;'
+			 F3_WChar='r2p0        ' c4='{00000000-0000-0000-0000-000000002000}' F5_Date='2002-03-03T02:06:00'/>
+	</rs:delete>
+</rs:data>
+</xml>

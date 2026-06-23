@@ -1,0 +1,46 @@
+[package]
+name = "tablegram"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.87"
+description = "ADO Recordset persistence parser and writer"
+license = "Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/ivere27/tablegram"
+homepage = "https://github.com/ivere27/tablegram"
+documentation = "https://docs.rs/tablegram"
+keywords = ["ado", "recordset", "adtg", "mdac"]
+categories = ["parser-implementations", "encoding"]
+authors = ["tablegram contributors"]
+include = [
+    "/Cargo.lock",
+    "/Cargo.toml",
+    "/LICENSE",
+    "/README.md",
+    "/SECURITY.md",
+    "/corpus/generated/**",
+    "/src/**",
+]
+
+[features]
+default = ["cli"]
+cli = ["dep:clap"]
+oracle = ["cli"]
+
+[[bin]]
+name = "tablegram"
+path = "src/main.rs"
+required-features = ["cli"]
+
+[dependencies]
+anyhow = "1.0"
+clap = { version = "4.5", features = ["derive"], optional = true }
+encoding_rs = "0.8"
+hex = "0.4"
+roxmltree = "0.20"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+[[bin]]
+name = "tablegram-web-server"
+path = "src/bin/web_server.rs"

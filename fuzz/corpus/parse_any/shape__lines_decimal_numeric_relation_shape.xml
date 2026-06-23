@@ -1,0 +1,92 @@
+<xml xmlns:s='uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882'
+	xmlns:dt='uuid:C2F41010-65B3-11d1-A29F-00AA00C14882'
+	xmlns:rs='urn:schemas-microsoft-com:rowset'
+	xmlns:z='#RowsetSchema'>
+<s:Schema id='RowsetSchema'>
+	<s:ElementType name='row' content='eltOnly' rs:CommandTimeout='120' rs:updatable='true' rs:ReshapeName='Rates'>
+		<s:AttributeType name='DiscountRate' rs:number='1' rs:nullable='true'>
+			<s:datatype dt:type='number' rs:dbtype='numeric' dt:maxLength='19' rs:scale='4' rs:precision='9' rs:fixedlength='true'/>
+		</s:AttributeType>
+		<s:AttributeType name='TaxRate' rs:number='2' rs:nullable='true'>
+			<s:datatype dt:type='number' rs:dbtype='numeric' dt:maxLength='19' rs:scale='4' rs:precision='9' rs:fixedlength='true'/>
+		</s:AttributeType>
+		<s:ElementType name='DiscountLines' content='eltOnly' rs:CommandTimeout='120' rs:updatable='true' rs:ReshapeName='DiscountLines'
+		 rs:relation='010000000100000000000000'>
+			<s:AttributeType name='DiscountRate' rs:number='1' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesOrderLines' rs:basecolumn='DiscountRate'>
+				<s:datatype dt:type='number' rs:dbtype='numeric' dt:maxLength='19' rs:scale='4' rs:precision='9' rs:fixedlength='true'
+				 rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='LineId' rs:number='2' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesOrderLines' rs:basecolumn='LineId' rs:keycolumn='true'>
+				<s:datatype dt:type='i8' dt:maxLength='8' rs:precision='19' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='OrderId' rs:number='3' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesOrderLines' rs:basecolumn='OrderId'>
+				<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='LineNumber' rs:number='4' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesOrderLines' rs:basecolumn='LineNumber'>
+				<s:datatype dt:type='i2' dt:maxLength='2' rs:precision='5' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='Quantity' rs:number='5' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesOrderLines' rs:basecolumn='Quantity'>
+				<s:datatype dt:type='i2' dt:maxLength='2' rs:precision='5' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:extends type='rs:rowbase'/>
+		</s:ElementType>
+		<s:ElementType name='TaxLines' content='eltOnly' rs:CommandTimeout='120' rs:updatable='true' rs:ReshapeName='TaxLines'
+		 rs:relation='020000000100000000000000'>
+			<s:AttributeType name='TaxRate' rs:number='1' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesOrderLines' rs:basecolumn='TaxRate'>
+				<s:datatype dt:type='number' rs:dbtype='numeric' dt:maxLength='19' rs:scale='4' rs:precision='9' rs:fixedlength='true'
+				 rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='LineId' rs:number='2' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesOrderLines' rs:basecolumn='LineId' rs:keycolumn='true'>
+				<s:datatype dt:type='i8' dt:maxLength='8' rs:precision='19' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='OrderId' rs:number='3' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesOrderLines' rs:basecolumn='OrderId'>
+				<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='LineNumber' rs:number='4' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesOrderLines' rs:basecolumn='LineNumber'>
+				<s:datatype dt:type='i2' dt:maxLength='2' rs:precision='5' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='Quantity' rs:number='5' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesOrderLines' rs:basecolumn='Quantity'>
+				<s:datatype dt:type='i2' dt:maxLength='2' rs:precision='5' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:extends type='rs:rowbase'/>
+		</s:ElementType>
+		<s:extends type='rs:rowbase'/>
+	</s:ElementType>
+</s:Schema>
+<rs:data>
+	<z:row DiscountRate='.0000' TaxRate='.0000'>
+		<DiscountLines DiscountRate='.0000' LineId='1000011' OrderId='100001' LineNumber='1' Quantity='4'/>
+		<DiscountLines DiscountRate='.0000' LineId='1000053' OrderId='100005' LineNumber='3' Quantity='1'/>
+		<DiscountLines DiscountRate='.0000' LineId='1000062' OrderId='100006' LineNumber='2' Quantity='1'/>
+		<TaxLines TaxRate='.0000' LineId='1000093' OrderId='100009' LineNumber='3' Quantity='5'/>
+		<TaxLines TaxRate='.0000' LineId='1000102' OrderId='100010' LineNumber='2' Quantity='5'/>
+		<TaxLines TaxRate='.0000' LineId='1000111' OrderId='100011' LineNumber='1' Quantity='5'/>
+	</z:row>
+	<z:row DiscountRate='.0100' TaxRate='.0100'>
+		<DiscountLines DiscountRate='.0100' LineId='1000012' OrderId='100001' LineNumber='2' Quantity='5'/>
+		<DiscountLines DiscountRate='.0100' LineId='1000021' OrderId='100002' LineNumber='1' Quantity='5'/>
+		<DiscountLines DiscountRate='.0100' LineId='1000063' OrderId='100006' LineNumber='3' Quantity='2'/>
+		<TaxLines TaxRate='.0100' LineId='1000011' OrderId='100001' LineNumber='1' Quantity='4'/>
+		<TaxLines TaxRate='.0100' LineId='1000103' OrderId='100010' LineNumber='3' Quantity='6'/>
+		<TaxLines TaxRate='.0100' LineId='1000112' OrderId='100011' LineNumber='2' Quantity='6'/>
+	</z:row>
+	<z:row DiscountRate='.0200' TaxRate='.0200'>
+		<DiscountLines DiscountRate='.0200' LineId='1000013' OrderId='100001' LineNumber='3' Quantity='6'/>
+		<DiscountLines DiscountRate='.0200' LineId='1000022' OrderId='100002' LineNumber='2' Quantity='6'/>
+		<DiscountLines DiscountRate='.0200' LineId='1000031' OrderId='100003' LineNumber='1' Quantity='6'/>
+		<TaxLines TaxRate='.0200' LineId='1000012' OrderId='100001' LineNumber='2' Quantity='5'/>
+		<TaxLines TaxRate='.0200' LineId='1000021' OrderId='100002' LineNumber='1' Quantity='5'/>
+		<TaxLines TaxRate='.0200' LineId='1000113' OrderId='100011' LineNumber='3' Quantity='7'/>
+	</z:row>
+</rs:data>
+</xml>

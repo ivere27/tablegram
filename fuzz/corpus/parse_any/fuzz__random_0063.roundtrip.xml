@@ -1,0 +1,35 @@
+<xml xmlns:s='uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882'
+	xmlns:dt='uuid:C2F41010-65B3-11d1-A29F-00AA00C14882'
+	xmlns:rs='urn:schemas-microsoft-com:rowset'
+	xmlns:z='#RowsetSchema'>
+<s:Schema id='RowsetSchema'>
+	<s:ElementType name='row' content='eltOnly' rs:updatable='true'>
+		<s:AttributeType name='ID' rs:number='1' rs:write='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='F1_DBDate' rs:number='2' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='F2_Integer' rs:number='3' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='F3_DBDate' rs:number='4' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='F4_WChar' rs:number='5' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='string' dt:maxLength='12' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='F5_VarChar' rs:number='6' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='80' rs:precision='0' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:extends type='rs:rowbase'/>
+	</s:ElementType>
+</s:Schema>
+<rs:data>
+	<z:row ID='1' F1_DBDate='2001-02-02' F2_Integer='100' F3_DBDate='2001-02-02' F4_WChar='r1p0        ' F5_VarChar='r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;'/>
+	<z:row ID='2' F1_DBDate='2002-03-03' F2_Integer='200' F3_DBDate='2002-03-03' F4_WChar='r2p0        ' F5_VarChar='r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;'/>
+	<z:row ID='3' F1_DBDate='2003-04-04' F2_Integer='300' F3_DBDate='2003-04-04' F4_WChar='r3p0        ' F5_VarChar='r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;'/>
+	<z:row ID='4' F1_DBDate='2004-05-05' F2_Integer='400' F3_DBDate='2004-05-05' F4_WChar='r4p0        ' F5_VarChar='r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;'/>
+	<z:row ID='5' F1_DBDate='2005-06-06' F2_Integer='500' F3_DBDate='2005-06-06' F4_WChar='r5p0        ' F5_VarChar='r5_p0_한글_&#x3c;&#x26;&#x27;&#x3e;'/>
+</rs:data>
+</xml>

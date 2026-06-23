@@ -1,0 +1,21 @@
+<xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"
+     xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+     xmlns:rs="urn:schemas-microsoft-com:rowset"
+     xmlns:z="#RowsetSchema">
+  <s:Schema id="RowsetSchema">
+    <s:ElementType name="row" content="eltOnly">
+      <s:AttributeType name="ID" dt:type="int"/>
+      <s:AttributeType name="FIXED_14_4" dt:type="fixed.14.4" rs:maybenull="true"/>
+      <s:AttributeType name="CURRENCY_ALIAS" dt:type="currency" rs:maybenull="true"/>
+      <s:AttributeType name="DECIMAL_ALIAS" dt:type="decimal" rs:maybenull="true"/>
+      <s:AttributeType name="NUMBER_DB_CURRENCY" dt:type="number" rs:dbtype="currency" rs:maybenull="true"/>
+      <s:AttributeType name="NUMBER_DB_DECIMAL" dt:type="number" rs:dbtype="decimal" rs:maybenull="true"/>
+      <s:AttributeType name="NUMBER_DB_NUMERIC" dt:type="number" rs:dbtype="numeric" rs:precision="18" rs:scale="4" rs:maybenull="true"/>
+      <s:Extends type="rs:rowbase"/>
+    </s:ElementType>
+  </s:Schema>
+  <rs:data>
+    <z:row ID="1" FIXED_14_4="1000.1234" CURRENCY_ALIAS="2000.5678" DECIMAL_ALIAS="3000.25" NUMBER_DB_CURRENCY="4000.1250" NUMBER_DB_DECIMAL="5000.50" NUMBER_DB_NUMERIC="6000.75"/>
+    <z:row ID="2"/>
+  </rs:data>
+</xml>

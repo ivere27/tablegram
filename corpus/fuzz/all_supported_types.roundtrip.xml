@@ -1,0 +1,166 @@
+<xml xmlns:s='uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882'
+	xmlns:dt='uuid:C2F41010-65B3-11d1-A29F-00AA00C14882'
+	xmlns:rs='urn:schemas-microsoft-com:rowset'
+	xmlns:z='#RowsetSchema'>
+<s:Schema id='RowsetSchema'>
+	<s:ElementType name='row' content='eltOnly' rs:updatable='true'>
+		<s:AttributeType name='ID' rs:number='1' rs:write='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='ALL_01_TinyInt' rs:number='2' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='ALL_02_UnsignedTinyInt' rs:number='3' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='ui1' dt:maxLength='1' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='ALL_03_SmallInt' rs:number='4' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i2' dt:maxLength='2' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='ALL_04_UnsignedSmallInt' rs:number='5' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='ui2' dt:maxLength='2' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='ALL_05_Integer' rs:number='6' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='ALL_06_UnsignedInt' rs:number='7' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='ui4' dt:maxLength='4' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='ALL_07_BigInt' rs:number='8' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i8' dt:maxLength='8' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='ALL_08_UnsignedBigInt' rs:number='9' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='ui8' dt:maxLength='8' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='ALL_09_Single' rs:number='10' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='r4' dt:maxLength='4' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='ALL_10_Double' rs:number='11' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='float' dt:maxLength='8' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='ALL_11_Currency' rs:number='12' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='number' rs:dbtype='currency' dt:maxLength='8' rs:precision='0' rs:fixedlength='true'
+			 rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='ALL_12_Boolean' rs:number='13' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='boolean' dt:maxLength='2' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='ALL_13_Date' rs:number='14' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='dateTime' rs:dbtype='variantdate' dt:maxLength='16' rs:precision='0' rs:fixedlength='true'
+			 rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='ALL_14_DBDate' rs:number='15' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='date' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='ALL_15_DBTime' rs:number='16' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='time' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='ALL_16_DBTimeStamp' rs:number='17' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='dateTime' rs:dbtype='timestamp' dt:maxLength='16' rs:scale='0' rs:precision='0' rs:fixedlength='true'
+			 rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='ALL_17_FileTime' rs:number='18' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='dateTime' rs:dbtype='filetime' dt:maxLength='16' rs:precision='0' rs:fixedlength='true'
+			 rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='ALL_18_GUID' rs:number='19' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='uuid' dt:maxLength='16' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='ALL_19_BSTR' rs:number='20' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='string' dt:maxLength='4294967295' rs:precision='0' rs:long='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='ALL_20_Char' rs:number='21' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='12' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='ALL_21_WChar' rs:number='22' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='string' dt:maxLength='12' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='ALL_22_VarChar' rs:number='23' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='120' rs:precision='0' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='ALL_23_VarWChar' rs:number='24' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='string' dt:maxLength='120' rs:precision='0' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='ALL_24_LongVarChar' rs:number='25' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='2000' rs:precision='0' rs:long='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='ALL_25_LongVarWChar' rs:number='26' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='string' dt:maxLength='2000' rs:precision='0' rs:long='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='ALL_26_Binary' rs:number='27' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='bin.hex' dt:maxLength='8' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='ALL_27_VarBinary' rs:number='28' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='bin.hex' dt:maxLength='16' rs:precision='0' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='ALL_28_LongVarBinary' rs:number='29' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='bin.hex' dt:maxLength='2000' rs:precision='0' rs:long='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='ALL_29_Numeric' rs:number='30' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='number' rs:dbtype='numeric' dt:maxLength='19' rs:scale='4' rs:precision='18' rs:fixedlength='true'
+			 rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='ALL_30_Decimal' rs:number='31' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='number' rs:dbtype='decimal' dt:maxLength='16' rs:scale='4' rs:precision='18' rs:fixedlength='true'
+			 rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:extends type='rs:rowbase'/>
+	</s:ElementType>
+</s:Schema>
+<rs:data>
+	<rs:update>
+		<rs:original>
+			<z:row ID='1' ALL_01_TinyInt='1' ALL_02_UnsignedTinyInt='1' ALL_03_SmallInt='100' ALL_04_UnsignedSmallInt='100'
+				 ALL_05_Integer='100' ALL_06_UnsignedInt='100' ALL_07_BigInt='100' ALL_08_UnsignedBigInt='100' ALL_09_Single='1.125'
+				 ALL_11_Currency='1000.1234' ALL_12_Boolean='False' ALL_13_Date='2001-02-02T01:03:00' ALL_14_DBDate='2001-02-02'
+				 ALL_15_DBTime='01:03:00' ALL_16_DBTimeStamp='2001-02-02T01:03:00' ALL_17_FileTime='2001-02-02T01:03:00' ALL_18_GUID='{00000000-0000-0000-0000-000000001000}'
+				 ALL_19_BSTR='r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;' ALL_20_Char='r1p0        ' ALL_22_VarChar='r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;'
+				 ALL_23_VarWChar='r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;' ALL_24_LongVarChar='r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_1 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_2 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_3 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_4 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_5 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_6 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_7 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_8 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_9 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_10 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_11 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_12 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_13 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_14 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_15 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_16 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_17 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_18 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_19 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_20 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_21 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_22 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_23 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_24 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_25 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_26 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_27 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_28 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_29 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_30 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_31 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_32 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_33 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_34 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_35 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_36 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_37 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_38 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_39 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_40 '
+				 ALL_25_LongVarWChar='r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_1 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_2 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_3 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_4 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_5 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_6 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_7 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_8 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_9 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_10 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_11 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_12 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_13 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_14 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_15 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_16 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_17 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_18 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_19 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_20 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_21 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_22 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_23 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_24 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_25 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_26 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_27 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_28 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_29 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_30 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_31 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_32 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_33 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_34 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_35 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_36 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_37 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_38 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_39 r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_40 '
+				 ALL_26_Binary='0100dead00000000' ALL_27_VarBinary='0100dead' ALL_28_LongVarBinary='deadbeef010000010203' ALL_29_Numeric='1000.1234'
+				 ALL_30_Decimal='1000.1234'/>
+		</rs:original>
+		<z:row ID='1' ALL_01_TinyInt='2' ALL_03_SmallInt='101' ALL_05_Integer='101' ALL_07_BigInt='101' ALL_11_Currency='1001.1234'
+			 ALL_13_Date='2001-03-03T02:03:07' ALL_15_DBTime='02:03:07' ALL_17_FileTime='2001-03-03T02:03:07' ALL_19_BSTR='r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;'
+			 ALL_21_WChar='r1p1        ' ALL_23_VarWChar='r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;' ALL_25_LongVarWChar='r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_1 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_2 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_3 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_4 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_5 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_6 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_7 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_8 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_9 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_10 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_11 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_12 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_13 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_14 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_15 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_16 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_17 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_18 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_19 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_20 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_21 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_22 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_23 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_24 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_25 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_26 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_27 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_28 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_29 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_30 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_31 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_32 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_33 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_34 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_35 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_36 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_37 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_38 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_39 r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;_40 '
+			 ALL_27_VarBinary='0101dead' ALL_29_Numeric='1001.1234' rs:forcenull='ALL_09_Single'/>
+	</rs:update>
+	<z:row ID='3' ALL_01_TinyInt='3' ALL_02_UnsignedTinyInt='3' ALL_03_SmallInt='300' ALL_04_UnsignedSmallInt='300'
+		 ALL_05_Integer='300' ALL_06_UnsignedInt='300' ALL_07_BigInt='300' ALL_09_Single='3.125' ALL_10_Double='3.125'
+		 ALL_11_Currency='3000.1234' ALL_12_Boolean='False' ALL_13_Date='2003-04-04T03:09:00' ALL_14_DBDate='2003-04-04'
+		 ALL_15_DBTime='03:09:00' ALL_16_DBTimeStamp='2003-04-04T03:09:00' ALL_17_FileTime='2003-04-04T03:09:00' ALL_18_GUID='{00000000-0000-0000-0000-000000003000}'
+		 ALL_20_Char='r3p0        ' ALL_21_WChar='r3p0        ' ALL_22_VarChar='r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;'
+		 ALL_23_VarWChar='r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;' ALL_24_LongVarChar='r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_1 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_2 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_3 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_4 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_5 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_6 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_7 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_8 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_9 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_10 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_11 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_12 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_13 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_14 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_15 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_16 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_17 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_18 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_19 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_20 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_21 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_22 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_23 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_24 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_25 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_26 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_27 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_28 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_29 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_30 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_31 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_32 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_33 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_34 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_35 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_36 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_37 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_38 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_39 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_40 '
+		 ALL_25_LongVarWChar='r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_1 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_2 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_3 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_4 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_5 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_6 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_7 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_8 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_9 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_10 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_11 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_12 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_13 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_14 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_15 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_16 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_17 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_18 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_19 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_20 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_21 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_22 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_23 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_24 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_25 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_26 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_27 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_28 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_29 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_30 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_31 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_32 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_33 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_34 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_35 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_36 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_37 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_38 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_39 r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_40 '
+		 ALL_26_Binary='0300dead00000000' ALL_27_VarBinary='0300dead' ALL_28_LongVarBinary='deadbeef030000010203' ALL_29_Numeric='3000.1234'/>
+	<z:row ID='4' ALL_01_TinyInt='4' ALL_02_UnsignedTinyInt='4' ALL_03_SmallInt='400' ALL_04_UnsignedSmallInt='400'
+		 ALL_05_Integer='400' ALL_06_UnsignedInt='400' ALL_08_UnsignedBigInt='400' ALL_09_Single='4.125' ALL_10_Double='4.125'
+		 ALL_11_Currency='4000.1234' ALL_12_Boolean='True' ALL_13_Date='2004-05-05T04:12:00' ALL_14_DBDate='2004-05-05'
+		 ALL_15_DBTime='04:12:00' ALL_16_DBTimeStamp='2004-05-05T04:12:00' ALL_17_FileTime='2004-05-05T04:12:00' ALL_19_BSTR='r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;'
+		 ALL_20_Char='r4p0        ' ALL_21_WChar='r4p0        ' ALL_22_VarChar='r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;'
+		 ALL_23_VarWChar='r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;' ALL_24_LongVarChar='r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_1 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_2 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_3 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_4 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_5 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_6 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_7 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_8 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_9 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_10 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_11 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_12 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_13 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_14 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_15 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_16 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_17 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_18 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_19 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_20 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_21 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_22 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_23 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_24 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_25 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_26 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_27 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_28 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_29 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_30 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_31 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_32 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_33 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_34 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_35 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_36 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_37 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_38 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_39 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_40 '
+		 ALL_25_LongVarWChar='r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_1 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_2 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_3 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_4 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_5 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_6 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_7 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_8 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_9 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_10 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_11 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_12 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_13 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_14 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_15 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_16 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_17 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_18 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_19 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_20 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_21 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_22 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_23 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_24 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_25 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_26 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_27 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_28 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_29 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_30 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_31 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_32 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_33 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_34 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_35 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_36 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_37 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_38 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_39 r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_40 '
+		 ALL_26_Binary='0400dead00000000' ALL_27_VarBinary='0400dead' ALL_28_LongVarBinary='deadbeef040000010203' ALL_30_Decimal='4000.1234'/>
+	<rs:insert>
+		<z:row ID='5' ALL_01_TinyInt='7' ALL_02_UnsignedTinyInt='7' ALL_03_SmallInt='502' ALL_05_Integer='502' ALL_06_UnsignedInt='502'
+			 ALL_07_BigInt='502' ALL_08_UnsignedBigInt='502' ALL_09_Single='5.3249998' ALL_10_Double='5.3250000000000002'
+			 ALL_11_Currency='5002.1234' ALL_12_Boolean='False' ALL_13_Date='2005-08-08T07:15:14' ALL_14_DBDate='2005-08-08'
+			 ALL_16_DBTimeStamp='2005-08-08T07:15:14' ALL_17_FileTime='2005-08-08T07:15:14' ALL_18_GUID='{00000000-0000-0000-0000-000000005002}'
+			 ALL_19_BSTR='r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;' ALL_20_Char='r5p2        ' ALL_21_WChar='r5p2        ' ALL_22_VarChar='r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;'
+			 ALL_23_VarWChar='r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;' ALL_24_LongVarChar='r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_1 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_2 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_3 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_4 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_5 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_6 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_7 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_8 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_9 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_10 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_11 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_12 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_13 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_14 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_15 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_16 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_17 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_18 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_19 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_20 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_21 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_22 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_23 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_24 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_25 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_26 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_27 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_28 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_29 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_30 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_31 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_32 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_33 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_34 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_35 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_36 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_37 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_38 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_39 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_40 '
+			 ALL_25_LongVarWChar='r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_1 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_2 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_3 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_4 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_5 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_6 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_7 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_8 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_9 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_10 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_11 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_12 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_13 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_14 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_15 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_16 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_17 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_18 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_19 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_20 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_21 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_22 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_23 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_24 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_25 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_26 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_27 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_28 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_29 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_30 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_31 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_32 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_33 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_34 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_35 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_36 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_37 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_38 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_39 r5_p2_한글_&#x3c;&#x26;&#x27;&#x3e;_40 '
+			 ALL_27_VarBinary='0502dead' ALL_28_LongVarBinary='deadbeef050200010203' ALL_29_Numeric='5002.1234' ALL_30_Decimal='5002.1234'
+			 rs:forcenull='ALL_04_UnsignedSmallInt ALL_15_DBTime ALL_26_Binary'/>
+	</rs:insert>
+	<rs:delete>
+		<z:row ID='2' ALL_01_TinyInt='2' ALL_02_UnsignedTinyInt='2' ALL_03_SmallInt='200' ALL_04_UnsignedSmallInt='200'
+			 ALL_05_Integer='200' ALL_06_UnsignedInt='200' ALL_07_BigInt='200' ALL_08_UnsignedBigInt='200' ALL_10_Double='2.125'
+			 ALL_11_Currency='2000.1234' ALL_12_Boolean='True' ALL_13_Date='2002-03-03T02:06:00' ALL_14_DBDate='2002-03-03'
+			 ALL_15_DBTime='02:06:00' ALL_16_DBTimeStamp='2002-03-03T02:06:00' ALL_17_FileTime='2002-03-03T02:06:00' ALL_18_GUID='{00000000-0000-0000-0000-000000002000}'
+			 ALL_19_BSTR='r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;' ALL_21_WChar='r2p0        ' ALL_22_VarChar='r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;'
+			 ALL_23_VarWChar='r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;' ALL_24_LongVarChar='r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_1 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_2 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_3 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_4 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_5 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_6 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_7 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_8 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_9 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_10 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_11 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_12 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_13 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_14 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_15 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_16 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_17 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_18 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_19 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_20 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_21 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_22 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_23 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_24 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_25 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_26 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_27 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_28 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_29 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_30 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_31 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_32 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_33 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_34 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_35 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_36 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_37 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_38 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_39 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_40 '
+			 ALL_25_LongVarWChar='r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_1 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_2 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_3 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_4 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_5 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_6 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_7 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_8 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_9 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_10 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_11 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_12 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_13 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_14 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_15 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_16 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_17 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_18 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_19 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_20 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_21 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_22 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_23 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_24 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_25 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_26 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_27 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_28 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_29 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_30 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_31 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_32 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_33 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_34 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_35 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_36 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_37 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_38 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_39 r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;_40 '
+			 ALL_26_Binary='0200dead00000000' ALL_27_VarBinary='0200dead' ALL_28_LongVarBinary='deadbeef020000010203' ALL_29_Numeric='2000.1234'
+			 ALL_30_Decimal='2000.1234'/>
+	</rs:delete>
+</rs:data>
+</xml>

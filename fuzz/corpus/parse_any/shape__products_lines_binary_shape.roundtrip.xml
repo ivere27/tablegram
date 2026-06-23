@@ -1,0 +1,152 @@
+<xml xmlns:s='uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882'
+	xmlns:dt='uuid:C2F41010-65B3-11d1-A29F-00AA00C14882'
+	xmlns:rs='urn:schemas-microsoft-com:rowset'
+	xmlns:z='#RowsetSchema'>
+<s:Schema id='RowsetSchema'>
+	<s:ElementType name='row' content='eltOnly' rs:CommandTimeout='120' rs:updatable='true' rs:ReshapeName='Products'>
+		<s:AttributeType name='ProductId' rs:number='1' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+			 rs:basetable='SalesProducts' rs:basecolumn='ProductId' rs:keycolumn='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='ProductSku' rs:number='2' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+			 rs:baseschema='dbo' rs:basetable='SalesProducts' rs:basecolumn='ProductSku'>
+			<s:datatype dt:type='bin.hex' dt:maxLength='8' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='ProductName' rs:number='3' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+			 rs:baseschema='dbo' rs:basetable='SalesProducts' rs:basecolumn='ProductName'>
+			<s:datatype dt:type='string' dt:maxLength='100' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:ElementType name='Lines' content='eltOnly' rs:CommandTimeout='120' rs:updatable='true' rs:ReshapeName='Lines'
+		 rs:relation='020000000100000000000000'>
+			<s:AttributeType name='ProductSku' rs:number='1' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesProducts' rs:basecolumn='ProductSku'>
+				<s:datatype dt:type='bin.hex' dt:maxLength='8' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='LineId' rs:number='2' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesOrderLines' rs:basecolumn='LineId' rs:keycolumn='true'>
+				<s:datatype dt:type='i8' dt:maxLength='8' rs:precision='19' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='OrderId' rs:number='3' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesOrderLines' rs:basecolumn='OrderId'>
+				<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='Quantity' rs:number='4' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesOrderLines' rs:basecolumn='Quantity'>
+				<s:datatype dt:type='i2' dt:maxLength='2' rs:precision='5' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='ProductId' rs:number='5' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesProducts' rs:basecolumn='ProductId' rs:keycolumn='true' rs:hidden='true'>
+				<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:extends type='rs:rowbase'/>
+		</s:ElementType>
+		<s:extends type='rs:rowbase'/>
+	</s:ElementType>
+</s:Schema>
+<rs:data>
+	<z:row ProductId='1' ProductSku='0001000100000000' ProductName='Product 1 혼합'>
+		<Lines ProductSku='0001000100000000' LineId='1000173' OrderId='100017' Quantity='4' ProductId='1'/>
+		<Lines ProductSku='0001000100000000' LineId='1000182' OrderId='100018' Quantity='4' ProductId='1'/>
+		<Lines ProductSku='0001000100000000' LineId='1000191' OrderId='100019' Quantity='4' ProductId='1'/>
+		<Lines ProductSku='0001000100000000' LineId='1000473' OrderId='100047' Quantity='7' ProductId='1'/>
+		<Lines ProductSku='0001000100000000' LineId='1000482' OrderId='100048' Quantity='7' ProductId='1'/>
+		<Lines ProductSku='0001000100000000' LineId='1000491' OrderId='100049' Quantity='7' ProductId='1'/>
+		<Lines ProductSku='0001000100000000' LineId='1000773' OrderId='100077' Quantity='1' ProductId='1'/>
+		<Lines ProductSku='0001000100000000' LineId='1000782' OrderId='100078' Quantity='1' ProductId='1'/>
+		<Lines ProductSku='0001000100000000' LineId='1000791' OrderId='100079' Quantity='1' ProductId='1'/>
+		<Lines ProductSku='0001000100000000' LineId='1001073' OrderId='100107' Quantity='4' ProductId='1'/>
+		<Lines ProductSku='0001000100000000' LineId='1001082' OrderId='100108' Quantity='4' ProductId='1'/>
+		<Lines ProductSku='0001000100000000' LineId='1001091' OrderId='100109' Quantity='4' ProductId='1'/>
+		<Lines ProductSku='0001000100000000' LineId='1001373' OrderId='100137' Quantity='7' ProductId='1'/>
+		<Lines ProductSku='0001000100000000' LineId='1001382' OrderId='100138' Quantity='7' ProductId='1'/>
+		<Lines ProductSku='0001000100000000' LineId='1001391' OrderId='100139' Quantity='7' ProductId='1'/>
+		<Lines ProductSku='0001000100000000' LineId='1001673' OrderId='100167' Quantity='1' ProductId='1'/>
+		<Lines ProductSku='0001000100000000' LineId='1001682' OrderId='100168' Quantity='1' ProductId='1'/>
+		<Lines ProductSku='0001000100000000' LineId='1001691' OrderId='100169' Quantity='1' ProductId='1'/>
+		<Lines ProductSku='0001000100000000' LineId='1001973' OrderId='100197' Quantity='4' ProductId='1'/>
+		<Lines ProductSku='0001000100000000' LineId='1001982' OrderId='100198' Quantity='4' ProductId='1'/>
+		<Lines ProductSku='0001000100000000' LineId='1001991' OrderId='100199' Quantity='4' ProductId='1'/>
+		<Lines ProductSku='0001000100000000' LineId='1002273' OrderId='100227' Quantity='7' ProductId='1'/>
+		<Lines ProductSku='0001000100000000' LineId='1002282' OrderId='100228' Quantity='7' ProductId='1'/>
+		<Lines ProductSku='0001000100000000' LineId='1002291' OrderId='100229' Quantity='7' ProductId='1'/>
+	</z:row>
+	<z:row ProductId='2' ProductSku='0002000200000000' ProductName='Product 2 혼합'>
+		<Lines ProductSku='0002000200000000' LineId='1000183' OrderId='100018' Quantity='5' ProductId='2'/>
+		<Lines ProductSku='0002000200000000' LineId='1000192' OrderId='100019' Quantity='5' ProductId='2'/>
+		<Lines ProductSku='0002000200000000' LineId='1000201' OrderId='100020' Quantity='5' ProductId='2'/>
+		<Lines ProductSku='0002000200000000' LineId='1000483' OrderId='100048' Quantity='8' ProductId='2'/>
+		<Lines ProductSku='0002000200000000' LineId='1000492' OrderId='100049' Quantity='8' ProductId='2'/>
+		<Lines ProductSku='0002000200000000' LineId='1000501' OrderId='100050' Quantity='8' ProductId='2'/>
+		<Lines ProductSku='0002000200000000' LineId='1000783' OrderId='100078' Quantity='2' ProductId='2'/>
+		<Lines ProductSku='0002000200000000' LineId='1000792' OrderId='100079' Quantity='2' ProductId='2'/>
+		<Lines ProductSku='0002000200000000' LineId='1000801' OrderId='100080' Quantity='2' ProductId='2'/>
+		<Lines ProductSku='0002000200000000' LineId='1001083' OrderId='100108' Quantity='5' ProductId='2'/>
+		<Lines ProductSku='0002000200000000' LineId='1001092' OrderId='100109' Quantity='5' ProductId='2'/>
+		<Lines ProductSku='0002000200000000' LineId='1001101' OrderId='100110' Quantity='5' ProductId='2'/>
+		<Lines ProductSku='0002000200000000' LineId='1001383' OrderId='100138' Quantity='8' ProductId='2'/>
+		<Lines ProductSku='0002000200000000' LineId='1001392' OrderId='100139' Quantity='8' ProductId='2'/>
+		<Lines ProductSku='0002000200000000' LineId='1001401' OrderId='100140' Quantity='8' ProductId='2'/>
+		<Lines ProductSku='0002000200000000' LineId='1001683' OrderId='100168' Quantity='2' ProductId='2'/>
+		<Lines ProductSku='0002000200000000' LineId='1001692' OrderId='100169' Quantity='2' ProductId='2'/>
+		<Lines ProductSku='0002000200000000' LineId='1001701' OrderId='100170' Quantity='2' ProductId='2'/>
+		<Lines ProductSku='0002000200000000' LineId='1001983' OrderId='100198' Quantity='5' ProductId='2'/>
+		<Lines ProductSku='0002000200000000' LineId='1001992' OrderId='100199' Quantity='5' ProductId='2'/>
+		<Lines ProductSku='0002000200000000' LineId='1002001' OrderId='100200' Quantity='5' ProductId='2'/>
+		<Lines ProductSku='0002000200000000' LineId='1002283' OrderId='100228' Quantity='8' ProductId='2'/>
+		<Lines ProductSku='0002000200000000' LineId='1002292' OrderId='100229' Quantity='8' ProductId='2'/>
+		<Lines ProductSku='0002000200000000' LineId='1002301' OrderId='100230' Quantity='8' ProductId='2'/>
+	</z:row>
+	<z:row ProductId='3' ProductSku='0003000300000000' ProductName='Product 3 혼합'>
+		<Lines ProductSku='0003000300000000' LineId='1000193' OrderId='100019' Quantity='6' ProductId='3'/>
+		<Lines ProductSku='0003000300000000' LineId='1000202' OrderId='100020' Quantity='6' ProductId='3'/>
+		<Lines ProductSku='0003000300000000' LineId='1000211' OrderId='100021' Quantity='6' ProductId='3'/>
+		<Lines ProductSku='0003000300000000' LineId='1000493' OrderId='100049' Quantity='9' ProductId='3'/>
+		<Lines ProductSku='0003000300000000' LineId='1000502' OrderId='100050' Quantity='9' ProductId='3'/>
+		<Lines ProductSku='0003000300000000' LineId='1000511' OrderId='100051' Quantity='9' ProductId='3'/>
+		<Lines ProductSku='0003000300000000' LineId='1000793' OrderId='100079' Quantity='3' ProductId='3'/>
+		<Lines ProductSku='0003000300000000' LineId='1000802' OrderId='100080' Quantity='3' ProductId='3'/>
+		<Lines ProductSku='0003000300000000' LineId='1000811' OrderId='100081' Quantity='3' ProductId='3'/>
+		<Lines ProductSku='0003000300000000' LineId='1001093' OrderId='100109' Quantity='6' ProductId='3'/>
+		<Lines ProductSku='0003000300000000' LineId='1001102' OrderId='100110' Quantity='6' ProductId='3'/>
+		<Lines ProductSku='0003000300000000' LineId='1001111' OrderId='100111' Quantity='6' ProductId='3'/>
+		<Lines ProductSku='0003000300000000' LineId='1001393' OrderId='100139' Quantity='9' ProductId='3'/>
+		<Lines ProductSku='0003000300000000' LineId='1001402' OrderId='100140' Quantity='9' ProductId='3'/>
+		<Lines ProductSku='0003000300000000' LineId='1001411' OrderId='100141' Quantity='9' ProductId='3'/>
+		<Lines ProductSku='0003000300000000' LineId='1001693' OrderId='100169' Quantity='3' ProductId='3'/>
+		<Lines ProductSku='0003000300000000' LineId='1001702' OrderId='100170' Quantity='3' ProductId='3'/>
+		<Lines ProductSku='0003000300000000' LineId='1001711' OrderId='100171' Quantity='3' ProductId='3'/>
+		<Lines ProductSku='0003000300000000' LineId='1001993' OrderId='100199' Quantity='6' ProductId='3'/>
+		<Lines ProductSku='0003000300000000' LineId='1002002' OrderId='100200' Quantity='6' ProductId='3'/>
+		<Lines ProductSku='0003000300000000' LineId='1002011' OrderId='100201' Quantity='6' ProductId='3'/>
+		<Lines ProductSku='0003000300000000' LineId='1002293' OrderId='100229' Quantity='9' ProductId='3'/>
+		<Lines ProductSku='0003000300000000' LineId='1002302' OrderId='100230' Quantity='9' ProductId='3'/>
+		<Lines ProductSku='0003000300000000' LineId='1002311' OrderId='100231' Quantity='9' ProductId='3'/>
+	</z:row>
+	<z:row ProductId='4' ProductSku='0004000400000000' ProductName='Product 4 혼합'>
+		<Lines ProductSku='0004000400000000' LineId='1000203' OrderId='100020' Quantity='7' ProductId='4'/>
+		<Lines ProductSku='0004000400000000' LineId='1000212' OrderId='100021' Quantity='7' ProductId='4'/>
+		<Lines ProductSku='0004000400000000' LineId='1000221' OrderId='100022' Quantity='7' ProductId='4'/>
+		<Lines ProductSku='0004000400000000' LineId='1000503' OrderId='100050' Quantity='1' ProductId='4'/>
+		<Lines ProductSku='0004000400000000' LineId='1000512' OrderId='100051' Quantity='1' ProductId='4'/>
+		<Lines ProductSku='0004000400000000' LineId='1000521' OrderId='100052' Quantity='1' ProductId='4'/>
+		<Lines ProductSku='0004000400000000' LineId='1000803' OrderId='100080' Quantity='4' ProductId='4'/>
+		<Lines ProductSku='0004000400000000' LineId='1000812' OrderId='100081' Quantity='4' ProductId='4'/>
+		<Lines ProductSku='0004000400000000' LineId='1000821' OrderId='100082' Quantity='4' ProductId='4'/>
+		<Lines ProductSku='0004000400000000' LineId='1001103' OrderId='100110' Quantity='7' ProductId='4'/>
+		<Lines ProductSku='0004000400000000' LineId='1001112' OrderId='100111' Quantity='7' ProductId='4'/>
+		<Lines ProductSku='0004000400000000' LineId='1001121' OrderId='100112' Quantity='7' ProductId='4'/>
+		<Lines ProductSku='0004000400000000' LineId='1001403' OrderId='100140' Quantity='1' ProductId='4'/>
+		<Lines ProductSku='0004000400000000' LineId='1001412' OrderId='100141' Quantity='1' ProductId='4'/>
+		<Lines ProductSku='0004000400000000' LineId='1001421' OrderId='100142' Quantity='1' ProductId='4'/>
+		<Lines ProductSku='0004000400000000' LineId='1001703' OrderId='100170' Quantity='4' ProductId='4'/>
+		<Lines ProductSku='0004000400000000' LineId='1001712' OrderId='100171' Quantity='4' ProductId='4'/>
+		<Lines ProductSku='0004000400000000' LineId='1001721' OrderId='100172' Quantity='4' ProductId='4'/>
+		<Lines ProductSku='0004000400000000' LineId='1002003' OrderId='100200' Quantity='7' ProductId='4'/>
+		<Lines ProductSku='0004000400000000' LineId='1002012' OrderId='100201' Quantity='7' ProductId='4'/>
+		<Lines ProductSku='0004000400000000' LineId='1002021' OrderId='100202' Quantity='7' ProductId='4'/>
+		<Lines ProductSku='0004000400000000' LineId='1002303' OrderId='100230' Quantity='1' ProductId='4'/>
+		<Lines ProductSku='0004000400000000' LineId='1002312' OrderId='100231' Quantity='1' ProductId='4'/>
+		<Lines ProductSku='0004000400000000' LineId='1002321' OrderId='100232' Quantity='1' ProductId='4'/>
+	</z:row>
+</rs:data>
+</xml>

@@ -1,0 +1,125 @@
+<xml xmlns:s='uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882'
+	xmlns:dt='uuid:C2F41010-65B3-11d1-A29F-00AA00C14882'
+	xmlns:rs='urn:schemas-microsoft-com:rowset'
+	xmlns:z='#RowsetSchema'>
+<s:Schema id='RowsetSchema'>
+	<s:ElementType name='row' content='eltOnly' rs:CommandTimeout='120' rs:updatable='true' rs:ReshapeName='Orders'>
+		<s:AttributeType name='OrderId' rs:number='1' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+			 rs:basetable='SalesOrders' rs:basecolumn='OrderId' rs:keycolumn='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='CustomerId' rs:number='2' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+			 rs:baseschema='dbo' rs:basetable='SalesOrders' rs:basecolumn='CustomerId'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='Freight' rs:number='3' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+			 rs:basetable='SalesOrders' rs:basecolumn='Freight'>
+			<s:datatype dt:type='number' rs:dbtype='currency' dt:maxLength='8' rs:precision='19' rs:fixedlength='true'
+			 rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:ElementType name='Lines' content='eltOnly' rs:CommandTimeout='120' rs:updatable='true' rs:ReshapeName='Lines'
+		 rs:relation='010000000100000000000000'>
+			<s:AttributeType name='OrderId' rs:number='1' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesOrderLines' rs:basecolumn='OrderId'>
+				<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='LineId' rs:number='2' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesOrderLines' rs:basecolumn='LineId' rs:keycolumn='true'>
+				<s:datatype dt:type='i8' dt:maxLength='8' rs:precision='19' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='LineNumber' rs:number='3' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesOrderLines' rs:basecolumn='LineNumber'>
+				<s:datatype dt:type='i2' dt:maxLength='2' rs:precision='5' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='ProductId' rs:number='4' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesOrderLines' rs:basecolumn='ProductId'>
+				<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='Quantity' rs:number='5' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesOrderLines' rs:basecolumn='Quantity'>
+				<s:datatype dt:type='i2' dt:maxLength='2' rs:precision='5' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='UnitPrice' rs:number='6' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesOrderLines' rs:basecolumn='UnitPrice'>
+				<s:datatype dt:type='number' rs:dbtype='currency' dt:maxLength='8' rs:precision='19' rs:fixedlength='true'
+				 rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:ElementType name='Product' content='eltOnly' rs:CommandTimeout='120' rs:updatable='true' rs:ReshapeName='Product'
+			 rs:relation='040000000100000000000000'>
+				<s:AttributeType name='ProductId' rs:number='1' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+					 rs:baseschema='dbo' rs:basetable='SalesProducts' rs:basecolumn='ProductId' rs:keycolumn='true'>
+					<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+				</s:AttributeType>
+				<s:AttributeType name='ProductName' rs:number='2' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+					 rs:baseschema='dbo' rs:basetable='SalesProducts' rs:basecolumn='ProductName'>
+					<s:datatype dt:type='string' dt:maxLength='100' rs:maybenull='false'/>
+				</s:AttributeType>
+				<s:AttributeType name='ProductSku' rs:number='3' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+					 rs:baseschema='dbo' rs:basetable='SalesProducts' rs:basecolumn='ProductSku'>
+					<s:datatype dt:type='bin.hex' dt:maxLength='8' rs:fixedlength='true' rs:maybenull='false'/>
+				</s:AttributeType>
+				<s:AttributeType name='UnitCost' rs:number='4' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+					 rs:baseschema='dbo' rs:basetable='SalesProducts' rs:basecolumn='UnitCost'>
+					<s:datatype dt:type='number' rs:dbtype='currency' dt:maxLength='8' rs:precision='10' rs:fixedlength='true'
+					 rs:maybenull='false'/>
+				</s:AttributeType>
+				<s:extends type='rs:rowbase'/>
+			</s:ElementType>
+			<s:ElementType name='Legacy' content='eltOnly' rs:CommandTimeout='120' rs:updatable='true' rs:ReshapeName='Legacy'
+			 rs:relation='020000000100000000000000'>
+				<s:AttributeType name='LineId' rs:number='1' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+					 rs:basetable='SalesLegacyDocs' rs:basecolumn='LineId'>
+					<s:datatype dt:type='i8' dt:maxLength='8' rs:precision='19' rs:fixedlength='true' rs:maybenull='false'/>
+				</s:AttributeType>
+				<s:AttributeType name='LegacyDocId' rs:number='2' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+					 rs:basetable='SalesLegacyDocs' rs:basecolumn='LegacyDocId' rs:keycolumn='true' rs:autoincrement='true'>
+					<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+				</s:AttributeType>
+				<s:AttributeType name='LegacyCode' rs:number='3' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+					 rs:baseschema='dbo' rs:basetable='SalesLegacyDocs' rs:basecolumn='LegacyCode'>
+					<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='6' rs:fixedlength='true' rs:maybenull='false'/>
+				</s:AttributeType>
+				<s:AttributeType name='LegacyRowVersion' rs:number='4' rs:rowver='true' rs:basecatalog='AdoRecordsetSales'
+					 rs:baseschema='dbo' rs:basetable='SalesLegacyDocs' rs:basecolumn='LegacyRowVersion'>
+					<s:datatype dt:type='bin.hex' dt:maxLength='8' rs:fixedlength='true' rs:maybenull='false'/>
+				</s:AttributeType>
+				<s:extends type='rs:rowbase'/>
+			</s:ElementType>
+			<s:extends type='rs:rowbase'/>
+		</s:ElementType>
+		<s:extends type='rs:rowbase'/>
+	</s:ElementType>
+</s:Schema>
+<rs:data>
+	<z:row OrderId='100001' CustomerId='1' Freight='7.35'>
+		<Lines OrderId='100001' LineId='1000011' LineNumber='1' ProductId='13' Quantity='4' UnitPrice='99.88'>
+			<Product ProductId='13' ProductName='Product 13 혼합' ProductSku='000d000d00000000' UnitCost='20.31'/>
+			<Legacy LineId='1000011' LegacyDocId='1' LegacyCode='LG0001' LegacyRowVersion='00000000000007d1'/>
+		</Lines>
+		<Lines OrderId='100001' LineId='1000012' LineNumber='2' ProductId='14' Quantity='5' UnitPrice='103.09'>
+			<Product ProductId='14' ProductName='Product 14 혼합' ProductSku='000e000e00000000' UnitCost='21.68'/>
+			<Legacy LineId='1000012' LegacyDocId='2' LegacyCode='LG0002' LegacyRowVersion='00000000000007d4'/>
+		</Lines>
+		<Lines OrderId='100001' LineId='1000013' LineNumber='3' ProductId='15' Quantity='6' UnitPrice='106.3'>
+			<Product ProductId='15' ProductName='Product 15 혼합' ProductSku='000f000f00000000' UnitCost='23.05'/>
+			<Legacy LineId='1000013' LegacyDocId='3' LegacyCode='LG0003' LegacyRowVersion='00000000000007d7'/>
+		</Lines>
+	</z:row>
+	<z:row OrderId='100002' CustomerId='2' Freight='9.7'>
+		<Lines OrderId='100002' LineId='1000021' LineNumber='1' ProductId='14' Quantity='5' UnitPrice='103.09'>
+			<Product rs:duplicate='true' ProductId='14' ProductName='Product 14 혼합' ProductSku='000e000e00000000'
+				 UnitCost='21.68'/>
+			<Legacy LineId='1000021' LegacyDocId='4' LegacyCode='LG0004' LegacyRowVersion='00000000000007da'/>
+		</Lines>
+		<Lines OrderId='100002' LineId='1000022' LineNumber='2' ProductId='15' Quantity='6' UnitPrice='106.3'>
+			<Product rs:duplicate='true' ProductId='15' ProductName='Product 15 혼합' ProductSku='000f000f00000000'
+				 UnitCost='23.05'/>
+			<Legacy LineId='1000022' LegacyDocId='5' LegacyCode='LG0005' LegacyRowVersion='00000000000007dd'/>
+		</Lines>
+		<Lines OrderId='100002' LineId='1000023' LineNumber='3' ProductId='16' Quantity='7' UnitPrice='109.51'>
+			<Product ProductId='16' ProductName='Product 16 혼합' ProductSku='0010001000000000' UnitCost='24.42'/>
+			<Legacy LineId='1000023' LegacyDocId='6' LegacyCode='LG0006' LegacyRowVersion='00000000000007e0'/>
+		</Lines>
+	</z:row>
+</rs:data>
+</xml>

@@ -1,0 +1,21 @@
+<xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"
+     xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+     xmlns:rs="urn:schemas-microsoft-com:rowset"
+     xmlns:z="#RowsetSchema">
+  <s:Schema id="RowsetSchema">
+    <s:ElementType name="row" content="eltOnly">
+      <s:attribute type="s2"/>
+      <s:attribute type="s1"/>
+      <s:attribute type="s3"/>
+      <s:extends type="rs:rowbase"/>
+    </s:ElementType>
+    <s:AttributeType name="s1" rs:name="Number After Text" dt:type="int"/>
+    <s:AttributeType name="s2" rs:name="Text First"/>
+    <s:AttributeType name="unused" dt:type="int"/>
+    <s:AttributeType name="s3" rs:name="Binary Third" dt:type="bin.hex" rs:maybenull="true"/>
+  </s:Schema>
+  <rs:data>
+    <z:row s1="10" s2="alpha" s3="0A0B"/>
+    <z:row s1="20" s2="beta"/>
+  </rs:data>
+</xml>

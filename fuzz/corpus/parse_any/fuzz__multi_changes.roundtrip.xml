@@ -1,0 +1,65 @@
+<xml xmlns:s='uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882'
+	xmlns:dt='uuid:C2F41010-65B3-11d1-A29F-00AA00C14882'
+	xmlns:rs='urn:schemas-microsoft-com:rowset'
+	xmlns:z='#RowsetSchema'>
+<s:Schema id='RowsetSchema'>
+	<s:ElementType name='row' content='eltOnly' rs:updatable='true'>
+		<s:AttributeType name='ID' rs:number='1' rs:write='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='M01_TEXT' rs:number='2' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='string' dt:maxLength='80' rs:precision='0' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='M02_INT' rs:number='3' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='M03_NUM' rs:number='4' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='number' rs:dbtype='numeric' dt:maxLength='19' rs:scale='4' rs:precision='18' rs:fixedlength='true'
+			 rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='M04_TS' rs:number='5' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='dateTime' rs:dbtype='timestamp' dt:maxLength='16' rs:scale='0' rs:precision='0' rs:fixedlength='true'
+			 rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='M05_BIN' rs:number='6' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='bin.hex' dt:maxLength='32' rs:precision='0' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='M06_BOOL' rs:number='7' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='boolean' dt:maxLength='2' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:extends type='rs:rowbase'/>
+	</s:ElementType>
+</s:Schema>
+<rs:data>
+	<rs:update>
+		<rs:original>
+			<z:row ID='1' M01_TEXT='r1_p0_한글_&#x3c;&#x26;&#x27;&#x3e;' M02_INT='100' M03_NUM='1000.1234' M04_TS='2001-02-02T01:03:00'
+				 M05_BIN='0100dead' M06_BOOL='False'/>
+		</rs:original>
+		<z:row ID='1' M01_TEXT='r1_p1_한글_&#x3c;&#x26;&#x27;&#x3e;' M03_NUM='1001.1234' M05_BIN='0101dead'/>
+	</rs:update>
+	<rs:update>
+		<rs:original>
+			<z:row ID='3' M01_TEXT='r3_p0_한글_&#x3c;&#x26;&#x27;&#x3e;' M02_INT='300' M03_NUM='3000.1234' M04_TS='2003-04-04T03:09:00'
+				 M05_BIN='0300dead' M06_BOOL='False'/>
+		</rs:original>
+		<z:row ID='3' M01_TEXT='r3_p2_한글_&#x3c;&#x26;&#x27;&#x3e;' M03_NUM='3002.1234' M05_BIN='0302dead'/>
+	</rs:update>
+	<z:row ID='4' M01_TEXT='r4_p0_한글_&#x3c;&#x26;&#x27;&#x3e;' M02_INT='400' M03_NUM='4000.1234' M04_TS='2004-05-05T04:12:00'
+		 M05_BIN='0400dead' M06_BOOL='True'/>
+	<z:row ID='6' M01_TEXT='r6_p0_한글_&#x3c;&#x26;&#x27;&#x3e;' M02_INT='600' M03_NUM='6000.1234' M04_TS='2006-07-07T06:18:00'
+		 M06_BOOL='True'/>
+	<rs:insert>
+		<z:row ID='7' M02_INT='703' M03_NUM='7003.1234' M04_TS='2007-11-11T10:21:21' M05_BIN='0703dead' M06_BOOL='True'
+			 rs:forcenull='M01_TEXT'/>
+		<z:row ID='8' M01_TEXT='r8_p4_한글_&#x3c;&#x26;&#x27;&#x3e;' M02_INT='804' M03_NUM='8004.1234' M04_TS='2008-01-13T12:24:28'
+			 M05_BIN='0804dead' M06_BOOL='True'/>
+	</rs:insert>
+	<rs:delete>
+		<z:row ID='2' M01_TEXT='r2_p0_한글_&#x3c;&#x26;&#x27;&#x3e;' M02_INT='200' M03_NUM='2000.1234' M04_TS='2002-03-03T02:06:00'
+			 M05_BIN='0200dead' M06_BOOL='True'/>
+		<z:row ID='5' M01_TEXT='r5_p0_한글_&#x3c;&#x26;&#x27;&#x3e;' M02_INT='500' M03_NUM='5000.1234' M04_TS='2005-06-06T05:15:00'
+			 M05_BIN='0500dead'/>
+	</rs:delete>
+</rs:data>
+</xml>

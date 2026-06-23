@@ -1,0 +1,275 @@
+<!doctype html>
+<meta charset="utf-8" />
+<title>tablegram wasm test</title>
+<style>
+  :root { color-scheme: light; }
+  body { font-family: Arial, sans-serif; margin: 20px; }
+  .controls { display: grid; gap: 8px; margin-bottom: 12px; }
+  .row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  pre { white-space: pre-wrap; background: #f8f8f8; padding: 12px; border: 1px solid #ddd; }
+  .outputs { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; align-items: stretch; }
+  .output-panel { min-width: 0; }
+  .output-panel h3 { margin: 0 0 6px 0; font-size: 14px; color: #444; }
+  .hidden { display: none; }
+  table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+  th, td { border: 1px solid #ccd; padding: 8px; text-align: left; }
+  th { background: #efefef; }
+  .error { color: #b00020; font-weight: 600; }
+  .muted { color: #666; }
+  @media (max-width: 960px) {
+    .outputs { grid-template-columns: 1fr; }
+  }
+</style>
+<h1>tablegram wasm smoke</h1>
+<div class="controls">
+  <div class="row">
+    <label for="sampleSelect">Server sample:</label>
+    <select id="sampleSelect" disabled>
+      <option value="">Loading samples...</option>
+    </select>
+    <button id="loadSample" disabled>Load sample</button>
+  </div>
+  <div class="row">
+  <label for="file">Upload file:</label>
+    <input id="file" type="file" accept=".adtg,.xml" />
+    <button id="run">Parse</button>
+  </div>
+  <div id="status" class="muted"></div>
+</div>
+<div class="outputs">
+  <div class="output-panel">
+    <h3>JSON</h3>
+    <pre id="out"></pre>
+  </div>
+  <div id="xmlPanel" class="output-panel hidden">
+    <h3>Raw XML</h3>
+    <pre id="xmlOut"></pre>
+  </div>
+</div>
+<div id="tableWrap"></div>
+
+<script type="module">
+  import init, { parse_recordset_json } from './pkg/tablegram_wasm.js';
+
+  await init();
+
+  const fileInput = document.getElementById('file');
+  const runBtn = document.getElementById('run');
+  const sampleSelect = document.getElementById('sampleSelect');
+  const loadSampleBtn = document.getElementById('loadSample');
+  const out = document.getElementById('out');
+  const xmlOut = document.getElementById('xmlOut');
+  const xmlPanel = document.getElementById('xmlPanel');
+  const tableWrap = document.getElementById('tableWrap');
+  const status = document.getElementById('status');
+
+  function setStatus(message, isError = false) {
+    status.textContent = message;
+    status.classList.toggle('error', isError);
+  }
+
+  function setXmlPanel(bytes, source) {
+    if (!source || !source.toLowerCase().endsWith('.xml')) {
+      xmlPanel.classList.add('hidden');
+      xmlOut.textContent = '';
+      return;
+    }
+
+    xmlPanel.classList.remove('hidden');
+    if (!(bytes instanceof Uint8Array) || bytes.length === 0) {
+      xmlOut.textContent = '';
+      return;
+    }
+
+    if (bytes.length >= 3 && bytes[0] === 0xEF && bytes[1] === 0xBB && bytes[2] === 0xBF) {
+      xmlOut.textContent = new TextDecoder('utf-8').decode(bytes.subarray(3));
+      return;
+    }
+    if (bytes.length >= 2 && bytes[0] === 0xFF && bytes[1] === 0xFE) {
+      xmlOut.textContent = new TextDecoder('utf-16le').decode(bytes.subarray(2));
+      return;
+    }
+    if (bytes.length >= 2 && bytes[0] === 0xFE && bytes[1] === 0xFF) {
+      xmlOut.textContent = new TextDecoder('utf-16be').decode(bytes.subarray(2));
+      return;
+    }
+
+    xmlOut.textContent = new TextDecoder('utf-8').decode(bytes);
+  }
+
+  function valueToText(value) {
+    if (value === null || value === undefined) return '';
+    if (typeof value === 'object') {
+      if ('value' in value) return value.value === null || value.value === undefined ? '' : String(value.value);
+      if (Array.isArray(value)) return value.map(valueToText).join(', ');
+      return JSON.stringify(value);
+    }
+    return String(value);
+  }
+
+  function renderTable(parsed) {
+    tableWrap.innerHTML = '';
+    if (!parsed || parsed.error) return;
+    if (!Array.isArray(parsed.fields) || !Array.isArray(parsed.rows)) return;
+
+    const table = document.createElement('table');
+    const thead = table.createTHead();
+    const headRow = thead.insertRow();
+    parsed.fields.forEach((field) => {
+      const cell = document.createElement('th');
+      cell.textContent = field && (field.name || field.xml_name) ? (field.name || field.xml_name) : '';
+      headRow.appendChild(cell);
+    });
+
+    const body = table.createTBody();
+    parsed.rows.forEach((row) => {
+      const tr = body.insertRow();
+      const values = Array.isArray(row)
+        ? row
+        : (row && typeof row === 'object' && Array.isArray(row.values))
+          ? row.values
+          : null;
+
+      if (Array.isArray(values)) {
+        values.forEach((value) => {
+          const td = tr.insertCell();
+          td.textContent = valueToText(value);
+        });
+        return;
+      }
+
+      if (Array.isArray(row)) {
+        row.forEach((value) => {
+          const td = tr.insertCell();
+          td.textContent = valueToText(value);
+        });
+      } else if (row && typeof row === 'object') {
+        parsed.fields.forEach((field) => {
+          const key = field && field.name ? field.name : undefined;
+          const td = tr.insertCell();
+          td.textContent = valueToText(key ? row[key] : '');
+        });
+      }
+    });
+
+    tableWrap.appendChild(table);
+  }
+
+  function renderParsed(raw, source, rawBytes) {
+    tableWrap.innerHTML = '';
+    setXmlPanel(rawBytes || null, source);
+    if (typeof raw !== 'string') {
+      raw = String(raw);
+    }
+
+    try {
+      const parsed = JSON.parse(raw);
+      renderTable(parsed);
+      setStatus(`Parsed ${source}`);
+      if (parsed.error) {
+        setStatus(`Parsed ${source} with warning: ${parsed.error}`, true);
+      } else {
+        out.classList.remove('error');
+      }
+      out.textContent = JSON.stringify(parsed, null, 2);
+      return;
+    } catch (err) {
+      setStatus(`Parsed ${source} (non-JSON output): ${err.message}`, true);
+      out.classList.add('error');
+      out.textContent = raw;
+    }
+  }
+
+  async function parseBytes(bytes, source) {
+    try {
+      const raw = parse_recordset_json(bytes);
+      renderParsed(raw, source, bytes);
+    } catch (err) {
+      setStatus(`Failed to parse ${source}: ${err.message}`, true);
+      out.classList.add('error');
+      setXmlPanel(bytes, source);
+      out.textContent = String(err);
+      tableWrap.innerHTML = '';
+    }
+  }
+
+  async function loadSamplePath(samplePath) {
+    try {
+      const response = await fetch(samplePath);
+      if (!response.ok) {
+        throw new Error(`Failed to fetch sample (HTTP ${response.status})`);
+      }
+      const bytes = new Uint8Array(await response.arrayBuffer());
+      await parseBytes(bytes, samplePath);
+    } catch (err) {
+      setStatus(`Failed to load sample: ${err.message}`, true);
+      out.classList.add('error');
+      out.textContent = String(err);
+      tableWrap.innerHTML = '';
+    }
+  }
+
+  async function loadSamples() {
+    try {
+      const res = await fetch('/public/samples/manifest.json');
+      if (!res.ok) {
+        throw new Error(`Server sample manifest not available (HTTP ${res.status})`);
+      }
+      const samples = await res.json();
+      if (!Array.isArray(samples) || samples.length === 0) {
+        throw new Error('Manifest has no sample files');
+      }
+
+      sampleSelect.innerHTML = '';
+      const defaultOption = document.createElement('option');
+      defaultOption.value = '';
+      defaultOption.textContent = 'Choose a sample';
+      sampleSelect.appendChild(defaultOption);
+
+      samples.forEach((sample) => {
+        if (!sample || !sample.path || !sample.name) {
+          return;
+        }
+        const option = document.createElement('option');
+        option.value = sample.path;
+        option.textContent = `${sample.label || sample.name} (${sample.format || 'file'})`;
+        sampleSelect.appendChild(option);
+      });
+
+      sampleSelect.disabled = false;
+      loadSampleBtn.disabled = false;
+      if (sampleSelect.options.length > 1) {
+        sampleSelect.selectedIndex = 1;
+        await loadSamplePath(sampleSelect.value);
+      }
+      setStatus('Loaded first sample. You can choose another one and click "Load sample".');
+    } catch (err) {
+      sampleSelect.innerHTML = '<option value=\"\">No server samples available</option>';
+      sampleSelect.disabled = true;
+      loadSampleBtn.disabled = true;
+      setStatus(err.message, true);
+    }
+  }
+
+  runBtn.addEventListener('click', async () => {
+    const selectedFile = fileInput.files[0];
+    if (!selectedFile) {
+      setStatus('Pick a local .adtg or .xml file first.', true);
+      return;
+    }
+
+    const bytes = new Uint8Array(await selectedFile.arrayBuffer());
+    await parseBytes(bytes, selectedFile.name);
+  });
+
+  loadSampleBtn.addEventListener('click', async () => {
+    const samplePath = sampleSelect.value;
+    if (!samplePath) {
+      setStatus('Pick a server sample first.', true);
+      return;
+    }
+    await loadSamplePath(samplePath);
+  });
+
+  await loadSamples();
+</script>

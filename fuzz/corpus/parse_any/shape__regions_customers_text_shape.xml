@@ -1,0 +1,91 @@
+<xml xmlns:s='uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882'
+	xmlns:dt='uuid:C2F41010-65B3-11d1-A29F-00AA00C14882'
+	xmlns:rs='urn:schemas-microsoft-com:rowset'
+	xmlns:z='#RowsetSchema'>
+<s:Schema id='RowsetSchema'>
+	<s:ElementType name='row' content='eltOnly' rs:CommandTimeout='120' rs:updatable='true' rs:ReshapeName='Regions'>
+		<s:AttributeType name='RegionCode' rs:number='1' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+			 rs:baseschema='dbo' rs:basetable='SalesRegions' rs:basecolumn='RegionCode'>
+			<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='3' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='RegionName' rs:number='2' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+			 rs:baseschema='dbo' rs:basetable='SalesRegions' rs:basecolumn='RegionName'>
+			<s:datatype dt:type='string' dt:maxLength='40' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='IsDomestic' rs:number='3' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+			 rs:baseschema='dbo' rs:basetable='SalesRegions' rs:basecolumn='IsDomestic'>
+			<s:datatype dt:type='boolean' dt:maxLength='2' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:ElementType name='Customers' content='eltOnly' rs:CommandTimeout='120' rs:updatable='true' rs:ReshapeName='Customers'
+		 rs:relation='010000000100000000000000'>
+			<s:AttributeType name='RegionCode' rs:number='1' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesRegions' rs:basecolumn='RegionCode'>
+				<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='3' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='CustomerId' rs:number='2' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesCustomers' rs:basecolumn='CustomerId' rs:keycolumn='true'>
+				<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='CustomerCode' rs:number='3' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesCustomers' rs:basecolumn='CustomerCode'>
+				<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='12' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='CustomerName' rs:number='4' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesCustomers' rs:basecolumn='CustomerName'>
+				<s:datatype dt:type='string' dt:maxLength='80' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='RegionId' rs:number='5' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesRegions' rs:basecolumn='RegionId' rs:keycolumn='true' rs:hidden='true'>
+				<s:datatype dt:type='ui1' dt:maxLength='1' rs:precision='3' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:extends type='rs:rowbase'/>
+		</s:ElementType>
+		<s:AttributeType name='RegionId' rs:number='5' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+			 rs:basetable='SalesRegions' rs:basecolumn='RegionId' rs:keycolumn='true' rs:hidden='true'>
+			<s:datatype dt:type='ui1' dt:maxLength='1' rs:precision='3' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:extends type='rs:rowbase'/>
+	</s:ElementType>
+</s:Schema>
+<rs:data>
+	<z:row RegionCode='SEL' RegionName='Seoul' IsDomestic='True' RegionId='1'>
+		<Customers RegionCode='SEL' CustomerId='1' CustomerCode='CUST0001' CustomerName='고객 1 / Customer 1' RegionId='1'/>
+		<Customers RegionCode='SEL' CustomerId='7' CustomerCode='CUST0007' CustomerName='고객 7 / Customer 7' RegionId='1'/>
+		<Customers RegionCode='SEL' CustomerId='13' CustomerCode='CUST0013' CustomerName='고객 13 / Customer 13'
+			 RegionId='1'/>
+	</z:row>
+	<z:row RegionCode='BUS' RegionName='Busan' IsDomestic='True' RegionId='2'>
+		<Customers RegionCode='BUS' CustomerId='2' CustomerCode='CUST0002' CustomerName='고객 2 / Customer 2' RegionId='2'/>
+		<Customers RegionCode='BUS' CustomerId='8' CustomerCode='CUST0008' CustomerName='고객 8 / Customer 8' RegionId='2'/>
+		<Customers RegionCode='BUS' CustomerId='14' CustomerCode='CUST0014' CustomerName='고객 14 / Customer 14'
+			 RegionId='2'/>
+	</z:row>
+	<z:row RegionCode='ICN' RegionName='Incheon' IsDomestic='True' RegionId='3'>
+		<Customers RegionCode='ICN' CustomerId='3' CustomerCode='CUST0003' CustomerName='고객 3 / Customer 3' RegionId='3'/>
+		<Customers RegionCode='ICN' CustomerId='9' CustomerCode='CUST0009' CustomerName='고객 9 / Customer 9' RegionId='3'/>
+		<Customers RegionCode='ICN' CustomerId='15' CustomerCode='CUST0015' CustomerName='고객 15 / Customer 15'
+			 RegionId='3'/>
+	</z:row>
+	<z:row RegionCode='TYO' RegionName='Tokyo' IsDomestic='False' RegionId='4'>
+		<Customers RegionCode='TYO' CustomerId='4' CustomerCode='CUST0004' CustomerName='고객 4 / Customer 4' RegionId='4'/>
+		<Customers RegionCode='TYO' CustomerId='10' CustomerCode='CUST0010' CustomerName='고객 10 / Customer 10'
+			 RegionId='4'/>
+		<Customers RegionCode='TYO' CustomerId='16' CustomerCode='CUST0016' CustomerName='고객 16 / Customer 16'
+			 RegionId='4'/>
+	</z:row>
+	<z:row RegionCode='SFO' RegionName='San Francisco' IsDomestic='False' RegionId='5'>
+		<Customers RegionCode='SFO' CustomerId='5' CustomerCode='CUST0005' CustomerName='고객 5 / Customer 5' RegionId='5'/>
+		<Customers RegionCode='SFO' CustomerId='11' CustomerCode='CUST0011' CustomerName='고객 11 / Customer 11'
+			 RegionId='5'/>
+		<Customers RegionCode='SFO' CustomerId='17' CustomerCode='CUST0017' CustomerName='고객 17 / Customer 17'
+			 RegionId='5'/>
+	</z:row>
+	<z:row RegionCode='BER' RegionName='Berlin' IsDomestic='False' RegionId='6'>
+		<Customers RegionCode='BER' CustomerId='6' CustomerCode='CUST0006' CustomerName='고객 6 / Customer 6' RegionId='6'/>
+		<Customers RegionCode='BER' CustomerId='12' CustomerCode='CUST0012' CustomerName='고객 12 / Customer 12'
+			 RegionId='6'/>
+		<Customers RegionCode='BER' CustomerId='18' CustomerCode='CUST0018' CustomerName='고객 18 / Customer 18'
+			 RegionId='6'/>
+	</z:row>
+</rs:data>
+</xml>

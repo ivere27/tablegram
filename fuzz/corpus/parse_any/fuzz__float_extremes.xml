@@ -1,0 +1,36 @@
+<xml xmlns:s='uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882'
+	xmlns:dt='uuid:C2F41010-65B3-11d1-A29F-00AA00C14882'
+	xmlns:rs='urn:schemas-microsoft-com:rowset'
+	xmlns:z='#RowsetSchema'>
+<s:Schema id='RowsetSchema'>
+	<s:ElementType name='row' content='eltOnly' rs:updatable='true'>
+		<s:AttributeType name='ID' rs:number='1' rs:write='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='SINGLE_VALUE' rs:number='2' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='r4' dt:maxLength='4' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='DOUBLE_VALUE' rs:number='3' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='float' dt:maxLength='8' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:extends type='rs:rowbase'/>
+	</s:ElementType>
+</s:Schema>
+<rs:data>
+	<rs:update>
+		<rs:original>
+			<z:row ID='1' SINGLE_VALUE='1.25' DOUBLE_VALUE='1.25'/>
+		</rs:original>
+		<z:row ID='1' SINGLE_VALUE='3.4028231E+38' DOUBLE_VALUE='1.7976931348623157E+308'/>
+	</rs:update>
+	<z:row ID='3' SINGLE_VALUE='1.401298464E-45' DOUBLE_VALUE='4.9406564584124654E-324'/>
+	<z:row ID='4'/>
+	<rs:insert>
+		<z:row ID='5' SINGLE_VALUE='-1.401298464E-45' DOUBLE_VALUE='-4.9406564584124654E-324'/>
+		<z:row ID='6' SINGLE_VALUE='0' DOUBLE_VALUE='0'/>
+	</rs:insert>
+	<rs:delete>
+		<z:row ID='2' SINGLE_VALUE='-3.4028231E+38' DOUBLE_VALUE='-1.7976931348623157E+308'/>
+	</rs:delete>
+</rs:data>
+</xml>

@@ -1,0 +1,100 @@
+<xml xmlns:s='uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882'
+	xmlns:dt='uuid:C2F41010-65B3-11d1-A29F-00AA00C14882'
+	xmlns:rs='urn:schemas-microsoft-com:rowset'
+	xmlns:z='#RowsetSchema'>
+<s:Schema id='RowsetSchema'>
+	<s:ElementType name='row' content='eltOnly' rs:CommandTimeout='120' rs:updatable='true' rs:ReshapeName='Orders'>
+		<s:AttributeType name='OrderId' rs:number='1' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+			 rs:basetable='SalesOrders' rs:basecolumn='OrderId' rs:keycolumn='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='OrderDate' rs:number='2' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+			 rs:basetable='SalesOrders' rs:basecolumn='OrderDate'>
+			<s:datatype dt:type='dateTime' rs:dbtype='timestamp' dt:maxLength='16' rs:scale='3' rs:precision='23' rs:fixedlength='true'
+			 rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='Freight' rs:number='3' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+			 rs:basetable='SalesOrders' rs:basecolumn='Freight'>
+			<s:datatype dt:type='number' rs:dbtype='currency' dt:maxLength='8' rs:precision='19' rs:fixedlength='true'
+			 rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:ElementType name='DateLines' content='eltOnly' rs:CommandTimeout='120' rs:updatable='true' rs:ReshapeName='DateLines'
+		 rs:relation='020000000100000000000000'>
+			<s:AttributeType name='OrderDate' rs:number='1' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesOrders' rs:basecolumn='OrderDate'>
+				<s:datatype dt:type='dateTime' rs:dbtype='timestamp' dt:maxLength='16' rs:scale='3' rs:precision='23' rs:fixedlength='true'
+				 rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='LineId' rs:number='2' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesOrderLines' rs:basecolumn='LineId' rs:keycolumn='true'>
+				<s:datatype dt:type='i8' dt:maxLength='8' rs:precision='19' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='OrderId' rs:number='3' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesOrderLines' rs:basecolumn='OrderId'>
+				<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='Quantity' rs:number='4' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesOrderLines' rs:basecolumn='Quantity'>
+				<s:datatype dt:type='i2' dt:maxLength='2' rs:precision='5' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='c4' rs:name='OrderId' rs:number='5' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesOrders' rs:basecolumn='OrderId' rs:keycolumn='true' rs:hidden='true'>
+				<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:extends type='rs:rowbase'/>
+		</s:ElementType>
+		<s:ElementType name='FreightLines' content='eltOnly' rs:CommandTimeout='120' rs:updatable='true' rs:ReshapeName='FreightLines'
+		 rs:relation='030000000100000000000000'>
+			<s:AttributeType name='Freight' rs:number='1' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesOrders' rs:basecolumn='Freight'>
+				<s:datatype dt:type='number' rs:dbtype='currency' dt:maxLength='8' rs:precision='19' rs:fixedlength='true'
+				 rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='LineId' rs:number='2' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesOrderLines' rs:basecolumn='LineId' rs:keycolumn='true'>
+				<s:datatype dt:type='i8' dt:maxLength='8' rs:precision='19' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='OrderId' rs:number='3' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesOrderLines' rs:basecolumn='OrderId'>
+				<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='Quantity' rs:number='4' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesOrderLines' rs:basecolumn='Quantity'>
+				<s:datatype dt:type='i2' dt:maxLength='2' rs:precision='5' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='c4' rs:name='OrderId' rs:number='5' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesOrders' rs:basecolumn='OrderId' rs:keycolumn='true' rs:hidden='true'>
+				<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:extends type='rs:rowbase'/>
+		</s:ElementType>
+		<s:extends type='rs:rowbase'/>
+	</s:ElementType>
+</s:Schema>
+<rs:data>
+	<z:row OrderId='100001' OrderDate='2024-01-01T09:13:00' Freight='7.35'>
+		<DateLines OrderDate='2024-01-01T09:13:00' LineId='1000011' OrderId='100001' Quantity='4' c4='100001'/>
+		<DateLines OrderDate='2024-01-01T09:13:00' LineId='1000012' OrderId='100001' Quantity='5' c4='100001'/>
+		<DateLines OrderDate='2024-01-01T09:13:00' LineId='1000013' OrderId='100001' Quantity='6' c4='100001'/>
+		<FreightLines Freight='7.35' LineId='1000011' OrderId='100001' Quantity='4' c4='100001'/>
+		<FreightLines Freight='7.35' LineId='1000012' OrderId='100001' Quantity='5' c4='100001'/>
+		<FreightLines Freight='7.35' LineId='1000013' OrderId='100001' Quantity='6' c4='100001'/>
+	</z:row>
+	<z:row OrderId='100002' OrderDate='2024-01-01T10:26:00' Freight='9.7'>
+		<DateLines OrderDate='2024-01-01T10:26:00' LineId='1000021' OrderId='100002' Quantity='5' c4='100002'/>
+		<DateLines OrderDate='2024-01-01T10:26:00' LineId='1000022' OrderId='100002' Quantity='6' c4='100002'/>
+		<DateLines OrderDate='2024-01-01T10:26:00' LineId='1000023' OrderId='100002' Quantity='7' c4='100002'/>
+		<FreightLines Freight='9.7' LineId='1000021' OrderId='100002' Quantity='5' c4='100002'/>
+		<FreightLines Freight='9.7' LineId='1000022' OrderId='100002' Quantity='6' c4='100002'/>
+		<FreightLines Freight='9.7' LineId='1000023' OrderId='100002' Quantity='7' c4='100002'/>
+	</z:row>
+	<z:row OrderId='100003' OrderDate='2024-01-01T11:39:00' Freight='12.05'>
+		<DateLines OrderDate='2024-01-01T11:39:00' LineId='1000031' OrderId='100003' Quantity='6' c4='100003'/>
+		<DateLines OrderDate='2024-01-01T11:39:00' LineId='1000032' OrderId='100003' Quantity='7' c4='100003'/>
+		<DateLines OrderDate='2024-01-01T11:39:00' LineId='1000033' OrderId='100003' Quantity='8' c4='100003'/>
+		<FreightLines Freight='12.05' LineId='1000031' OrderId='100003' Quantity='6' c4='100003'/>
+		<FreightLines Freight='12.05' LineId='1000032' OrderId='100003' Quantity='7' c4='100003'/>
+		<FreightLines Freight='12.05' LineId='1000033' OrderId='100003' Quantity='8' c4='100003'/>
+	</z:row>
+</rs:data>
+</xml>

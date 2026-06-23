@@ -1,0 +1,31 @@
+FROM ubuntu:24.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    bash \
+    build-essential \
+    ca-certificates \
+    curl \
+    zip \
+    && rm -rf /var/lib/apt/lists/*
+
+ENV RUSTUP_HOME=/opt/rustup
+ENV CARGO_HOME=/opt/cargo
+ENV PATH=/opt/cargo/bin:${PATH}
+
+RUN curl -fsSL https://sh.rustup.rs -o /tmp/rustup-init.sh && \
+    sh /tmp/rustup-init.sh -y --profile minimal --default-toolchain stable && \
+    rm -f /tmp/rustup-init.sh
+
+RUN rustup toolchain install nightly --profile minimal && \
+    rustup target add wasm32-unknown-unknown && \
+    rustup target add --toolchain nightly wasm32-unknown-unknown
+
+RUN cargo install --locked wasm-pack
+
+COPY docker/build_wasm.sh /opt/tablegram/build_wasm.sh
+RUN chmod +x /opt/tablegram/build_wasm.sh
+
+WORKDIR /workspace/tablegram
+ENTRYPOINT ["/opt/tablegram/build_wasm.sh"]

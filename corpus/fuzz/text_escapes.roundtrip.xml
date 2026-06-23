@@ -1,0 +1,193 @@
+<xml xmlns:s='uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882'
+	xmlns:dt='uuid:C2F41010-65B3-11d1-A29F-00AA00C14882'
+	xmlns:rs='urn:schemas-microsoft-com:rowset'
+	xmlns:z='#RowsetSchema'>
+<s:Schema id='RowsetSchema'>
+	<s:ElementType name='row' content='eltOnly' rs:updatable='true'>
+		<s:AttributeType name='ID' rs:number='1' rs:write='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='TXT_VAR' rs:number='2' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='160' rs:precision='0' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='TXT_WIDE' rs:number='3' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='string' dt:maxLength='220' rs:precision='0' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='TXT_LONG' rs:number='4' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='string' dt:maxLength='4000' rs:precision='0' rs:long='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:extends type='rs:rowbase'/>
+	</s:ElementType>
+</s:Schema>
+<rs:data>
+	<rs:update>
+		<rs:original>
+			<z:row ID='1' TXT_VAR='row=1|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end' TXT_WIDE='row=1|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€'
+				 TXT_LONG='row=1|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=1
+row=1|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=2
+row=1|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=3
+row=1|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=4
+row=1|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=5
+row=1|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=6
+row=1|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=7
+row=1|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=8
+row=1|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=9
+row=1|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=10
+row=1|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=11
+row=1|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=12
+row=1|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=13
+row=1|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=14
+row=1|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=15
+row=1|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=16
+row=1|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=17
+row=1|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=18
+'/>
+		</rs:original>
+		<z:row ID='1' TXT_VAR='row=1|phase=1|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end' TXT_WIDE='row=1|phase=1|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€'
+			 TXT_LONG='row=1|phase=1|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=1
+row=1|phase=1|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=2
+row=1|phase=1|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=3
+row=1|phase=1|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=4
+row=1|phase=1|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=5
+row=1|phase=1|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=6
+row=1|phase=1|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=7
+row=1|phase=1|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=8
+row=1|phase=1|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=9
+row=1|phase=1|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=10
+row=1|phase=1|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=11
+row=1|phase=1|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=12
+row=1|phase=1|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=13
+row=1|phase=1|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=14
+row=1|phase=1|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=15
+row=1|phase=1|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=16
+row=1|phase=1|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=17
+row=1|phase=1|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=18
+'/>
+	</rs:update>
+	<z:row ID='3'/>
+	<rs:insert>
+		<z:row ID='4' TXT_VAR='row=4|phase=2|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end' TXT_WIDE='row=4|phase=2|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€'
+			 TXT_LONG='row=4|phase=2|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=1
+row=4|phase=2|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=2
+row=4|phase=2|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=3
+row=4|phase=2|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=4
+row=4|phase=2|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=5
+row=4|phase=2|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=6
+row=4|phase=2|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=7
+row=4|phase=2|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=8
+row=4|phase=2|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=9
+row=4|phase=2|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=10
+row=4|phase=2|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=11
+row=4|phase=2|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=12
+row=4|phase=2|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=13
+row=4|phase=2|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=14
+row=4|phase=2|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=15
+row=4|phase=2|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=16
+row=4|phase=2|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=17
+row=4|phase=2|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=18
+'/>
+	</rs:insert>
+	<rs:delete>
+		<z:row ID='2' TXT_VAR='row=2|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end' TXT_WIDE='row=2|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€'
+			 TXT_LONG='row=2|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=1
+row=2|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=2
+row=2|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=3
+row=2|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=4
+row=2|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=5
+row=2|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=6
+row=2|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=7
+row=2|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=8
+row=2|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=9
+row=2|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=10
+row=2|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=11
+row=2|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=12
+row=2|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=13
+row=2|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=14
+row=2|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=15
+row=2|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=16
+row=2|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=17
+row=2|phase=0|&#x22;dq&#x22;|&#x27;sq&#x27;|&#x3c;&#x26;&#x3e;|tab	crlf
+end|wide=한글_값_€|part=18
+'/>
+	</rs:delete>
+</rs:data>
+</xml>

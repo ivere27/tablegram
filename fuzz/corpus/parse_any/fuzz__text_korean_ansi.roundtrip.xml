@@ -1,0 +1,37 @@
+<xml xmlns:s='uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882'
+	xmlns:dt='uuid:C2F41010-65B3-11d1-A29F-00AA00C14882'
+	xmlns:rs='urn:schemas-microsoft-com:rowset'
+	xmlns:z='#RowsetSchema'>
+<s:Schema id='RowsetSchema'>
+	<s:ElementType name='row' content='eltOnly' rs:updatable='true'>
+		<s:AttributeType name='ID' rs:number='1' rs:write='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='FIXED_ANSI_KR' rs:number='2' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='10' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='VAR_ANSI_KR' rs:number='3' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='120' rs:precision='0' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='LONG_ANSI_KR' rs:number='4' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='4000' rs:precision='0' rs:long='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:extends type='rs:rowbase'/>
+	</s:ElementType>
+</s:Schema>
+<rs:data>
+	<rs:update>
+		<rs:original>
+			<z:row ID='1' FIXED_ANSI_KR='가나다라마' VAR_ANSI_KR='한글_1_p0_값카' LONG_ANSI_KR='한글_1_p0_값카|1;한글_1_p0_값카|2;한글_1_p0_값카|3;한글_1_p0_값카|4;한글_1_p0_값카|5;한글_1_p0_값카|6;한글_1_p0_값카|7;한글_1_p0_값카|8;한글_1_p0_값카|9;한글_1_p0_값카|10;한글_1_p0_값카|11;한글_1_p0_값카|12;한글_1_p0_값카|13;한글_1_p0_값카|14;한글_1_p0_값카|15;한글_1_p0_값카|16;한글_1_p0_값카|17;한글_1_p0_값카|18;한글_1_p0_값카|19;한글_1_p0_값카|20;한글_1_p0_값카|21;한글_1_p0_값카|22;한글_1_p0_값카|23;한글_1_p0_값카|24;'/>
+		</rs:original>
+		<z:row FIXED_ANSI_KR='카타파하값' VAR_ANSI_KR='한글_1_p1_값카' LONG_ANSI_KR='한글_1_p1_값카|1;한글_1_p1_값카|2;한글_1_p1_값카|3;한글_1_p1_값카|4;한글_1_p1_값카|5;한글_1_p1_값카|6;한글_1_p1_값카|7;한글_1_p1_값카|8;한글_1_p1_값카|9;한글_1_p1_값카|10;한글_1_p1_값카|11;한글_1_p1_값카|12;한글_1_p1_값카|13;한글_1_p1_값카|14;한글_1_p1_값카|15;한글_1_p1_값카|16;한글_1_p1_값카|17;한글_1_p1_값카|18;한글_1_p1_값카|19;한글_1_p1_값카|20;한글_1_p1_값카|21;한글_1_p1_값카|22;한글_1_p1_값카|23;한글_1_p1_값카|24;'/>
+	</rs:update>
+	<z:row ID='3'/>
+	<rs:insert>
+		<z:row ID='4' FIXED_ANSI_KR='한글자료끝' VAR_ANSI_KR='한글_4_p2_값카' LONG_ANSI_KR='한글_4_p2_값카|1;한글_4_p2_값카|2;한글_4_p2_값카|3;한글_4_p2_값카|4;한글_4_p2_값카|5;한글_4_p2_값카|6;한글_4_p2_값카|7;한글_4_p2_값카|8;한글_4_p2_값카|9;한글_4_p2_값카|10;한글_4_p2_값카|11;한글_4_p2_값카|12;한글_4_p2_값카|13;한글_4_p2_값카|14;한글_4_p2_값카|15;한글_4_p2_값카|16;한글_4_p2_값카|17;한글_4_p2_값카|18;한글_4_p2_값카|19;한글_4_p2_값카|20;한글_4_p2_값카|21;한글_4_p2_값카|22;한글_4_p2_값카|23;한글_4_p2_값카|24;'/>
+	</rs:insert>
+	<rs:delete>
+		<z:row ID='2' FIXED_ANSI_KR='바사아자차' VAR_ANSI_KR='한글_2_p0_값카' LONG_ANSI_KR='한글_2_p0_값카|1;한글_2_p0_값카|2;한글_2_p0_값카|3;한글_2_p0_값카|4;한글_2_p0_값카|5;한글_2_p0_값카|6;한글_2_p0_값카|7;한글_2_p0_값카|8;한글_2_p0_값카|9;한글_2_p0_값카|10;한글_2_p0_값카|11;한글_2_p0_값카|12;한글_2_p0_값카|13;한글_2_p0_값카|14;한글_2_p0_값카|15;한글_2_p0_값카|16;한글_2_p0_값카|17;한글_2_p0_값카|18;한글_2_p0_값카|19;한글_2_p0_값카|20;한글_2_p0_값카|21;한글_2_p0_값카|22;한글_2_p0_값카|23;한글_2_p0_값카|24;'/>
+	</rs:delete>
+</rs:data>
+</xml>

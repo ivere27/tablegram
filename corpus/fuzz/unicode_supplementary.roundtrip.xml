@@ -1,0 +1,37 @@
+<xml xmlns:s='uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882'
+	xmlns:dt='uuid:C2F41010-65B3-11d1-A29F-00AA00C14882'
+	xmlns:rs='urn:schemas-microsoft-com:rowset'
+	xmlns:z='#RowsetSchema'>
+<s:Schema id='RowsetSchema'>
+	<s:ElementType name='row' content='eltOnly' rs:updatable='true'>
+		<s:AttributeType name='ID' rs:number='1' rs:write='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='SUPP_FIXED' rs:number='2' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='string' dt:maxLength='16' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='SUPP_VAR' rs:number='3' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='string' dt:maxLength='80' rs:precision='0' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='SUPP_LONG' rs:number='4' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='string' dt:maxLength='4000' rs:precision='0' rs:long='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:extends type='rs:rowbase'/>
+	</s:ElementType>
+</s:Schema>
+<rs:data>
+	<rs:update>
+		<rs:original>
+			<z:row ID='1' SUPP_FIXED=' 😀 R1 P0 𠀀    ' SUPP_VAR='row=1|phase=0|😀|𠀀|한글' SUPP_LONG='row=1|phase=0|😀|𠀀|한글|part=1 row=1|phase=0|😀|𠀀|한글|part=2 row=1|phase=0|😀|𠀀|한글|part=3 row=1|phase=0|😀|𠀀|한글|part=4 row=1|phase=0|😀|𠀀|한글|part=5 row=1|phase=0|😀|𠀀|한글|part=6 row=1|phase=0|😀|𠀀|한글|part=7 row=1|phase=0|😀|𠀀|한글|part=8 row=1|phase=0|😀|𠀀|한글|part=9 row=1|phase=0|😀|𠀀|한글|part=10 row=1|phase=0|😀|𠀀|한글|part=11 row=1|phase=0|😀|𠀀|한글|part=12 row=1|phase=0|😀|𠀀|한글|part=13 row=1|phase=0|😀|𠀀|한글|part=14 row=1|phase=0|😀|𠀀|한글|part=15 row=1|phase=0|😀|𠀀|한글|part=16 row=1|phase=0|😀|𠀀|한글|part=17 row=1|phase=0|😀|𠀀|한글|part=18 row=1|phase=0|😀|𠀀|한글|part=19 row=1|phase=0|😀|𠀀|한글|part=20 row=1|phase=0|😀|𠀀|한글|part=21 row=1|phase=0|😀|𠀀|한글|part=22 row=1|phase=0|😀|𠀀|한글|part=23 row=1|phase=0|😀|𠀀|한글|part=24 '/>
+		</rs:original>
+		<z:row ID='1' SUPP_FIXED=' 😀 R1 P1 𠀀    ' SUPP_VAR='row=1|phase=1|😀|𠀀|한글' SUPP_LONG='row=1|phase=1|😀|𠀀|한글|part=1 row=1|phase=1|😀|𠀀|한글|part=2 row=1|phase=1|😀|𠀀|한글|part=3 row=1|phase=1|😀|𠀀|한글|part=4 row=1|phase=1|😀|𠀀|한글|part=5 row=1|phase=1|😀|𠀀|한글|part=6 row=1|phase=1|😀|𠀀|한글|part=7 row=1|phase=1|😀|𠀀|한글|part=8 row=1|phase=1|😀|𠀀|한글|part=9 row=1|phase=1|😀|𠀀|한글|part=10 row=1|phase=1|😀|𠀀|한글|part=11 row=1|phase=1|😀|𠀀|한글|part=12 row=1|phase=1|😀|𠀀|한글|part=13 row=1|phase=1|😀|𠀀|한글|part=14 row=1|phase=1|😀|𠀀|한글|part=15 row=1|phase=1|😀|𠀀|한글|part=16 row=1|phase=1|😀|𠀀|한글|part=17 row=1|phase=1|😀|𠀀|한글|part=18 row=1|phase=1|😀|𠀀|한글|part=19 row=1|phase=1|😀|𠀀|한글|part=20 row=1|phase=1|😀|𠀀|한글|part=21 row=1|phase=1|😀|𠀀|한글|part=22 row=1|phase=1|😀|𠀀|한글|part=23 row=1|phase=1|😀|𠀀|한글|part=24 '/>
+	</rs:update>
+	<z:row ID='3'/>
+	<rs:insert>
+		<z:row ID='4' SUPP_FIXED=' 😀 R4 P2 𠀀    ' SUPP_VAR='row=4|phase=2|😀|𠀀|한글' SUPP_LONG='row=4|phase=2|😀|𠀀|한글|part=1 row=4|phase=2|😀|𠀀|한글|part=2 row=4|phase=2|😀|𠀀|한글|part=3 row=4|phase=2|😀|𠀀|한글|part=4 row=4|phase=2|😀|𠀀|한글|part=5 row=4|phase=2|😀|𠀀|한글|part=6 row=4|phase=2|😀|𠀀|한글|part=7 row=4|phase=2|😀|𠀀|한글|part=8 row=4|phase=2|😀|𠀀|한글|part=9 row=4|phase=2|😀|𠀀|한글|part=10 row=4|phase=2|😀|𠀀|한글|part=11 row=4|phase=2|😀|𠀀|한글|part=12 row=4|phase=2|😀|𠀀|한글|part=13 row=4|phase=2|😀|𠀀|한글|part=14 row=4|phase=2|😀|𠀀|한글|part=15 row=4|phase=2|😀|𠀀|한글|part=16 row=4|phase=2|😀|𠀀|한글|part=17 row=4|phase=2|😀|𠀀|한글|part=18 row=4|phase=2|😀|𠀀|한글|part=19 row=4|phase=2|😀|𠀀|한글|part=20 row=4|phase=2|😀|𠀀|한글|part=21 row=4|phase=2|😀|𠀀|한글|part=22 row=4|phase=2|😀|𠀀|한글|part=23 row=4|phase=2|😀|𠀀|한글|part=24 '/>
+	</rs:insert>
+	<rs:delete>
+		<z:row ID='2' SUPP_FIXED=' 😀 R2 P0 𠀀    ' SUPP_VAR='row=2|phase=0|😀|𠀀|한글' SUPP_LONG='row=2|phase=0|😀|𠀀|한글|part=1 row=2|phase=0|😀|𠀀|한글|part=2 row=2|phase=0|😀|𠀀|한글|part=3 row=2|phase=0|😀|𠀀|한글|part=4 row=2|phase=0|😀|𠀀|한글|part=5 row=2|phase=0|😀|𠀀|한글|part=6 row=2|phase=0|😀|𠀀|한글|part=7 row=2|phase=0|😀|𠀀|한글|part=8 row=2|phase=0|😀|𠀀|한글|part=9 row=2|phase=0|😀|𠀀|한글|part=10 row=2|phase=0|😀|𠀀|한글|part=11 row=2|phase=0|😀|𠀀|한글|part=12 row=2|phase=0|😀|𠀀|한글|part=13 row=2|phase=0|😀|𠀀|한글|part=14 row=2|phase=0|😀|𠀀|한글|part=15 row=2|phase=0|😀|𠀀|한글|part=16 row=2|phase=0|😀|𠀀|한글|part=17 row=2|phase=0|😀|𠀀|한글|part=18 row=2|phase=0|😀|𠀀|한글|part=19 row=2|phase=0|😀|𠀀|한글|part=20 row=2|phase=0|😀|𠀀|한글|part=21 row=2|phase=0|😀|𠀀|한글|part=22 row=2|phase=0|😀|𠀀|한글|part=23 row=2|phase=0|😀|𠀀|한글|part=24 '/>
+	</rs:delete>
+</rs:data>
+</xml>

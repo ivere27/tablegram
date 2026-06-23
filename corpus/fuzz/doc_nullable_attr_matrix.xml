@@ -1,0 +1,23 @@
+<xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"
+     xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+     xmlns:rs="urn:schemas-microsoft-com:rowset"
+     xmlns:z="#RowsetSchema">
+  <s:Schema id="RowsetSchema">
+    <s:ElementType name="row" content="eltOnly">
+      <s:AttributeType name="ID" dt:type="int"/>
+      <s:AttributeType name="INT_DEFAULT" dt:type="int"/>
+      <s:AttributeType name="INT_MAYBE_TRUE" dt:type="int" rs:maybenull="true"/>
+      <s:AttributeType name="INT_MAYBE_FALSE" dt:type="int" rs:maybenull="false"/>
+      <s:AttributeType name="INT_NULLABLE_TRUE" dt:type="int" rs:nullable="true"/>
+      <s:AttributeType name="INT_NULLABLE_TRUE_MAYBE_FALSE" dt:type="int" rs:nullable="true" rs:maybenull="false"/>
+      <s:AttributeType name="INT_NULLABLE_FALSE_MAYBE_TRUE" dt:type="int" rs:nullable="false" rs:maybenull="true"/>
+      <s:AttributeType name="TEXT_DEFAULT"/>
+      <s:AttributeType name="TEXT_MAYBE_FALSE" rs:maybenull="false"/>
+      <s:Extends type="rs:rowbase"/>
+    </s:ElementType>
+  </s:Schema>
+  <rs:data>
+    <z:row ID="1" INT_DEFAULT="10" INT_MAYBE_TRUE="11" INT_MAYBE_FALSE="12" INT_NULLABLE_TRUE="13" INT_NULLABLE_TRUE_MAYBE_FALSE="14" INT_NULLABLE_FALSE_MAYBE_TRUE="15" TEXT_DEFAULT="alpha" TEXT_MAYBE_FALSE="beta"/>
+    <z:row ID="2" INT_DEFAULT="20" INT_MAYBE_TRUE="21" INT_MAYBE_FALSE="22" INT_NULLABLE_TRUE="23" INT_NULLABLE_TRUE_MAYBE_FALSE="24" INT_NULLABLE_FALSE_MAYBE_TRUE="25" TEXT_DEFAULT="gamma" TEXT_MAYBE_FALSE="delta"/>
+  </rs:data>
+</xml>

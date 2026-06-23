@@ -1,0 +1,72 @@
+<xml xmlns:s='uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882'
+	xmlns:dt='uuid:C2F41010-65B3-11d1-A29F-00AA00C14882'
+	xmlns:rs='urn:schemas-microsoft-com:rowset'
+	xmlns:z='#RowsetSchema'>
+<s:Schema id='RowsetSchema'>
+	<s:ElementType name='row' content='eltOnly' rs:CommandTimeout='120' rs:updatable='true' rs:ReshapeName='IntegerKeys'>
+		<s:AttributeType name='RegionId' rs:number='1' rs:nullable='true'>
+			<s:datatype dt:type='ui1' dt:maxLength='1' rs:precision='3' rs:fixedlength='true'/>
+		</s:AttributeType>
+		<s:AttributeType name='EmployeeId' rs:number='2' rs:nullable='true'>
+			<s:datatype dt:type='i2' dt:maxLength='2' rs:precision='5' rs:fixedlength='true'/>
+		</s:AttributeType>
+		<s:ElementType name='RegionCustomers' content='eltOnly' rs:CommandTimeout='120' rs:updatable='true' rs:ReshapeName='RegionCustomers'
+		 rs:relation='010000000100000000000000'>
+			<s:AttributeType name='RegionId' rs:number='1' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesCustomers' rs:basecolumn='RegionId'>
+				<s:datatype dt:type='ui1' dt:maxLength='1' rs:precision='3' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='CustomerId' rs:number='2' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesCustomers' rs:basecolumn='CustomerId' rs:keycolumn='true'>
+				<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='CustomerCode' rs:number='3' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesCustomers' rs:basecolumn='CustomerCode'>
+				<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='12' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:extends type='rs:rowbase'/>
+		</s:ElementType>
+		<s:ElementType name='EmployeeOrders' content='eltOnly' rs:CommandTimeout='120' rs:updatable='true' rs:ReshapeName='EmployeeOrders'
+		 rs:relation='020000000100000000000000'>
+			<s:AttributeType name='EmployeeId' rs:number='1' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesOrders' rs:basecolumn='EmployeeId'>
+				<s:datatype dt:type='i2' dt:maxLength='2' rs:precision='5' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='OrderId' rs:number='2' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesOrders' rs:basecolumn='OrderId' rs:keycolumn='true'>
+				<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='CustomerId' rs:number='3' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesOrders' rs:basecolumn='CustomerId'>
+				<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='Priority' rs:number='4' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesOrders' rs:basecolumn='Priority'>
+				<s:datatype dt:type='ui1' dt:maxLength='1' rs:precision='3' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:extends type='rs:rowbase'/>
+		</s:ElementType>
+		<s:extends type='rs:rowbase'/>
+	</s:ElementType>
+</s:Schema>
+<rs:data>
+	<z:row RegionId='1' EmployeeId='1'>
+		<RegionCustomers RegionId='1' CustomerId='1' CustomerCode='CUST0001'/>
+		<RegionCustomers RegionId='1' CustomerId='7' CustomerCode='CUST0007'/>
+		<EmployeeOrders EmployeeId='1' OrderId='100001' CustomerId='1' Priority='2'/>
+		<EmployeeOrders EmployeeId='1' OrderId='100013' CustomerId='13' Priority='4'/>
+	</z:row>
+	<z:row RegionId='2' EmployeeId='2'>
+		<RegionCustomers RegionId='2' CustomerId='2' CustomerCode='CUST0002'/>
+		<RegionCustomers RegionId='2' CustomerId='8' CustomerCode='CUST0008'/>
+		<EmployeeOrders EmployeeId='2' OrderId='100002' CustomerId='2' Priority='3'/>
+		<EmployeeOrders EmployeeId='2' OrderId='100014' CustomerId='14' Priority='5'/>
+	</z:row>
+	<z:row RegionId='3' EmployeeId='3'>
+		<RegionCustomers RegionId='3' CustomerId='3' CustomerCode='CUST0003'/>
+		<RegionCustomers RegionId='3' CustomerId='9' CustomerCode='CUST0009'/>
+		<EmployeeOrders EmployeeId='3' OrderId='100003' CustomerId='3' Priority='4'/>
+		<EmployeeOrders EmployeeId='3' OrderId='100015' CustomerId='15' Priority='1'/>
+	</z:row>
+</rs:data>
+</xml>

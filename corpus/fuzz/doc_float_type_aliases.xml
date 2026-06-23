@@ -1,0 +1,22 @@
+<xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"
+     xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+     xmlns:rs="urn:schemas-microsoft-com:rowset"
+     xmlns:z="#RowsetSchema">
+  <s:Schema id="RowsetSchema">
+    <s:ElementType name="row" content="eltOnly">
+      <s:AttributeType name="ID" dt:type="int"/>
+      <s:AttributeType name="FLOAT_NO_LEN" dt:type="float" rs:maybenull="true"/>
+      <s:AttributeType name="FLOAT_LEN4" dt:type="float" dt:maxLength="4" rs:maybenull="true"/>
+      <s:AttributeType name="FLOAT_LEN8" dt:type="float" dt:maxLength="8" rs:maybenull="true"/>
+      <s:AttributeType name="R4_NO_LEN" dt:type="r4" rs:maybenull="true"/>
+      <s:AttributeType name="R4_LEN8" dt:type="r4" dt:maxLength="8" rs:maybenull="true"/>
+      <s:AttributeType name="R8_NO_LEN" dt:type="r8" rs:maybenull="true"/>
+      <s:AttributeType name="R8_LEN4" dt:type="r8" dt:maxLength="4" rs:maybenull="true"/>
+      <s:Extends type="rs:rowbase"/>
+    </s:ElementType>
+  </s:Schema>
+  <rs:data>
+    <z:row ID="1" FLOAT_NO_LEN="1.25" FLOAT_LEN4="2.5" FLOAT_LEN8="3.75" R4_NO_LEN="4.5" R4_LEN8="5.25" R8_NO_LEN="6.125" R8_LEN4="7.875"/>
+    <z:row ID="2"/>
+  </rs:data>
+</xml>

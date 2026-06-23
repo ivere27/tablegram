@@ -1,0 +1,47 @@
+<xml xmlns:s='uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882'
+	xmlns:dt='uuid:C2F41010-65B3-11d1-A29F-00AA00C14882'
+	xmlns:rs='urn:schemas-microsoft-com:rowset'
+	xmlns:z='#RowsetSchema'>
+<s:Schema id='RowsetSchema'>
+	<s:ElementType name='row' content='eltOnly' rs:updatable='true'>
+		<s:AttributeType name='ID' rs:number='1' rs:write='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='c1' rs:name='Field Space 1 Single' rs:number='2' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='r4' dt:maxLength='4' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='F2_DBTime' rs:number='3' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='time' dt:maxLength='6' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='F3_LongVarBinary' rs:number='4' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='bin.hex' dt:maxLength='2000' rs:precision='0' rs:long='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='F4_UnsignedSmallInt' rs:number='5' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='ui2' dt:maxLength='2' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='F5_SmallInt' rs:number='6' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='i2' dt:maxLength='2' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:extends type='rs:rowbase'/>
+	</s:ElementType>
+</s:Schema>
+<rs:data>
+	<rs:update>
+		<rs:original>
+			<z:row ID='1' c1='1.125' F2_DBTime='01:03:00' F3_LongVarBinary='deadbeef010000010203' F4_UnsignedSmallInt='100'
+				 F5_SmallInt='100'/>
+		</rs:original>
+		<z:row ID='1' c1='1.225' F3_LongVarBinary='deadbeef010100010203' F5_SmallInt='101'/>
+	</rs:update>
+	<z:row ID='3' c1='3.125' F2_DBTime='03:09:00' F3_LongVarBinary='deadbeef030000010203' F4_UnsignedSmallInt='300'
+		 F5_SmallInt='300'/>
+	<rs:insert>
+		<z:row ID='4' c1='4.3249998' F2_DBTime='06:12:14' F3_LongVarBinary='deadbeef040200010203' F4_UnsignedSmallInt='402'
+			 rs:forcenull='F5_SmallInt'/>
+	</rs:insert>
+	<rs:delete>
+		<z:row ID='2' c1='2.125' F2_DBTime='02:06:00' F3_LongVarBinary='deadbeef020000010203' F4_UnsignedSmallInt='200'
+			 F5_SmallInt='200'/>
+	</rs:delete>
+</rs:data>
+</xml>

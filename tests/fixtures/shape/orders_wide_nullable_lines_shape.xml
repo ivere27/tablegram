@@ -1,0 +1,128 @@
+<xml xmlns:s='uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882'
+	xmlns:dt='uuid:C2F41010-65B3-11d1-A29F-00AA00C14882'
+	xmlns:rs='urn:schemas-microsoft-com:rowset'
+	xmlns:z='#RowsetSchema'>
+<s:Schema id='RowsetSchema'>
+	<s:ElementType name='row' content='eltOnly' rs:CommandTimeout='120' rs:updatable='true' rs:ReshapeName='Orders'>
+		<s:AttributeType name='OrderId' rs:number='1' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+			 rs:basetable='SalesOrders' rs:basecolumn='OrderId' rs:keycolumn='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='CustomerId' rs:number='2' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+			 rs:baseschema='dbo' rs:basetable='SalesOrders' rs:basecolumn='CustomerId'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='Freight' rs:number='3' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+			 rs:basetable='SalesOrders' rs:basecolumn='Freight'>
+			<s:datatype dt:type='number' rs:dbtype='currency' dt:maxLength='8' rs:precision='19' rs:fixedlength='true'
+			 rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:ElementType name='Lines' content='eltOnly' rs:CommandTimeout='120' rs:updatable='true' rs:ReshapeName='Lines'
+		 rs:relation='010000000100000000000000'>
+			<s:AttributeType name='OrderId' rs:number='1' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesOrderLines' rs:basecolumn='OrderId'>
+				<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='LineId' rs:number='2' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales' rs:baseschema='dbo'
+				 rs:basetable='SalesOrderLines' rs:basecolumn='LineId' rs:keycolumn='true'>
+				<s:datatype dt:type='i8' dt:maxLength='8' rs:precision='19' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='LineNumber' rs:number='3' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesOrderLines' rs:basecolumn='LineNumber'>
+				<s:datatype dt:type='i2' dt:maxLength='2' rs:precision='5' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='LineComment' rs:number='4' rs:nullable='true' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesOrderLines' rs:basecolumn='LineComment'>
+				<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='160'/>
+			</s:AttributeType>
+			<s:AttributeType name='MaybeComment2' rs:number='5' rs:nullable='true'>
+				<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='160'/>
+			</s:AttributeType>
+			<s:AttributeType name='CustomerNotes' rs:number='6' rs:nullable='true' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesCustomers' rs:basecolumn='CustomerNotes'>
+				<s:datatype dt:type='string' dt:maxLength='1073741823' rs:long='true'/>
+			</s:AttributeType>
+			<s:AttributeType name='ProductDescription' rs:number='7' rs:nullable='true' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesProducts' rs:basecolumn='ProductDescription'>
+				<s:datatype dt:type='string' dt:maxLength='1073741823' rs:long='true'/>
+			</s:AttributeType>
+			<s:AttributeType name='ReceivedAt' rs:number='8' rs:nullable='true' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesPayments' rs:basecolumn='ReceivedAt'>
+				<s:datatype dt:type='dateTime' rs:dbtype='timestamp' dt:maxLength='16' rs:scale='3' rs:precision='23' rs:fixedlength='true'/>
+			</s:AttributeType>
+			<s:AttributeType name='TrackingNumber' rs:number='9' rs:nullable='true' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesShipments' rs:basecolumn='TrackingNumber'>
+				<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='32'/>
+			</s:AttributeType>
+			<s:AttributeType name='ShipLabel' rs:number='10' rs:nullable='true' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesShipments' rs:basecolumn='ShipLabel'>
+				<s:datatype dt:type='bin.hex' dt:maxLength='2147483647' rs:long='true'/>
+			</s:AttributeType>
+			<s:AttributeType name='MaybeUnitPrice' rs:number='11' rs:nullable='true'>
+				<s:datatype dt:type='number' rs:dbtype='currency' dt:maxLength='8' rs:precision='19' rs:fixedlength='true'/>
+			</s:AttributeType>
+			<s:AttributeType name='MaybeDiscount' rs:number='12' rs:nullable='true'>
+				<s:datatype dt:type='number' rs:dbtype='numeric' dt:maxLength='19' rs:scale='4' rs:precision='9' rs:fixedlength='true'/>
+			</s:AttributeType>
+			<s:AttributeType name='MaybeProductGuid' rs:number='13' rs:nullable='true'>
+				<s:datatype dt:type='uuid' dt:maxLength='16' rs:fixedlength='true'/>
+			</s:AttributeType>
+			<s:AttributeType name='c13' rs:name='OrderId' rs:number='14' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesOrders' rs:basecolumn='OrderId' rs:keycolumn='true' rs:hidden='true'>
+				<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='CustomerId' rs:number='15' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesCustomers' rs:basecolumn='CustomerId' rs:keycolumn='true' rs:hidden='true'>
+				<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='ProductId' rs:number='16' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesProducts' rs:basecolumn='ProductId' rs:keycolumn='true' rs:hidden='true'>
+				<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='PaymentId' rs:number='17' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesPayments' rs:basecolumn='PaymentId' rs:keycolumn='true' rs:hidden='true'>
+				<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:AttributeType name='ShipmentId' rs:number='18' rs:writeunknown='true' rs:basecatalog='AdoRecordsetSales'
+				 rs:baseschema='dbo' rs:basetable='SalesShipments' rs:basecolumn='ShipmentId' rs:keycolumn='true' rs:hidden='true'>
+				<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+			</s:AttributeType>
+			<s:extends type='rs:rowbase'/>
+		</s:ElementType>
+		<s:extends type='rs:rowbase'/>
+	</s:ElementType>
+</s:Schema>
+<rs:data>
+	<z:row OrderId='100001' CustomerId='1' Freight='7.35'>
+		<Lines OrderId='100001' LineId='1000011' LineNumber='1' CustomerNotes='Notes row 1 &#x26; &#x3c;sales&#x3e; &#x22;mixed&#x22;'
+			 ProductDescription='Long product text 상품상품상품상품' ReceivedAt='2024-01-01T17:00:00' TrackingNumber='TRK100001'
+			 ShipLabel='22d4c28f3579051f67d0d5ed6707aff655542de8' MaybeUnitPrice='99.88' MaybeDiscount='.0000' c13='100001'
+			 CustomerId='1' ProductId='13' PaymentId='1' ShipmentId='1'/>
+		<Lines OrderId='100001' LineId='1000012' LineNumber='2' LineComment='line comment 100001-2' MaybeComment2='line comment 100001-2'
+			 CustomerNotes='Notes row 1 &#x26; &#x3c;sales&#x3e; &#x22;mixed&#x22;' ProductDescription='Long product text 상품상품상품상품상품'
+			 ReceivedAt='2024-01-01T17:00:00' TrackingNumber='TRK100001' ShipLabel='22d4c28f3579051f67d0d5ed6707aff65554
+			2de8' MaybeDiscount='.0100' MaybeProductGuid='{00000014-AAAA-BBBB-CCCC-000000000014}' c13='100001' CustomerId='1'
+			 ProductId='14' PaymentId='1' ShipmentId='1'/>
+		<Lines OrderId='100001' LineId='1000013' LineNumber='3' LineComment='line comment 100001-3' MaybeComment2='line comment 100001-3'
+			 CustomerNotes='Notes row 1 &#x26; &#x3c;sales&#x3e; &#x22;mixed&#x22;' ProductDescription='Long product text 상품'
+			 ReceivedAt='2024-01-01T17:00:00' TrackingNumber='TRK100001' ShipLabel='22d4c28f3579051f67d0d5ed6707aff65554
+			2de8' MaybeUnitPrice='106.3' MaybeProductGuid='{00000015-AAAA-BBBB-CCCC-000000000015}' c13='100001' CustomerId='1'
+			 ProductId='15' PaymentId='1' ShipmentId='1'/>
+	</z:row>
+	<z:row OrderId='100002' CustomerId='2' Freight='9.7'>
+		<Lines OrderId='100002' LineId='1000021' LineNumber='1' LineComment='line comment 100002-1' CustomerNotes='Notes row 2 &#x26; &#x3c;sales&#x3e; &#x22;mixed&#x22;'
+			 ProductDescription='Long product text 상품상품상품상품상품' ReceivedAt='2024-01-01T18:00:00' TrackingNumber='TRK100002'
+			 ShipLabel='6dab3306aa07242e6b77cae83d9852e25128dc38' MaybeUnitPrice='103.09' MaybeDiscount='.0100' c13='100002'
+			 CustomerId='2' ProductId='14' PaymentId='2' ShipmentId='2'/>
+		<Lines OrderId='100002' LineId='1000022' LineNumber='2' LineComment='line comment 100002-2' MaybeComment2='line comment 100002-2'
+			 CustomerNotes='Notes row 2 &#x26; &#x3c;sales&#x3e; &#x22;mixed&#x22;' ProductDescription='Long product text 상품'
+			 ReceivedAt='2024-01-01T18:00:00' TrackingNumber='TRK100002' ShipLabel='6dab3306aa07242e6b77cae83d9852e25128
+			dc38' MaybeDiscount='.0200' MaybeProductGuid='{00000015-AAAA-BBBB-CCCC-000000000015}' c13='100002' CustomerId='2'
+			 ProductId='15' PaymentId='2' ShipmentId='2'/>
+		<Lines OrderId='100002' LineId='1000023' LineNumber='3' LineComment='line comment 100002-3' MaybeComment2='line comment 100002-3'
+			 CustomerNotes='Notes row 2 &#x26; &#x3c;sales&#x3e; &#x22;mixed&#x22;' ReceivedAt='2024-01-01T18:00:00' TrackingNumber='TRK100002'
+			 ShipLabel='6dab3306aa07242e6b77cae83d9852e25128dc38' MaybeUnitPrice='109.51' MaybeProductGuid='{00000016-AAAA-BBBB-CCCC-000000000016}'
+			 c13='100002' CustomerId='2' ProductId='16' PaymentId='2' ShipmentId='2'/>
+	</z:row>
+</rs:data>
+</xml>

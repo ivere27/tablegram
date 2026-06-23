@@ -1,0 +1,41 @@
+<xml xmlns:s='uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882'
+	xmlns:dt='uuid:C2F41010-65B3-11d1-A29F-00AA00C14882'
+	xmlns:rs='urn:schemas-microsoft-com:rowset'
+	xmlns:z='#RowsetSchema'>
+<s:Schema id='RowsetSchema'>
+	<s:ElementType name='row' content='eltOnly' rs:updatable='true'>
+		<s:AttributeType name='ID' rs:number='1' rs:write='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='REQ_TEXT' rs:number='2' rs:write='true'>
+			<s:datatype dt:type='string' dt:maxLength='80' rs:precision='0' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='REQ_INT' rs:number='3' rs:write='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='REQ_BIN' rs:number='4' rs:write='true'>
+			<s:datatype dt:type='bin.hex' dt:maxLength='16' rs:precision='0' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='REQ_TS' rs:number='5' rs:write='true'>
+			<s:datatype dt:type='dateTime' rs:dbtype='timestamp' dt:maxLength='16' rs:scale='0' rs:precision='0' rs:fixedlength='true'
+			 rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:extends type='rs:rowbase'/>
+	</s:ElementType>
+</s:Schema>
+<rs:data>
+	<rs:update>
+		<rs:original>
+			<z:row ID='1' REQ_TEXT='alpha' REQ_INT='10' REQ_BIN='010203' REQ_TS='2026-01-02T03:04:05'/>
+		</rs:original>
+		<z:row REQ_TEXT='alpha-updated' REQ_BIN='aabbcc'/>
+	</rs:update>
+	<z:row ID='3' REQ_TEXT='gamma' REQ_INT='30' REQ_BIN='070809' REQ_TS='2026-03-04T05:06:07'/>
+	<rs:insert>
+		<z:row ID='4' REQ_TEXT='delta' REQ_INT='40' REQ_BIN='deadbeef' REQ_TS='2026-04-05T06:07:08'/>
+	</rs:insert>
+	<rs:delete>
+		<z:row ID='2' REQ_TEXT='beta' REQ_INT='20' REQ_BIN='040506' REQ_TS='2026-02-03T04:05:06'/>
+	</rs:delete>
+</rs:data>
+</xml>

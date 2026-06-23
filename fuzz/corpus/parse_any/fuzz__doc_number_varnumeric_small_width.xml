@@ -1,0 +1,21 @@
+<xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"
+     xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+     xmlns:rs="urn:schemas-microsoft-com:rowset"
+     xmlns:z="#RowsetSchema">
+  <s:Schema id="RowsetSchema">
+    <s:ElementType name="row" content="eltOnly">
+      <s:AttributeType name="ID" dt:type="int"/>
+      <s:AttributeType name="NUMBER_LEN3_DECIMAL" dt:type="number" dt:maxLength="3" rs:maybenull="true"/>
+      <s:AttributeType name="NUMBER_LEN3_TRAILING_ZERO" dt:type="number" dt:maxLength="3" rs:maybenull="true"/>
+      <s:AttributeType name="NUMBER_LEN4_DECIMAL" dt:type="number" dt:maxLength="4" rs:maybenull="true"/>
+      <s:AttributeType name="NUMBER_LEN4_INTEGER" dt:type="number" dt:maxLength="4" rs:maybenull="true"/>
+      <s:AttributeType name="NUMBER_LEN5_DECIMAL" dt:type="number" dt:maxLength="5" rs:maybenull="true"/>
+      <s:AttributeType name="NUMBER_LEN6_DECIMAL" dt:type="number" dt:maxLength="6" rs:maybenull="true"/>
+      <s:Extends type="rs:rowbase"/>
+    </s:ElementType>
+  </s:Schema>
+  <rs:data>
+    <z:row ID="1" NUMBER_LEN3_DECIMAL="12.3" NUMBER_LEN3_TRAILING_ZERO="100" NUMBER_LEN4_DECIMAL="12.25" NUMBER_LEN4_INTEGER="1234" NUMBER_LEN5_DECIMAL="6000.75" NUMBER_LEN6_DECIMAL="6000.75"/>
+    <z:row ID="2"/>
+  </rs:data>
+</xml>

@@ -1,0 +1,33 @@
+# Build artifacts and caches
+target/
+fuzz/target/
+fuzz/artifacts/
+wasm_bindings/target/
+web/pkg/
+web/public/samples/
+
+# VCS and editor artifacts
+.git
+.gitignore
+.idea
+.vscode
+
+# Large caches
+node_modules/
+.cargo/
+.rustup/
+
+# Local configuration, credentials, logs, and temp
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.crt
+*.pfx
+*.p12
+*.log
+*.tmp
+*.bak
+tmp/
+temp/

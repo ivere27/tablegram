@@ -1,0 +1,31 @@
+<xml xmlns:s='uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882'
+	xmlns:dt='uuid:C2F41010-65B3-11d1-A29F-00AA00C14882'
+	xmlns:rs='urn:schemas-microsoft-com:rowset'
+	xmlns:z='#RowsetSchema'>
+<s:Schema id='RowsetSchema'>
+	<s:ElementType name='row' content='eltOnly' rs:updatable='true'>
+		<s:AttributeType name='ID' rs:number='1' rs:write='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='0' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='VALUE_FIELD' rs:number='2' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='4000' rs:precision='0' rs:long='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:extends type='rs:rowbase'/>
+	</s:ElementType>
+</s:Schema>
+<rs:data>
+	<rs:update>
+		<rs:original>
+			<z:row ID='1' VALUE_FIELD='long-0-1 한글 long-0-2 한글 long-0-3 한글 long-0-4 한글 long-0-5 한글 long-0-6 한글 long-0-7 한글 long-0-8 한글 long-0-9 한글 long-0-10 한글 long-0-11 한글 long-0-12 한글 long-0-13 한글 long-0-14 한글 long-0-15 한글 long-0-16 한글 long-0-17 한글 long-0-18 한글 long-0-19 한글 long-0-20 한글 long-0-21 한글 long-0-22 한글 long-0-23 한글 long-0-24 한글 long-0-25 한글 long-0-26 한글 long-0-27 한글 long-0-28 한글 long-0-29 한글 long-0-30 한글 long-0-31 한글 long-0-32 한글 long-0-33 한글 long-0-34 한글 long-0-35 한글 long-0-36 한글 long-0-37 한글 long-0-38 한글 long-0-39 한글 long-0-40 한글 long-0-41 한글 long-0-42 한글 long-0-43 한글 long-0-44 한글 long-0-45 한글 long-0-46 한글 long-0-47 한글 long-0-48 한글 long-0-49 한글 long-0-50 한글 long-0-51 한글 long-0-52 한글 long-0-53 한글 long-0-54 한글 long-0-55 한글 long-0-56 한글 long-0-57 한글 long-0-58 한글 long-0-59 한글 long-0-60 한글 long-0-61 한글 long-0-62 한글 long-0-63 한글 long-0-64 한글 long-0-65 한글 long-0-66 한글 long-0-67 한글 long-0-68 한글 long-0-69 한글 long-0-70 한글 long-0-71 한글 long-0-72 한글 long-0-73 한글 long-0-74 한글 long-0-75 한글 long-0-76 한글 long-0-77 한글 long-0-78 한글 long-0-79 한글 long-0-80 한글 '/>
+		</rs:original>
+		<z:row VALUE_FIELD='long-3-1 한글 long-3-2 한글 long-3-3 한글 long-3-4 한글 long-3-5 한글 long-3-6 한글 long-3-7 한글 long-3-8 한글 long-3-9 한글 long-3-10 한글 long-3-11 한글 long-3-12 한글 long-3-13 한글 long-3-14 한글 long-3-15 한글 long-3-16 한글 long-3-17 한글 long-3-18 한글 long-3-19 한글 long-3-20 한글 long-3-21 한글 long-3-22 한글 long-3-23 한글 long-3-24 한글 long-3-25 한글 long-3-26 한글 long-3-27 한글 long-3-28 한글 long-3-29 한글 long-3-30 한글 long-3-31 한글 long-3-32 한글 long-3-33 한글 long-3-34 한글 long-3-35 한글 long-3-36 한글 long-3-37 한글 long-3-38 한글 long-3-39 한글 long-3-40 한글 long-3-41 한글 long-3-42 한글 long-3-43 한글 long-3-44 한글 long-3-45 한글 long-3-46 한글 long-3-47 한글 long-3-48 한글 long-3-49 한글 long-3-50 한글 long-3-51 한글 long-3-52 한글 long-3-53 한글 long-3-54 한글 long-3-55 한글 long-3-56 한글 long-3-57 한글 long-3-58 한글 long-3-59 한글 long-3-60 한글 long-3-61 한글 long-3-62 한글 long-3-63 한글 long-3-64 한글 long-3-65 한글 long-3-66 한글 long-3-67 한글 long-3-68 한글 long-3-69 한글 long-3-70 한글 long-3-71 한글 long-3-72 한글 long-3-73 한글 long-3-74 한글 long-3-75 한글 long-3-76 한글 long-3-77 한글 long-3-78 한글 long-3-79 한글 long-3-80 한글 '/>
+	</rs:update>
+	<z:row ID='3' VALUE_FIELD='long-2-1 한글 long-2-2 한글 long-2-3 한글 long-2-4 한글 long-2-5 한글 long-2-6 한글 long-2-7 한글 long-2-8 한글 long-2-9 한글 long-2-10 한글 long-2-11 한글 long-2-12 한글 long-2-13 한글 long-2-14 한글 long-2-15 한글 long-2-16 한글 long-2-17 한글 long-2-18 한글 long-2-19 한글 long-2-20 한글 long-2-21 한글 long-2-22 한글 long-2-23 한글 long-2-24 한글 long-2-25 한글 long-2-26 한글 long-2-27 한글 long-2-28 한글 long-2-29 한글 long-2-30 한글 long-2-31 한글 long-2-32 한글 long-2-33 한글 long-2-34 한글 long-2-35 한글 long-2-36 한글 long-2-37 한글 long-2-38 한글 long-2-39 한글 long-2-40 한글 long-2-41 한글 long-2-42 한글 long-2-43 한글 long-2-44 한글 long-2-45 한글 long-2-46 한글 long-2-47 한글 long-2-48 한글 long-2-49 한글 long-2-50 한글 long-2-51 한글 long-2-52 한글 long-2-53 한글 long-2-54 한글 long-2-55 한글 long-2-56 한글 long-2-57 한글 long-2-58 한글 long-2-59 한글 long-2-60 한글 long-2-61 한글 long-2-62 한글 long-2-63 한글 long-2-64 한글 long-2-65 한글 long-2-66 한글 long-2-67 한글 long-2-68 한글 long-2-69 한글 long-2-70 한글 long-2-71 한글 long-2-72 한글 long-2-73 한글 long-2-74 한글 long-2-75 한글 long-2-76 한글 long-2-77 한글 long-2-78 한글 long-2-79 한글 long-2-80 한글 '/>
+	<rs:insert>
+		<z:row ID='4' VALUE_FIELD='long-4-1 한글 long-4-2 한글 long-4-3 한글 long-4-4 한글 long-4-5 한글 long-4-6 한글 long-4-7 한글 long-4-8 한글 long-4-9 한글 long-4-10 한글 long-4-11 한글 long-4-12 한글 long-4-13 한글 long-4-14 한글 long-4-15 한글 long-4-16 한글 long-4-17 한글 long-4-18 한글 long-4-19 한글 long-4-20 한글 long-4-21 한글 long-4-22 한글 long-4-23 한글 long-4-24 한글 long-4-25 한글 long-4-26 한글 long-4-27 한글 long-4-28 한글 long-4-29 한글 long-4-30 한글 long-4-31 한글 long-4-32 한글 long-4-33 한글 long-4-34 한글 long-4-35 한글 long-4-36 한글 long-4-37 한글 long-4-38 한글 long-4-39 한글 long-4-40 한글 long-4-41 한글 long-4-42 한글 long-4-43 한글 long-4-44 한글 long-4-45 한글 long-4-46 한글 long-4-47 한글 long-4-48 한글 long-4-49 한글 long-4-50 한글 long-4-51 한글 long-4-52 한글 long-4-53 한글 long-4-54 한글 long-4-55 한글 long-4-56 한글 long-4-57 한글 long-4-58 한글 long-4-59 한글 long-4-60 한글 long-4-61 한글 long-4-62 한글 long-4-63 한글 long-4-64 한글 long-4-65 한글 long-4-66 한글 long-4-67 한글 long-4-68 한글 long-4-69 한글 long-4-70 한글 long-4-71 한글 long-4-72 한글 long-4-73 한글 long-4-74 한글 long-4-75 한글 long-4-76 한글 long-4-77 한글 long-4-78 한글 long-4-79 한글 long-4-80 한글 '/>
+	</rs:insert>
+	<rs:delete>
+		<z:row ID='2' VALUE_FIELD='long-1-1 한글 long-1-2 한글 long-1-3 한글 long-1-4 한글 long-1-5 한글 long-1-6 한글 long-1-7 한글 long-1-8 한글 long-1-9 한글 long-1-10 한글 long-1-11 한글 long-1-12 한글 long-1-13 한글 long-1-14 한글 long-1-15 한글 long-1-16 한글 long-1-17 한글 long-1-18 한글 long-1-19 한글 long-1-20 한글 long-1-21 한글 long-1-22 한글 long-1-23 한글 long-1-24 한글 long-1-25 한글 long-1-26 한글 long-1-27 한글 long-1-28 한글 long-1-29 한글 long-1-30 한글 long-1-31 한글 long-1-32 한글 long-1-33 한글 long-1-34 한글 long-1-35 한글 long-1-36 한글 long-1-37 한글 long-1-38 한글 long-1-39 한글 long-1-40 한글 long-1-41 한글 long-1-42 한글 long-1-43 한글 long-1-44 한글 long-1-45 한글 long-1-46 한글 long-1-47 한글 long-1-48 한글 long-1-49 한글 long-1-50 한글 long-1-51 한글 long-1-52 한글 long-1-53 한글 long-1-54 한글 long-1-55 한글 long-1-56 한글 long-1-57 한글 long-1-58 한글 long-1-59 한글 long-1-60 한글 long-1-61 한글 long-1-62 한글 long-1-63 한글 long-1-64 한글 long-1-65 한글 long-1-66 한글 long-1-67 한글 long-1-68 한글 long-1-69 한글 long-1-70 한글 long-1-71 한글 long-1-72 한글 long-1-73 한글 long-1-74 한글 long-1-75 한글 long-1-76 한글 long-1-77 한글 long-1-78 한글 long-1-79 한글 long-1-80 한글 '/>
+	</rs:delete>
+</rs:data>
+</xml>
